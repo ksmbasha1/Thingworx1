@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <Mashups>
+        <Mashup
+         aspect.isResponsive="false"
+         aspect.mashupType="target"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-10-01T12:11:12.790Z"
+         name="AcmeBeverageTarget"
+         projectName=""
+         rows="0.0"
+         tags="Applications:AcmeVending">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ParameterDefinitions></ParameterDefinitions>
+            <Things>
+                <Thing>AcmeVendingCorp</Thing>
+            </Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "Data" : {
+                "Session" : {
+                  "DataName" : "Session",
+                  "EntityName" : "",
+                  "EntityType" : "Session",
+                  "Id" : "session",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "SessionInterface",
+                    "Name" : "GetGlobalSessionValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGlobalSessionValues"
+                  } ]
+                },
+                "Things_AcmeVendingCorp" : {
+                  "DataName" : "Things_AcmeVendingCorp",
+                  "EntityName" : "AcmeVendingCorp",
+                  "EntityType" : "Things",
+                  "Id" : "501348251758856",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "331348251758873",
+                    "Name" : "StartUpSelection",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "StartUpSelection"
+                  } ]
+                },
+                "UserExtensions" : {
+                  "DataName" : "UserExtensions",
+                  "EntityName" : "",
+                  "EntityType" : "UserExtensions",
+                  "Id" : "UserExtensions",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "UserExtensionInterface",
+                    "Name" : "GetCurrentUserExtensionProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetCurrentUserExtensionProperties"
+                  } ]
+                }
+              },
+              "DataBindings" : [ ],
+              "DesignTimePermissions" : {
+                "Create" : [ ],
+                "Delete" : [ ],
+                "Metadata" : [ ],
+                "Read" : [ ],
+                "Update" : [ ]
+              },
+              "Events" : [ {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_AcmeVendingCorp",
+                "EventHandlerService" : "StartUpSelection",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "591348251781198"
+              } ],
+              "RunTimePermissions" : {
+                "permissions" : [ ]
+              },
+              "UI" : {
+                "Properties" : {
+                  "Area" : "Mashup",
+                  "DropShadow" : false,
+                  "Font" : "Arial, Helvetica",
+                  "Height" : 650,
+                  "Id" : "mashup-root",
+                  "Left" : 0,
+                  "MaxWidth" : 0,
+                  "MinHeight" : 0,
+                  "MinWidth" : 0,
+                  "ResponsiveLayout" : false,
+                  "Style" : "VendingMasterStyle",
+                  "Tags" : [ {
+                    "vocabulary" : "Applications",
+                    "vocabularyTerm" : "AcmeVending"
+                  }, {
+                    "vocabulary" : "Applications",
+                    "vocabularyTerm" : "AcmeVending"
+                  } ],
+                  "Top" : 0,
+                  "Type" : "targetmashup",
+                  "Visible" : true,
+                  "Width" : 1026,
+                  "WindowStyle" : "VendingWindowStyle",
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Target Mashup",
+                  "id_index" : 30
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Height" : 591,
+                    "Id" : "pagemashupcontainer-1",
+                    "Left" : 0,
+                    "Name" : "",
+                    "ResponsiveLayout" : false,
+                    "Top" : 60,
+                    "Type" : "pagemashupcontainer",
+                    "Visible" : true,
+                    "Width" : 1026,
+                    "Z-index" : 1,
+                    "__TypeDisplayName" : "Page Mashup Container"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Alignment" : "left",
+                    "Area" : "UI",
+                    "Height" : 45,
+                    "Id" : "Link-8",
+                    "Left" : 9,
+                    "LinkDisplay" : "textOnly",
+                    "LinkHoverStyle" : "DefaultLinkHoverStyle",
+                    "LinkStyle" : "DefaultLinkStyle",
+                    "ResponsiveLayout" : false,
+                    "SourceURL" : "./index.html#target=AcmeTarget&mashup=DemoLaunch",
+                    "TargetWindow" : "replace",
+                    "Text" : " ",
+                    "Top" : 5,
+                    "Type" : "link",
+                    "Visible" : true,
+                    "Width" : 160,
+                    "Z-index" : 11,
+                    "__TypeDisplayName" : "Link"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Alignment" : "left",
+                    "AllButTopRememberLastChoice" : true,
+                    "Area" : "UI",
+                    "ConfiguredOrDataDriven" : "configured",
+                    "DisplayName" : "Menu-26",
+                    "DrivePageMashupOrBindToMashup" : "pagemashup",
+                    "EvenlySpacedMenuItems" : false,
+                    "Height" : 54,
+                    "IconMaxWidth" : 53,
+                    "Id" : "Menu-26",
+                    "Left" : 338,
+                    "Levels" : "all",
+                    "Menu" : "AcmeVendingHeader",
+                    "MenuBackgroundStyle" : "VendingShapeStyle2",
+                    "MenuHoverStyle" : "VendingMenuHover",
+                    "MenuItemDisplay" : "iconleftoftext",
+                    "MenuLevelHoverStyle" : "DefaultMenuLevelHoverStyle",
+                    "MenuLevelSelectedStyle" : "DefaultMenuLevelSelectedStyle",
+                    "MenuLevelStyle" : "DefaultMenuLevelStyle",
+                    "MenuSelectedStyle" : "VendingMenuSelectedStyle",
+                    "MenuStyle" : "VendingShapeStyle2",
+                    "ResponsiveLayout" : false,
+                    "SubMenuHeight" : 25,
+                    "Top" : 0,
+                    "Type" : "menu",
+                    "View" : "horiz",
+                    "Visible" : true,
+                    "Width" : 675,
+                    "Z-index" : 11,
+                    "__TypeDisplayName" : "Menu"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "Shape-27",
+                    "DynamicFillOrientation" : "vertical",
+                    "DynamicRangeMaximum" : 100,
+                    "DynamicRangeMinimum" : 0,
+                    "EnableDynamicFill" : false,
+                    "GradientOrientation" : "vertical",
+                    "GradientType" : "linear",
+                    "Height" : 54,
+                    "Id" : "Shape-27",
+                    "Left" : 0,
+                    "RectangleCornerRadius" : 10,
+                    "ResponsiveLayout" : false,
+                    "ShapeFormatter_StateParameters" : [ ],
+                    "ShapeStyle" : "VendingShapeStyle2",
+                    "ShapeType" : "rectangle",
+                    "Top" : 0,
+                    "Type" : "shape",
+                    "UnfilledBackgroundStyle" : "DefaultShapeUnfilledBackgroundStyle",
+                    "Visible" : true,
+                    "Width" : 1024,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Shape"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "AlternateText" : "",
+                    "Area" : "UI",
+                    "BorderStyle" : "DefaultImageBorderStyle",
+                    "DisplayName" : "Image-28",
+                    "Height" : 47,
+                    "Id" : "Image-28",
+                    "Left" : 10,
+                    "PreventCaching" : false,
+                    "ResponsiveLayout" : false,
+                    "SourceURL" : "/Thingworx/MediaEntities/AcmeBevLogo",
+                    "Top" : 4,
+                    "Type" : "image",
+                    "Visible" : true,
+                    "Width" : 161,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Image"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "AlternateText" : "",
+                    "Area" : "UI",
+                    "BorderStyle" : "DefaultImageBorderStyle",
+                    "DisplayName" : "Image-29",
+                    "Height" : 34,
+                    "Id" : "Image-29",
+                    "Left" : 185,
+                    "PreventCaching" : false,
+                    "ResponsiveLayout" : false,
+                    "SourceURL" : "/Thingworx/MediaEntities/PoweredByTW",
+                    "Top" : 10,
+                    "Type" : "image",
+                    "Visible" : true,
+                    "Width" : 96,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Image"
+                  },
+                  "Widgets" : [ ]
+                } ]
+              },
+              "mashupType" : "target"
+            }
+            ]]>
+            </mashupContent>
+        </Mashup>
+    </Mashups>
+</Entities>

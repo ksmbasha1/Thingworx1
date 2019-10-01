@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <Mashups>
+        <Mashup
+         aspect.isResponsive="false"
+         aspect.mashupType="page"
+         columns="0.0"
+         description=""
+         documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#xA;"
+         homeMashup=""
+         lastModifiedDate="2019-10-01T12:11:12.827Z"
+         name="VendingMain"
+         projectName=""
+         rows="0.0"
+         tags="Applications:AcmeVending">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ParameterDefinitions></ParameterDefinitions>
+            <Things>
+                <Thing>VendingNetworkServices</Thing>
+            </Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "Data" : {
+                "Groups_AcmeVendingGroup" : {
+                  "DataName" : "Groups_AcmeVendingGroup",
+                  "EntityName" : "AcmeVendingGroup",
+                  "EntityType" : "Groups",
+                  "Id" : "95def274-f2e8-49e7-8700-599c1a68631f",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "eace014f-09b9-47f9-8a31-7900ccdd72aa",
+                    "Name" : "GetGroupMembers",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGroupMembers"
+                  } ]
+                },
+                "Session" : {
+                  "DataName" : "Session",
+                  "EntityName" : "",
+                  "EntityType" : "Session",
+                  "Id" : "session",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "SessionInterface",
+                    "Name" : "GetGlobalSessionValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGlobalSessionValues"
+                  } ]
+                },
+                "Things_VendingNetworkServices" : {
+                  "DataName" : "Things_VendingNetworkServices",
+                  "EntityName" : "VendingNetworkServices",
+                  "EntityType" : "Things",
+                  "Id" : "981320869403432",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "791320869403439",
+                    "Name" : "GetVendingNetwork",
+                    "Parameters" : {
+                      "filter" : "blank"
+                    },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetVendingNetwork"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "e592db45-faca-41ce-86a9-d5eec53017ba",
+                    "Name" : "GetDashboardData",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetDashboardData"
+                  } ]
+                },
+                "UserExtensions" : {
+                  "DataName" : "UserExtensions",
+                  "EntityName" : "",
+                  "EntityType" : "UserExtensions",
+                  "Id" : "UserExtensions",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "UserExtensionInterface",
+                    "Name" : "GetCurrentUserExtensionProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetCurrentUserExtensionProperties"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "6f66c1fb-e695-40d8-8c41-b1a8cd1f360f",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetVendingNetwork",
+                "SourceSection" : "Things_VendingNetworkServices",
+                "TargetArea" : "UI",
+                "TargetId" : "Tree-32",
+                "TargetSection" : ""
+              }, {
+                "Id" : "2cf25887-f27e-4692-8ce2-6b2c18d9f566",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetGroupMembers",
+                "SourceSection" : "Groups_AcmeVendingGroup",
+                "TargetArea" : "UI",
+                "TargetId" : "Grid-44",
+                "TargetSection" : ""
+              }, {
+                "Id" : "1be33dff-05ed-4387-9cd2-eff6ade1f95e",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "to",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Entity",
+                  "TargetPropertyBaseType" : "THINGNAME",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetVendingNetwork",
+                "SourceSection" : "Things_VendingNetworkServices",
+                "TargetArea" : "UI",
+                "TargetId" : "Navigation-24",
+                "TargetSection" : ""
+              }, {
+                "Id" : "27c4e191-7ed4-432a-9979-dd08e516b7fc",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "to",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Entity",
+                  "TargetPropertyBaseType" : "THINGNAME",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetVendingNetwork",
+                "SourceSection" : "Things_VendingNetworkServices",
+                "TargetArea" : "UI",
+                "TargetId" : "MashupContainer-15",
+                "TargetSection" : ""
+              }, {
+                "Id" : "c2561a0b-0925-46f2-80bb-e27d60798d00",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "zoom",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Zoom",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetVendingNetwork",
+                "SourceSection" : "Things_VendingNetworkServices",
+                "TargetArea" : "UI",
+                "TargetId" : "MashupContainer-15",
+                "TargetSection" : ""
+              }, {
+                "Id" : "6bdb4ce8-dd8f-4795-aada-52e00d9b083b",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "to",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Entity",
+                  "TargetPropertyBaseType" : "THINGNAME",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetVendingNetwork",
+                "SourceSection" : "Things_VendingNetworkServices",
+                "TargetArea" : "UI",
+                "TargetId" : "MashupContainer-37",
+                "TargetSection" : ""
+              }, {
+                "Id" : "c30fbc1a-e7d5-4d5a-8e9a-267a5a204f07",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "to",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Entity",
+                  "TargetPropertyBaseType" : "THINGNAME",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetVendingNetwork",
+                "SourceSection" : "Things_VendingNetworkServices",
+                "TargetArea" : "UI",
+                "TargetId" : "MashupContainer-39",
+                "TargetSection" : ""
+              }, {
+                "Id" : "a150830f-3372-4edb-8551-591ba559680b",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "to",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Entity",
+                  "TargetPropertyBaseType" : "THINGNAME",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetVendingNetwork",
+                "SourceSection" : "Things_VendingNetworkServices",
+                "TargetArea" : "UI",
+                "TargetId" : "MashupContainer-38",
+                "TargetSection" : ""
+              } ],
+              "DesignTimePermissions" : {
+                "Create" : [ ],
+                "Delete" : [ ],
+                "Metadata" : [ ],
+                "Read" : [ ],
+                "Update" : [ ]
+              },
+              "Events" : [ {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Groups_AcmeVendingGroup",
+                "EventHandlerService" : "GetGroupMembers",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "4ad258df-f8dd-4b07-8022-2d913edaf202"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_VendingNetworkServices",
+                "EventHandlerService" : "GetVendingNetwork",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "4f0e00c0-b611-43d3-a83f-906f38c38aff"
+              } ],
+              "RunTimePermissions" : {
+                "permissions" : [ ]
+              },
+              "UI" : {
+                "Properties" : {
+                  "Area" : "Mashup",
+                  "Height" : 590,
+                  "Id" : "mashup-root",
+                  "IgnoreWarningsInViewMashup" : false,
+                  "IsPrintLayout" : false,
+                  "Left" : 0,
+                  "Master" : "AcmeBeverageTarget",
+                  "MinHeight" : 0,
+                  "MinWidth" : 0,
+                  "ResponsiveLayout" : false,
+                  "Style" : "VendingMashupStyle",
+                  "Tags" : [ {
+                    "vocabulary" : "Applications",
+                    "vocabularyTerm" : "AcmeVending"
+                  }, {
+                    "vocabulary" : "Applications",
+                    "vocabularyTerm" : "AcmeVending"
+                  } ],
+                  "Top" : 0,
+                  "Type" : "mashup",
+                  "Visible" : true,
+                  "Width" : 1026,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Mashup",
+                  "id_index" : 44
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "AutoSelectFirstRow" : true,
+                    "ClosedNodeFormatter_StateParameters" : [ ],
+                    "CollapseChildrenOfLevel" : 99,
+                    "DisplayName" : "Tree-32",
+                    "Height" : 320,
+                    "IDField" : "to",
+                    "Id" : "Tree-32",
+                    "LabelField" : "description",
+                    "Left" : 5,
+                    "NoChildFormatter_StateParameters" : [ ],
+                    "OpenNodeFormatter_StateParameters" : [ ],
+                    "ParentIDField" : "from",
+                    "ResponsiveLayout" : false,
+                    "RootParentID" : "",
+                    "SelectedBreadcrumb" : "",
+                    "TooltipField" : "description",
+                    "Top" : 35,
+                    "TreeBGStyle" : "VendingTreeBG",
+                    "TreeFormatter" : {
+                      "FieldName" : "assetType",
+                      "StateDefinition" : "AcmeVendingNetwork",
+                      "StateDefinitionType" : "string",
+                      "StateFormats" : [ {
+                        "comparator" : "==",
+                        "state" : "AcmeVendingRegionIcon",
+                        "stateName" : "Region",
+                        "value" : "Region:"
+                      }, {
+                        "comparator" : "==",
+                        "state" : "AcmeVendingSiteIcon",
+                        "stateName" : "Site",
+                        "value" : "Site:"
+                      }, {
+                        "comparator" : "==",
+                        "state" : "AcmeVendingVMIcon",
+                        "stateName" : "VerySmartVendingMach",
+                        "value" : "VerySmartVendingMach:true"
+                      }, {
+                        "comparator" : "==",
+                        "state" : "AcmeVendingVMIconOOS",
+                        "stateName" : "VerySmartVendingMach",
+                        "value" : "VerySmartVendingMach:false"
+                      }, {
+                        "comparator" : "==",
+                        "state" : "AcmeVendingVMIcon",
+                        "stateName" : "BuildDemoVendingMachine",
+                        "value" : "BuildDemoVendingMachine:true"
+                      }, {
+                        "comparator" : "==",
+                        "state" : "AcmeVendingVMIconOOS",
+                        "stateName" : "BuildDemoVendingMachine",
+                        "value" : "BuildDemoVendingMachine:false"
+                      }, {
+                        "comparator" : "==",
+                        "state" : "AcmeVendingIcon",
+                        "stateName" : "Corp",
+                        "value" : "Corp:"
+                      }, {
+                        "state" : "AcmeVendingVMIcon",
+                        "stateName" : ""
+                      } ]
+                    },
+                    "TreeFormatter_StateParameters" : [ {
+                      "BaseType" : "STRING",
+                      "DefaultValue" : "Region:",
+                      "Description" : "Region",
+                      "ParameterName" : "TreeFormatter_Region"
+                    }, {
+                      "BaseType" : "STRING",
+                      "DefaultValue" : "Site:",
+                      "Description" : "Site",
+                      "ParameterName" : "TreeFormatter_Site"
+                    }, {
+                      "BaseType" : "STRING",
+                      "DefaultValue" : "VerySmartVendingMach:true",
+                      "Description" : "VerySmartVendingMach",
+                      "ParameterName" : "TreeFormatter_VerySmartVendingMach"
+                    }, {
+                      "BaseType" : "STRING",
+                      "DefaultValue" : "VerySmartVendingMach:false",
+                      "Description" : "VerySmartVendingMach",
+                      "ParameterName" : "TreeFormatter_VerySmartVendingMach"
+                    }, {
+                      "BaseType" : "STRING",
+                      "DefaultValue" : "BuildDemoVendingMachine:true",
+                      "Description" : "BuildDemoVendingMachine",
+                      "ParameterName" : "TreeFormatter_BuildDemoVendingMachine"
+                    }, {
+                      "BaseType" : "STRING",
+                      "DefaultValue" : "BuildDemoVendingMachine:false",
+                      "Description" : "BuildDemoVendingMachine",
+                      "ParameterName" : "TreeFormatter_BuildDemoVendingMachine"
+                    }, {
+                      "BaseType" : "STRING",
+                      "DefaultValue" : "Corp:",
+                      "Description" : "Corp",
+                      "ParameterName" : "TreeFormatter_Corp"
+                    } ],
+                    "TreeSelectedStyle" : "VendingSelectedStyle",
+                    "Type" : "tree",
+                    "ValueField" : "to",
+                    "Visible" : true,
+                    "Width" : 190,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Tree"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "Shape-33",
+                    "DynamicFillOrientation" : "vertical",
+                    "DynamicRangeMaximum" : 100,
+                    "DynamicRangeMinimum" : 0,
+                    "EnableDynamicFill" : false,
+                    "GradientOrientation" : "vertical",
+                    "GradientType" : "linear",
+                    "Height" : 588,
+                    "Id" : "Shape-33",
+                    "Left" : 0,
+                    "RectangleCornerRadius" : 10,
+                    "ResponsiveLayout" : false,
+                    "ShapeFormatter_StateParameters" : [ ],
+                    "ShapeStyle" : "VendingShapeStyle",
+                    "ShapeType" : "rectangle",
+                    "Top" : 0,
+                    "Type" : "shape",
+                    "UnfilledBackgroundStyle" : "DefaultShapeUnfilledBackgroundStyle",
+                    "Visible" : true,
+                    "Width" : 200,
+                    "Z-index" : 9,
+                    "__TypeDisplayName" : "Shape"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Alignment" : "center",
+                    "Area" : "UI",
+                    "DisplayName" : "Navigation-24",
+                    "FixedPopupHeight" : 0,
+                    "FixedPopupWidth" : 0,
+                    "Height" : 23,
+                    "Id" : "Navigation-24",
+                    "Left" : 5,
+                    "MashupName" : "VendingMachineProfile",
+                    "MashupParameters" : [ {
+                      "BaseType" : "THINGNAME",
+                      "Description" : "",
+                      "ParameterName" : "Entity",
+                      "ParmDef" : {
+                        "aspects" : {
+                          "ordinal" : "0"
+                        },
+                        "baseType" : "THINGNAME",
+                        "description" : "",
+                        "name" : "Entity",
+                        "ordinal" : 0
+                      }
+                    } ],
+                    "MessageToShow" : "Mashup must be selected",
+                    "ModalPopupOpacity" : 0.5,
+                    "NavigationActiveStyle" : "DefaultNavigationActiveStyle",
+                    "NavigationHoverStyle" : "DefaultNavigationHoverStyle",
+                    "PopupTitle" : "",
+                    "PopupTitleStyle" : "DefaultPopupTitleStyle",
+                    "ResponsiveLayout" : false,
+                    "RoundedCorners" : true,
+                    "ShowCloseButton" : true,
+                    "ShowMessageIfNoMashup" : false,
+                    "Style" : "VendingNavStyle",
+                    "TargetWindow" : "popup",
+                    "Text" : "View VM Profile",
+                    "Top" : 5,
+                    "Transparent" : false,
+                    "Type" : "navigation",
+                    "Visible" : true,
+                    "Width" : 190,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Navigation"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "CurrentTab" : 1,
+                    "DefaultTabAtRuntime" : 1,
+                    "DisplayName" : "Tabs-36",
+                    "Height" : 590,
+                    "Id" : "Tabs-36",
+                    "Left" : 205,
+                    "NumberOfTabs" : 4,
+                    "Orientation" : "Horizontal",
+                    "ResponsiveLayout" : false,
+                    "RoundedCorners" : false,
+                    "Tab10Image" : "",
+                    "Tab10Name" : "Tab10Name",
+                    "Tab10Value" : "Tab10Value",
+                    "Tab10Visible" : true,
+                    "Tab11Image" : "",
+                    "Tab11Name" : "Tab11Name",
+                    "Tab11Value" : "Tab11Value",
+                    "Tab11Visible" : true,
+                    "Tab12Image" : "",
+                    "Tab12Name" : "Tab12Name",
+                    "Tab12Value" : "Tab12Value",
+                    "Tab12Visible" : true,
+                    "Tab13Image" : "",
+                    "Tab13Name" : "Tab13Name",
+                    "Tab13Value" : "Tab13Value",
+                    "Tab13Visible" : true,
+                    "Tab14Image" : "",
+                    "Tab14Name" : "Tab14Name",
+                    "Tab14Value" : "Tab14Value",
+                    "Tab14Visible" : true,
+                    "Tab15Image" : "",
+                    "Tab15Name" : "Tab15Name",
+                    "Tab15Value" : "Tab15Value",
+                    "Tab15Visible" : true,
+                    "Tab16Image" : "",
+                    "Tab16Name" : "Tab16Name",
+                    "Tab16Value" : "Tab16Value",
+                    "Tab16Visible" : true,
+                    "Tab1Image" : "/Thingworx/MediaEntities/iconDashboard",
+                    "Tab1Name" : "Dashboard",
+                    "Tab1Value" : "Dashboard",
+                    "Tab1Visible" : true,
+                    "Tab2Image" : "/Thingworx/MediaEntities/iconMaintenance",
+                    "Tab2Name" : "Maintenance",
+                    "Tab2Value" : "Maintenance",
+                    "Tab2Visible" : true,
+                    "Tab3Image" : "/Thingworx/MediaEntities/iconOperations",
+                    "Tab3Name" : "Operations",
+                    "Tab3Value" : "Operations",
+                    "Tab3Visible" : true,
+                    "Tab4Image" : "/Thingworx/MediaEntities/iconSalesMarketing",
+                    "Tab4Name" : "Sales & Marketing",
+                    "Tab4Value" : "Sales & Marketing",
+                    "Tab4Visible" : true,
+                    "Tab5Image" : "",
+                    "Tab5Name" : "Tab5Name",
+                    "Tab5Value" : "Tab5Value",
+                    "Tab5Visible" : true,
+                    "Tab6Image" : "",
+                    "Tab6Name" : "Tab6Name",
+                    "Tab6Value" : "Tab6Value",
+                    "Tab6Visible" : true,
+                    "Tab7Image" : "",
+                    "Tab7Name" : "Tab7Name",
+                    "Tab7Value" : "Tab7Value",
+                    "Tab7Visible" : true,
+                    "Tab8Image" : "",
+                    "Tab8Name" : "Tab8Name",
+                    "Tab8Value" : "Tab8Value",
+                    "Tab8Visible" : true,
+                    "Tab9Image" : "",
+                    "Tab9Name" : "Tab9Name",
+                    "Tab9Value" : "Tab9Value",
+                    "Tab9Visible" : true,
+                    "TabContentStyle" : "VendingMasterStyle",
+                    "TabHeight" : 30,
+                    "TabSelectedStyle" : "VendingTabSelectedStyle",
+                    "TabSpacing" : 2,
+                    "TabUnselectedStyle" : "DefaultTabUnselectedStyle",
+                    "TabWidgetMap" : [ {
+                      "MashupContainer-15" : true
+                    }, {
+                      "MashupContainer-37" : true
+                    }, {
+                      "MashupContainer-38" : true
+                    }, {
+                      "MashupContainer-39" : true
+                    } ],
+                    "Top" : 0,
+                    "Type" : "tabs",
+                    "Visible" : true,
+                    "Width" : 820,
+                    "WidthOfTabAreaForVerticalTabs" : 150,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Tabs"
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "Height" : 559,
+                      "Id" : "MashupContainer-15",
+                      "Left" : 0,
+                      "MashupParameters" : [ {
+                        "BaseType" : "NUMBER",
+                        "Description" : "ZoomLevel",
+                        "ParameterName" : "Zoom",
+                        "ParmDef" : {
+                          "aspects" : {
+                            "ordinal" : "1"
+                          },
+                          "baseType" : "NUMBER",
+                          "description" : "ZoomLevel",
+                          "name" : "Zoom",
+                          "ordinal" : 0
+                        }
+                      }, {
+                        "BaseType" : "THINGNAME",
+                        "Description" : "ThingName",
+                        "ParameterName" : "Entity",
+                        "ParmDef" : {
+                          "aspects" : {
+                            "ordinal" : "0"
+                          },
+                          "baseType" : "THINGNAME",
+                          "description" : "ThingName",
+                          "name" : "Entity",
+                          "ordinal" : 0
+                        }
+                      } ],
+                      "Name" : "VendingDashboard",
+                      "ResponsiveLayout" : false,
+                      "Top" : 30,
+                      "Type" : "mashupcontainer",
+                      "Visible" : true,
+                      "Width" : 819,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Mashup Container"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "DisplayName" : "MashupContainer-37",
+                      "Height" : 558,
+                      "Id" : "MashupContainer-37",
+                      "Left" : 0,
+                      "MashupParameters" : [ {
+                        "BaseType" : "THINGNAME",
+                        "Description" : "",
+                        "ParameterName" : "Entity",
+                        "ParmDef" : {
+                          "aspects" : {
+                            "ordinal" : "0"
+                          },
+                          "baseType" : "THINGNAME",
+                          "description" : "",
+                          "name" : "Entity",
+                          "ordinal" : 0
+                        }
+                      } ],
+                      "Name" : "VendingMaintenance",
+                      "ResponsiveLayout" : false,
+                      "Top" : 30,
+                      "Type" : "mashupcontainer",
+                      "Visible" : true,
+                      "Width" : 817,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Mashup Container"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "DisplayName" : "MashupContainer-38",
+                      "Height" : 558,
+                      "Id" : "MashupContainer-38",
+                      "Left" : 0,
+                      "MashupParameters" : [ {
+                        "BaseType" : "THINGNAME",
+                        "Description" : "",
+                        "ParameterName" : "Entity",
+                        "ParmDef" : {
+                          "aspects" : {
+                            "ordinal" : "0"
+                          },
+                          "baseType" : "THINGNAME",
+                          "description" : "",
+                          "name" : "Entity",
+                          "ordinal" : 0
+                        }
+                      } ],
+                      "Name" : "VendingOperations",
+                      "ResponsiveLayout" : false,
+                      "Top" : 30,
+                      "Type" : "mashupcontainer",
+                      "Visible" : true,
+                      "Width" : 817,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Mashup Container"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "DisplayName" : "MashupContainer-39",
+                      "Height" : 558,
+                      "Id" : "MashupContainer-39",
+                      "Left" : 0,
+                      "MashupParameters" : [ {
+                        "BaseType" : "THINGNAME",
+                        "Description" : "",
+                        "ParameterName" : "Entity",
+                        "ParmDef" : {
+                          "aspects" : {
+                            "ordinal" : "0"
+                          },
+                          "baseType" : "THINGNAME",
+                          "description" : "",
+                          "name" : "Entity",
+                          "ordinal" : 0
+                        }
+                      } ],
+                      "Name" : "VendingSalesMarketing",
+                      "ResponsiveLayout" : false,
+                      "Top" : 30,
+                      "Type" : "mashupcontainer",
+                      "Visible" : true,
+                      "Width" : 817,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Mashup Container"
+                    },
+                    "Widgets" : [ ]
+                  } ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "Fieldset-40",
+                    "FieldsetLabelStyle" : "VendingNavStyle",
+                    "FieldsetStyle" : "VendingFieldsetStyle",
+                    "Height" : 208,
+                    "Id" : "Fieldset-40",
+                    "Left" : 5,
+                    "ResponsiveLayout" : false,
+                    "Title" : "Community Members",
+                    "Top" : 375,
+                    "Type" : "fieldset",
+                    "Visible" : true,
+                    "Width" : 189,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Fieldset"
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "AutoSelectFirstRow" : false,
+                      "CellTextWrapping" : false,
+                      "ColumnFormat" : {
+                        "formatInfo" : [ {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "FieldName" : "name",
+                          "FormatOptions" : {
+                            "FormatString" : "full",
+                            "formatInfo" : {
+                              "FieldName" : "",
+                              "StateDefinition" : "",
+                              "StateDefinitionType" : "fixed",
+                              "StateFormats" : [ {
+                                "state" : "",
+                                "stateName" : "fixed"
+                              } ]
+                            },
+                            "renderer" : "STRING"
+                          },
+                          "Title" : "Users",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto"
+                        } ]
+                      },
+                      "CurrentScrollTop" : 0,
+                      "DisplayName" : "Grid-44",
+                      "GridBackgroundStyle" : "DefaultGridBackgroundStyle",
+                      "GridEditableFieldStyle" : "DefaultGridEditableFieldStyle",
+                      "GridHeaderStyle" : "DefaultGridHeaderStyle",
+                      "GridInvalidFieldStyle" : "DefaultGridInvalidFieldStyle",
+                      "Height" : 190,
+                      "Id" : "Grid-44",
+                      "IsEditable" : false,
+                      "IsPrintLayout" : false,
+                      "Left" : 0,
+                      "MultiSelect" : false,
+                      "ResponsiveLayout" : false,
+                      "RowAlternateBackgroundStyle" : "DefaultRowAlternateBackgroundStyle",
+                      "RowBackgroundStyle" : "DefaultRowBackgroundStyle",
+                      "RowFormat_StateParameters" : [ ],
+                      "RowHeight" : 30,
+                      "RowHoverStyle" : "DefaultRowHoverStyle",
+                      "RowSelectedStyle" : "DefaultRowSelectedStyle",
+                      "ScrollTop" : 0,
+                      "ShowAllColumns" : false,
+                      "Top" : 15,
+                      "Type" : "dhxgrid",
+                      "Visible" : true,
+                      "Width" : 185,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Grid"
+                    },
+                    "Widgets" : [ ]
+                  } ]
+                } ]
+              },
+              "mashupType" : "page"
+            }
+            ]]>
+            </mashupContent>
+        </Mashup>
+    </Mashups>
+</Entities>

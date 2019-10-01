@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <DataTags>
+        <DataTagVocabulary
+         description=""
+         documentationContent=""
+         homeMashup=""
+         isDynamic="true"
+         lastModifiedDate="2019-10-01T12:11:07.711Z"
+         name="EquiptmentStatusCodes"
+         projectName=""
+         tags="Applications:AcmeVending">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <VocabularyTerm
+             description=""
+             name="Bill Sensor Fault"></VocabularyTerm>
+            <VocabularyTerm
+             description=""
+             name="Comm Error"></VocabularyTerm>
+            <VocabularyTerm
+             description=""
+             name="Dispenser Blockage"></VocabularyTerm>
+            <VocabularyTerm
+             description=""
+             name="Money Collector Full"></VocabularyTerm>
+            <VocabularyTerm
+             description=""
+             name="NFC Detector Fault"></VocabularyTerm>
+            <VocabularyTerm
+             description=""
+             name="Needs Replenishment"></VocabularyTerm>
+            <VocabularyTerm
+             description=""
+             name="Normal"></VocabularyTerm>
+            <VocabularyTerm
+             description=""
+             name="Out Of Service"></VocabularyTerm>
+            <VocabularyTerm
+             description=""
+             name="Refrigeration Fault"></VocabularyTerm>
+        </DataTagVocabulary>
+    </DataTags>
+</Entities>

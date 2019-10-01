@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <Mashups>
+        <Mashup
+         aspect.mashupType="page"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-10-01T12:11:12.712Z"
+         name="VendingProvisionDTEditor"
+         projectName=""
+         rows="0.0"
+         tags="Applications:AcmeVending">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ParameterDefinitions>
+                <FieldDefinition
+                 aspect.dataShape="ProvisioningDS"
+                 aspect.ordinal="0"
+                 baseType="INFOTABLE"
+                 description=""
+                 name="ProvData"
+                 ordinal="0"></FieldDefinition>
+            </ParameterDefinitions>
+            <Things>
+                <Thing>ProvisioningDT</Thing>
+            </Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "Data" : {
+                "Things_ProvisioningDT" : {
+                  "DataName" : "Things_ProvisioningDT",
+                  "EntityName" : "ProvisioningDT",
+                  "EntityType" : "Things",
+                  "Id" : "421328892869725",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "311328892869730",
+                    "Name" : "AddDataTableEntry",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "AddDataTableEntry"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "271328892869747",
+                    "Name" : "GetDataTableEntries",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetDataTableEntries"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "221328892869783",
+                    "Name" : "UpdateDataTableEntry",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "UpdateDataTableEntry"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "531328892874551",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetDataTableEntries",
+                "SourceSection" : "Things_ProvisioningDT",
+                "TargetArea" : "UI",
+                "TargetId" : "Grid-1",
+                "TargetSection" : ""
+              }, {
+                "Id" : "671328893897072",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "AssetID",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetDataTableEntries",
+                "SourceSection" : "Things_ProvisioningDT",
+                "TargetArea" : "UI",
+                "TargetId" : "Textbox-3",
+                "TargetSection" : ""
+              }, {
+                "Id" : "541328893900806",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "ESN",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetDataTableEntries",
+                "SourceSection" : "Things_ProvisioningDT",
+                "TargetArea" : "UI",
+                "TargetId" : "Textbox-9",
+                "TargetSection" : ""
+              }, {
+                "Id" : "371328893905160",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "MEID",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetDataTableEntries",
+                "SourceSection" : "Things_ProvisioningDT",
+                "TargetArea" : "UI",
+                "TargetId" : "Textbox-14",
+                "TargetSection" : ""
+              }, {
+                "Id" : "891328893908136",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Name",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetDataTableEntries",
+                "SourceSection" : "Things_ProvisioningDT",
+                "TargetArea" : "UI",
+                "TargetId" : "Textbox-4",
+                "TargetSection" : ""
+              }, {
+                "Id" : "541328893910566",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Serial_No",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetDataTableEntries",
+                "SourceSection" : "Things_ProvisioningDT",
+                "TargetArea" : "UI",
+                "TargetId" : "Textbox-7",
+                "TargetSection" : ""
+              }, {
+                "Id" : "621328893913530",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Vendor",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetDataTableEntries",
+                "SourceSection" : "Things_ProvisioningDT",
+                "TargetArea" : "UI",
+                "TargetId" : "Textbox-8",
+                "TargetSection" : ""
+              }, {
+                "Id" : "911328893921376",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "location",
+                  "SourcePropertyBaseType" : "LOCATION",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Location",
+                  "TargetPropertyBaseType" : "LOCATION",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetDataTableEntries",
+                "SourceSection" : "Things_ProvisioningDT",
+                "TargetArea" : "UI",
+                "TargetId" : "GoogleLocationPicker-15",
+                "TargetSection" : ""
+              }, {
+                "Id" : "771328894218941",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "ProvData",
+                  "SourcePropertyBaseType" : "",
+                  "TargetProperty" : "values",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceDetails" : "AllData",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "UpdateDataTableEntry",
+                "TargetSection" : "Things_ProvisioningDT"
+              }, {
+                "Id" : "321328894237329",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "ProvData",
+                  "SourcePropertyBaseType" : "",
+                  "TargetProperty" : "values",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceDetails" : "AllData",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "AddDataTableEntry",
+                "TargetSection" : "Things_ProvisioningDT"
+              }, {
+                "Id" : "771328894296962",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetDetails" : "AllData",
+                  "TargetProperty" : "ProvData",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property",
+                  "TargetSubProperty" : "AssetID"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "Textbox-3",
+                "SourceSection" : "",
+                "TargetArea" : "Mashup",
+                "TargetId" : "mashup-root",
+                "TargetSection" : ""
+              }, {
+                "Id" : "561328894302890",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetDetails" : "AllData",
+                  "TargetProperty" : "ProvData",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property",
+                  "TargetSubProperty" : "Name"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "Textbox-4",
+                "SourceSection" : "",
+                "TargetArea" : "Mashup",
+                "TargetId" : "mashup-root",
+                "TargetSection" : ""
+              }, {
+                "Id" : "301328894310691",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetDetails" : "AllData",
+                  "TargetProperty" : "ProvData",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property",
+                  "TargetSubProperty" : "Serial_No"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "Textbox-7",
+                "SourceSection" : "",
+                "TargetArea" : "Mashup",
+                "TargetId" : "mashup-root",
+                "TargetSection" : ""
+              }, {
+                "Id" : "71328894315577",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetDetails" : "AllData",
+                  "TargetProperty" : "ProvData",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property",
+                  "TargetSubProperty" : "Vendor"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "Textbox-8",
+                "SourceSection" : "",
+                "TargetArea" : "Mashup",
+                "TargetId" : "mashup-root",
+                "TargetSection" : ""
+              }, {
+                "Id" : "371328894319936",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetDetails" : "AllData",
+                  "TargetProperty" : "ProvData",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property",
+                  "TargetSubProperty" : "ESN"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "Textbox-9",
+                "SourceSection" : "",
+                "TargetArea" : "Mashup",
+                "TargetId" : "mashup-root",
+                "TargetSection" : ""
+              }, {
+                "Id" : "861328894323724",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetDetails" : "AllData",
+                  "TargetProperty" : "ProvData",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property",
+                  "TargetSubProperty" : "MEID"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "Textbox-14",
+                "SourceSection" : "",
+                "TargetArea" : "Mashup",
+                "TargetId" : "mashup-root",
+                "TargetSection" : ""
+              }, {
+                "Id" : "311328894364776",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Location",
+                  "SourcePropertyBaseType" : "LOCATION",
+                  "TargetProperty" : "location",
+                  "TargetPropertyBaseType" : "LOCATION",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "GoogleLocationPicker-15",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "UpdateDataTableEntry",
+                "TargetSection" : "Things_ProvisioningDT"
+              }, {
+                "Id" : "691328894721735",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Location",
+                  "SourcePropertyBaseType" : "LOCATION",
+                  "TargetProperty" : "location",
+                  "TargetPropertyBaseType" : "LOCATION",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "GoogleLocationPicker-15",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "AddDataTableEntry",
+                "TargetSection" : "Things_ProvisioningDT"
+              } ],
+              "Events" : [ {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_ProvisioningDT",
+                "EventHandlerService" : "GetDataTableEntries",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "621328893875214"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_ProvisioningDT",
+                "EventHandlerService" : "AddDataTableEntry",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "Clicked",
+                "EventTriggerId" : "Button-16",
+                "EventTriggerSection" : "",
+                "Id" : "331328894452536"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_ProvisioningDT",
+                "EventHandlerService" : "UpdateDataTableEntry",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "Clicked",
+                "EventTriggerId" : "Button-17",
+                "EventTriggerSection" : "",
+                "Id" : "671328894456680"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_ProvisioningDT",
+                "EventHandlerService" : "GetDataTableEntries",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "ServiceInvokeCompleted",
+                "EventTriggerId" : "UpdateDataTableEntry",
+                "EventTriggerSection" : "Things_ProvisioningDT",
+                "Id" : "941328894462868"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_ProvisioningDT",
+                "EventHandlerService" : "GetDataTableEntries",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "ServiceInvokeCompleted",
+                "EventTriggerId" : "AddDataTableEntry",
+                "EventTriggerSection" : "Things_ProvisioningDT",
+                "Id" : "481328894467834"
+              } ],
+              "UI" : {
+                "Properties" : {
+                  "Area" : "Mashup",
+                  "Height" : 618,
+                  "Id" : "mashup-root",
+                  "Left" : 0,
+                  "Tags" : [ {
+                    "vocabulary" : "Applications",
+                    "vocabularyTerm" : "AcmeVending"
+                  } ],
+                  "Top" : 0,
+                  "Type" : "mashup",
+                  "Width" : 1024,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Mashup",
+                  "_currentParameterDefs" : [ {
+                    "Aspects" : {
+                      "dataShape" : "ProvisioningDS"
+                    },
+                    "BaseType" : "INFOTABLE",
+                    "Description" : "",
+                    "ParameterName" : "ProvData"
+                  } ],
+                  "id_index" : 17
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "AutoSelectFirstRow" : false,
+                    "ColumnFormat" : {
+                      "formatInfo" : [ {
+                        "Align" : "left",
+                        "FieldName" : "AssetID",
+                        "FormatOptions" : {
+                          "FormatString" : "full",
+                          "formatInfo" : {
+                            "FieldName" : "",
+                            "StateDefinition" : "",
+                            "StateDefinitionType" : "fixed",
+                            "StateFormats" : [ {
+                              "state" : "",
+                              "stateName" : "fixed"
+                            } ]
+                          },
+                          "renderer" : "STRING"
+                        },
+                        "Title" : "AssetID",
+                        "Width" : "auto"
+                      }, {
+                        "Align" : "left",
+                        "FieldName" : "Name",
+                        "FormatOptions" : {
+                          "FormatString" : "full",
+                          "formatInfo" : {
+                            "FieldName" : "",
+                            "StateDefinition" : "",
+                            "StateDefinitionType" : "fixed",
+                            "StateFormats" : [ {
+                              "state" : "",
+                              "stateName" : "fixed"
+                            } ]
+                          },
+                          "renderer" : "STRING"
+                        },
+                        "Title" : "Name",
+                        "Width" : "auto"
+                      }, {
+                        "Align" : "left",
+                        "FieldName" : "Serial_No",
+                        "FormatOptions" : {
+                          "FormatString" : "full",
+                          "renderer" : "STRING"
+                        },
+                        "Title" : "Serial_No",
+                        "Width" : "auto"
+                      }, {
+                        "Align" : "left",
+                        "FieldName" : "Vendor",
+                        "FormatOptions" : {
+                          "FormatString" : "full",
+                          "renderer" : "STRING"
+                        },
+                        "Title" : "Vendor",
+                        "Width" : "auto"
+                      }, {
+                        "Align" : "left",
+                        "FieldName" : "ESN",
+                        "FormatOptions" : {
+                          "FormatString" : "full",
+                          "renderer" : "STRING"
+                        },
+                        "Title" : "ESN",
+                        "Width" : "auto"
+                      }, {
+                        "Align" : "left",
+                        "FieldName" : "MEID",
+                        "FormatOptions" : {
+                          "FormatString" : "full",
+                          "renderer" : "STRING"
+                        },
+                        "Title" : "MEID",
+                        "Width" : "auto"
+                      }, {
+                        "Align" : "left",
+                        "FieldName" : "location",
+                        "FormatOptions" : {
+                          "FormatString" : "0.0000",
+                          "formatInfo" : {
+                            "FieldName" : "",
+                            "StateDefinition" : "",
+                            "StateDefinitionType" : "fixed",
+                            "StateFormats" : [ {
+                              "state" : "",
+                              "stateName" : "fixed"
+                            } ]
+                          },
+                          "renderer" : "LOCATION"
+                        },
+                        "Title" : "location",
+                        "Width" : "auto"
+                      } ]
+                    },
+                    "Height" : 250,
+                    "Id" : "Grid-1",
+                    "Left" : 310,
+                    "MultiSelect" : false,
+                    "RowHeight" : 30,
+                    "ShowAllColumns" : false,
+                    "Top" : 5,
+                    "Type" : "dhxgrid",
+                    "Width" : 595,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Grid"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Alignment" : "right",
+                    "Area" : "UI",
+                    "Height" : 22,
+                    "Id" : "Label-2",
+                    "Left" : 10,
+                    "Text" : "Asset ID:",
+                    "Top" : 10,
+                    "Type" : "label",
+                    "Width" : 75,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Label"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Height" : 24,
+                    "Id" : "Textbox-3",
+                    "Label" : "",
+                    "Left" : 95,
+                    "Text" : "",
+                    "Top" : 5,
+                    "Type" : "textbox",
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Textbox",
+                    "__supportsLabel" : true
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Height" : 24,
+                    "Id" : "Textbox-4",
+                    "Label" : "",
+                    "Left" : 95,
+                    "Text" : "",
+                    "Top" : 35,
+                    "Type" : "textbox",
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Textbox",
+                    "__supportsLabel" : true
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Alignment" : "right",
+                    "Area" : "UI",
+                    "Height" : 22,
+                    "Id" : "Label-5",
+                    "Left" : 10,
+                    "Text" : "Name:",
+                    "Top" : 40,
+                    "Type" : "label",
+                    "Width" : 75,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Label"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Alignment" : "right",
+                    "Area" : "UI",
+                    "Height" : 22,
+                    "Id" : "Label-6",
+                    "Left" : 10,
+                    "Text" : "Serial No:",
+                    "Top" : 70,
+                    "Type" : "label",
+                    "Width" : 75,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Label"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Height" : 24,
+                    "Id" : "Textbox-7",
+                    "Label" : "",
+                    "Left" : 95,
+                    "Text" : "",
+                    "Top" : 65,
+                    "Type" : "textbox",
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Textbox",
+                    "__supportsLabel" : true
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Height" : 24,
+                    "Id" : "Textbox-8",
+                    "Label" : "",
+                    "Left" : 95,
+                    "Text" : "",
+                    "Top" : 95,
+                    "Type" : "textbox",
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Textbox",
+                    "__supportsLabel" : true
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Height" : 24,
+                    "Id" : "Textbox-9",
+                    "Label" : "",
+                    "Left" : 95,
+                    "Text" : "",
+                    "Top" : 125,
+                    "Type" : "textbox",
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Textbox",
+                    "__supportsLabel" : true
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Alignment" : "right",
+                    "Area" : "UI",
+                    "Height" : 22,
+                    "Id" : "Label-10",
+                    "Left" : 10,
+                    "Text" : "Vendor:",
+                    "Top" : 100,
+                    "Type" : "label",
+                    "Width" : 75,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Label"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Alignment" : "right",
+                    "Area" : "UI",
+                    "Height" : 22,
+                    "Id" : "Label-11",
+                    "Left" : 10,
+                    "Text" : "ESN:",
+                    "Top" : 130,
+                    "Type" : "label",
+                    "Width" : 75,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Label"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Alignment" : "right",
+                    "Area" : "UI",
+                    "Height" : 22,
+                    "Id" : "Label-12",
+                    "Left" : 10,
+                    "Text" : "MEID:",
+                    "Top" : 160,
+                    "Type" : "label",
+                    "Width" : 75,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Label"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Alignment" : "right",
+                    "Area" : "UI",
+                    "Height" : 22,
+                    "Id" : "Label-13",
+                    "Left" : 10,
+                    "Text" : "Location:",
+                    "Top" : 190,
+                    "Type" : "label",
+                    "Width" : 75,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Label"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Height" : 24,
+                    "Id" : "Textbox-14",
+                    "Label" : "",
+                    "Left" : 95,
+                    "Text" : "",
+                    "Top" : 155,
+                    "Type" : "textbox",
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Textbox",
+                    "__supportsLabel" : true
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Elevation" : 0,
+                    "Height" : 130,
+                    "Id" : "GoogleLocationPicker-15",
+                    "Left" : 95,
+                    "MapHeight" : 400,
+                    "MapWidth" : 600,
+                    "ReadOnly" : false,
+                    "ShowElevation" : false,
+                    "ShowUnits" : false,
+                    "Top" : 185,
+                    "Type" : "googlelocation",
+                    "Units" : "WGS84",
+                    "UseMap" : true,
+                    "Width" : 175,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Google Location Picker"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "CancelConfirmationButton" : "button2",
+                    "ConfirmationButton1Label" : "Yes",
+                    "ConfirmationButton2Label" : "No",
+                    "ConfirmationPrompt" : "Do Action?",
+                    "ConfirmationRequired" : false,
+                    "ConfirmationTitle" : "Confirm Action",
+                    "DefaultConfirmationButton" : "button1",
+                    "Height" : 30,
+                    "Id" : "Button-16",
+                    "Label" : "Add Entry",
+                    "Left" : 390,
+                    "Top" : 270,
+                    "Type" : "button",
+                    "Width" : 150,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Button"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "CancelConfirmationButton" : "button2",
+                    "ConfirmationButton1Label" : "Yes",
+                    "ConfirmationButton2Label" : "No",
+                    "ConfirmationPrompt" : "Do Action?",
+                    "ConfirmationRequired" : false,
+                    "ConfirmationTitle" : "Confirm Action",
+                    "DefaultConfirmationButton" : "button1",
+                    "Height" : 30,
+                    "Id" : "Button-17",
+                    "Label" : "Update Entry",
+                    "Left" : 580,
+                    "Top" : 270,
+                    "Type" : "button",
+                    "Width" : 150,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Button"
+                  },
+                  "Widgets" : [ ]
+                } ]
+              },
+              "mashupType" : "page"
+            }
+            ]]>
+            </mashupContent>
+        </Mashup>
+    </Mashups>
+</Entities>

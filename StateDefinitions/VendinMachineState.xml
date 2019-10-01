@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <StateDefinitions>
+        <StateDefinition
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-10-01T12:11:07.945Z"
+         name="VendinMachineState"
+         projectName=""
+         tags="Applications:AcmeVending">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <content>
+            <![CDATA[
+            {
+              "stateDefinitions" : [ {
+                "comparator" : "<",
+                "defaultStyleDefinition" : "AcmeOrderPaused",
+                "defaultValue" : 10,
+                "description" : "",
+                "displayString" : "NotProvisioned",
+                "name" : "NotProvisioned"
+              }, {
+                "comparator" : "<",
+                "defaultStyleDefinition" : "AcmeOrderRunning",
+                "defaultValue" : 100,
+                "description" : "",
+                "displayString" : "NormalService",
+                "name" : "NormalService"
+              }, {
+                "comparator" : "<",
+                "defaultStyleDefinition" : "AcmeOrderNew",
+                "defaultValue" : 1000,
+                "description" : "",
+                "displayString" : "OutOfService",
+                "name" : "OutOfService"
+              }, {
+                "defaultStyleDefinition" : "AcmePageTitle",
+                "description" : "",
+                "displayString" : "CloneMaster",
+                "name" : "CloneMaster"
+              } ],
+              "stateType" : "numeric"
+            }
+            ]]>
+            </content>
+        </StateDefinition>
+    </StateDefinitions>
+</Entities>

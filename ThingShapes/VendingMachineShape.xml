@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <ThingShapes>
+        <ThingShape
+         className=""
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-10-01T12:11:07.812Z"
+         name="VendingMachineShape"
+         projectName=""
+         tags="Applications:ThingWorxTraining">
+            <PropertyDefinitions>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isPersistent="false"
+                 aspect.units="%"
+                 baseType="NUMBER"
+                 category=""
+                 description="Vending Machine Current Humidity "
+                 isLocalOnly="false"
+                 name="CurrentHumidity"
+                 ordinal="2"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.dataChangeType="VALUE"
+                 aspect.isPersistent="true"
+                 baseType="USERNAME"
+                 category=""
+                 description="Vending Machine Field Service Technician "
+                 isLocalOnly="false"
+                 name="FieldServiceTech"
+                 ordinal="6"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.dataChangeType="VALUE"
+                 aspect.isPersistent="true"
+                 aspect.units="%"
+                 baseType="NUMBER"
+                 category=""
+                 description="Vending Machine Humidity Setpoint "
+                 isLocalOnly="false"
+                 name="VMHumiditySetpoint"
+                 ordinal="3"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.dataChangeType="VALUE"
+                 aspect.units="F"
+                 baseType="NUMBER"
+                 category=""
+                 description="Vending Machine Temperature"
+                 isLocalOnly="false"
+                 name="CurrentTemperature"
+                 ordinal="4"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.dataChangeType="VALUE"
+                 aspect.defaultValue="-20.0"
+                 aspect.isPersistent="true"
+                 aspect.units="F"
+                 baseType="NUMBER"
+                 category=""
+                 description="Vending Machine Temperature Min "
+                 isLocalOnly="false"
+                 name="VMTempMin"
+                 ordinal="9"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.dataChangeType="VALUE"
+                 aspect.defaultValue="135.0"
+                 aspect.isPersistent="true"
+                 aspect.units="F"
+                 baseType="NUMBER"
+                 category=""
+                 description="Vending Machine Temperature Max "
+                 isLocalOnly="false"
+                 name="VMTempMax"
+                 ordinal="8"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.dataChangeType="VALUE"
+                 aspect.isPersistent="true"
+                 aspect.units="F"
+                 baseType="NUMBER"
+                 category=""
+                 description="Vending Machine Temperature Setpoint "
+                 isLocalOnly="false"
+                 name="VMTemperatureSetpoint"
+                 ordinal="5"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.dataChangeType="VALUE"
+                 aspect.isPersistent="true"
+                 baseType="LOCATION"
+                 category=""
+                 description="Vending Machine Location "
+                 isLocalOnly="false"
+                 name="Location"
+                 ordinal="7"></PropertyDefinition>
+            </PropertyDefinitions>
+            <ServiceDefinitions></ServiceDefinitions>
+            <EventDefinitions></EventDefinitions>
+            <ServiceMappings></ServiceMappings>
+            <ServiceImplementations></ServiceImplementations>
+            <Subscriptions>
+                <Subscription
+                 enabled="true"
+                 eventName="Alert"
+                 source=""
+                 sourceProperty="CurrentHumidity"
+                 sourceType="Thing">
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="Event.Alert:Property.CurrentHumidity">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var params = {
+                                        	cc: undefined /* STRING */,
+                                        	bcc: undefined /* STRING */,
+                                        	subject: "Humidity" /* STRING */,
+                                        	from: "ksmbasha@axelta.com" /* STRING */,
+                                        	to: "ksmbasha@axelta.com" /* STRING */,
+                                        	body: "Humidity is high" /* HTML */
+                                        };
+                                        
+                                        // no return
+                                        Things["ACMEVendingNotifier"].SendMessage(params);
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </Subscription>
+                <Subscription
+                 enabled="true"
+                 eventName="Alert"
+                 source=""
+                 sourceProperty="CurrentTemperature"
+                 sourceType="Thing">
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="Event.Alert:Property.CurrentTemperature">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var params = {
+                                        subject: "HighHigh alert triggered",
+                                        from: "ksmbasha@axelta.com",
+                                        to: "ksmbasha@axelta.com",
+                                        body: "The temperature is too high"
+                                        };
+                                        // no return
+                                        Things["ACMEVendingNotifier"].SendMessage(params);
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </Subscription>
+            </Subscriptions>
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations>
+                <AlertDefinitions
+                 name="CurrentHumidity">
+                    <AlertDefinition
+                     alertType="Above"
+                     description="Humidity"
+                     enabled="true"
+                     name="HumidityHigh"
+                     priority="1">
+                        <AlertAttributes>
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     aspect.friendlyName="Limit"
+                                     aspect.isRequired="true"
+                                     baseType="NUMBER"
+                                     description="Limit to compare"
+                                     name="limit"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.defaultValue="true"
+                                     aspect.friendlyName="Include Limit?"
+                                     aspect.isRequired="false"
+                                     baseType="BOOLEAN"
+                                     description="Limit includes value"
+                                     name="limitInclusive"
+                                     ordinal="1"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <limit>80.0</limit>
+                                    <limitInclusive>true</limitInclusive>
+                                </Row>
+                            </Rows>
+                        </AlertAttributes>
+                    </AlertDefinition>
+                </AlertDefinitions>
+                <AlertDefinitions
+                 name="CurrentTemperature">
+                    <AlertDefinition
+                     alertType="Above"
+                     description="Temperature High High Alert "
+                     enabled="true"
+                     name="HighTemp"
+                     priority="1">
+                        <AlertAttributes>
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     aspect.friendlyName="Limit"
+                                     aspect.isRequired="true"
+                                     baseType="NUMBER"
+                                     description="Limit to compare"
+                                     name="limit"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.defaultValue="true"
+                                     aspect.friendlyName="Include Limit?"
+                                     aspect.isRequired="false"
+                                     baseType="BOOLEAN"
+                                     description="Limit includes value"
+                                     name="limitInclusive"
+                                     ordinal="1"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <limit>155.0</limit>
+                                    <limitInclusive>true</limitInclusive>
+                                </Row>
+                            </Rows>
+                        </AlertAttributes>
+                    </AlertDefinition>
+                </AlertDefinitions>
+                <AlertDefinitions
+                 name="FieldServiceTech"></AlertDefinitions>
+                <AlertDefinitions
+                 name="Location"></AlertDefinitions>
+                <AlertDefinitions
+                 name="VMHumiditySetpoint"></AlertDefinitions>
+                <AlertDefinitions
+                 name="VMTemperatureSetpoint"></AlertDefinitions>
+                <AlertDefinitions
+                 name="VMTempMax"></AlertDefinitions>
+                <AlertDefinitions
+                 name="VMTempMin"></AlertDefinitions>
+            </AlertConfigurations>
+            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+        </ThingShape>
+    </ThingShapes>
+</Entities>

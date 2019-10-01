@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <Mashups>
+        <Mashup
+         aspect.mashupType="target"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-10-01T12:11:12.795Z"
+         name="VZW_Vending"
+         projectName=""
+         rows="0.0"
+         tags="Applications:AcmeVending">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ParameterDefinitions></ParameterDefinitions>
+            <Things></Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "Data" : { },
+              "DataBindings" : [ ],
+              "Events" : [ ],
+              "UI" : {
+                "Properties" : {
+                  "Area" : "Mashup",
+                  "Height" : 648,
+                  "Id" : "mashup-root",
+                  "Left" : 0,
+                  "Tags" : [ {
+                    "vocabulary" : "Applications",
+                    "vocabularyTerm" : "AcmeVending"
+                  } ],
+                  "Top" : 0,
+                  "Type" : "targetmashup",
+                  "Width" : 1024,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Target Mashup",
+                  "id_index" : 11
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Height" : 563,
+                    "Id" : "pagemashupcontainer-1",
+                    "Left" : 0,
+                    "Name" : "",
+                    "Top" : 85,
+                    "Type" : "pagemashupcontainer",
+                    "Width" : 1024,
+                    "Z-index" : 1,
+                    "__TypeDisplayName" : "Page Mashup Container"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "AlternateText" : "",
+                    "Area" : "UI",
+                    "Height" : 84,
+                    "Id" : "Image-4",
+                    "Left" : 0,
+                    "SourceURL" : "/Thingworx/MediaEntities/banner",
+                    "Top" : 0,
+                    "Type" : "image",
+                    "Width" : 1024,
+                    "Z-index" : 1,
+                    "__TypeDisplayName" : "Image"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "AlternateText" : "",
+                    "Area" : "UI",
+                    "Height" : 64,
+                    "Id" : "Image-5",
+                    "Left" : 10,
+                    "SourceURL" : "/Thingworx/MediaEntities/VZWLogo",
+                    "Top" : 10,
+                    "Type" : "image",
+                    "Width" : 175,
+                    "Z-index" : 2,
+                    "__TypeDisplayName" : "Image"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "AlternateText" : "",
+                    "Area" : "UI",
+                    "Height" : 57,
+                    "Id" : "Image-7",
+                    "Left" : 405,
+                    "SourceURL" : "/Thingworx/MediaEntities/AcmeBGBeverage",
+                    "Top" : 15,
+                    "Type" : "image",
+                    "Width" : 234,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Image"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Height" : 25,
+                    "Id" : "Chat-11",
+                    "Left" : 805,
+                    "Top" : 30,
+                    "Type" : "chat",
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Chat"
+                  },
+                  "Widgets" : [ ]
+                } ]
+              },
+              "mashupType" : "target"
+            }
+            ]]>
+            </mashupContent>
+        </Mashup>
+    </Mashups>
+</Entities>

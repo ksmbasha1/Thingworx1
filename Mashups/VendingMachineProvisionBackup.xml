@@ -1,0 +1,1601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <Mashups>
+        <Mashup
+         aspect.mashupType="page"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-10-01T12:11:13.138Z"
+         name="VendingMachineProvisionBackup"
+         projectName=""
+         rows="0.0"
+         tags="Applications:AcmeVending">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ParameterDefinitions></ParameterDefinitions>
+            <Things>
+                <Thing>VendingNetworkServices</Thing>
+            </Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "Data" : {
+                "DataTags_Products" : {
+                  "DataName" : "DataTags_Products",
+                  "EntityName" : "Products",
+                  "EntityType" : "DataTags",
+                  "Id" : "101328812959025",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "881328813158601",
+                    "Name" : "GetVocabularyTerms",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetVocabularyTerms"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "301328814909706",
+                    "Name" : "GetVocabularyTerms1",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetVocabularyTerms"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "211328814937271",
+                    "Name" : "GetVocabularyTerms11",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetVocabularyTerms"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "221328814945060",
+                    "Name" : "GetVocabularyTerms111",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetVocabularyTerms"
+                  } ]
+                },
+                "DynamicThingTemplates_VMTemplateVerySmart" : {
+                  "DataName" : "DynamicThingTemplates_VMTemplateVerySmart",
+                  "EntityName" : "VMTemplateVerySmart",
+                  "EntityType" : "DynamicThingTemplates",
+                  "Id" : "861320972582618",
+                  "Services" : [ {
+                    "APIMethod" : "get",
+                    "Characteristic" : "Services",
+                    "Id" : "351320972582626",
+                    "Name" : "GetProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetProperties"
+                  } ]
+                },
+                "Session" : {
+                  "DataName" : "Session",
+                  "EntityName" : "",
+                  "EntityType" : "Session",
+                  "Id" : "session",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "SessionInterface",
+                    "Name" : "GetGlobalSessionValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGlobalSessionValues"
+                  } ]
+                },
+                "Things_VendingNetworkServices" : {
+                  "DataName" : "Things_VendingNetworkServices",
+                  "EntityName" : "VendingNetworkServices",
+                  "EntityType" : "Things",
+                  "Id" : "791328814691967",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "191328814691976",
+                    "Name" : "GetNewMachines",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetNewMachines"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "31328819300470",
+                    "Name" : "ProvisionMachine",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "ProvisionMachine"
+                  } ]
+                },
+                "UserExtensions" : {
+                  "DataName" : "UserExtensions",
+                  "EntityName" : "",
+                  "EntityType" : "UserExtensions",
+                  "Id" : "UserExtensions",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "UserExtensionInterface",
+                    "Name" : "GetCurrentUserExtensionProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetCurrentUserExtensionProperties"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "121328644914363",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "name",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "ANYSCALAR",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetProperties",
+                "SourceSection" : "DynamicThingTemplates_VMTemplateVerySmart",
+                "TargetArea" : "UI",
+                "TargetId" : "ValueDisplay-31",
+                "TargetSection" : ""
+              }, {
+                "Id" : "391328644925498",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "InService",
+                  "SourcePropertyBaseType" : "BOOLEAN",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "ANYSCALAR",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetProperties",
+                "SourceSection" : "DynamicThingTemplates_VMTemplateVerySmart",
+                "TargetArea" : "UI",
+                "TargetId" : "ValueDisplay-32",
+                "TargetSection" : ""
+              }, {
+                "Id" : "111328811767781",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "AssetId",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "ANYSCALAR",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetProperties",
+                "SourceSection" : "DynamicThingTemplates_VMTemplateVerySmart",
+                "TargetArea" : "UI",
+                "TargetId" : "ValueDisplay-76",
+                "TargetSection" : ""
+              }, {
+                "Id" : "201328811775626",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "ESN",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "ANYSCALAR",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetProperties",
+                "SourceSection" : "DynamicThingTemplates_VMTemplateVerySmart",
+                "TargetArea" : "UI",
+                "TargetId" : "ValueDisplay-77",
+                "TargetSection" : ""
+              }, {
+                "Id" : "911328811838341",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "MEID",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "ANYSCALAR",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetProperties",
+                "SourceSection" : "DynamicThingTemplates_VMTemplateVerySmart",
+                "TargetArea" : "UI",
+                "TargetId" : "ValueDisplay-81",
+                "TargetSection" : ""
+              }, {
+                "Id" : "511328813169183",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetVocabularyTerms",
+                "SourceSection" : "DataTags_Products",
+                "TargetArea" : "UI",
+                "TargetId" : "List-86",
+                "TargetSection" : ""
+              }, {
+                "Id" : "821328814709936",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetNewMachines",
+                "SourceSection" : "Things_VendingNetworkServices",
+                "TargetArea" : "UI",
+                "TargetId" : "List-35",
+                "TargetSection" : ""
+              }, {
+                "Id" : "581328814740825",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "name",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "value",
+                  "TargetPropertyBaseType" : "THINGNAME",
+                  "TargetPropertyType" : "Entity"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetNewMachines",
+                "SourceSection" : "Things_VendingNetworkServices",
+                "TargetArea" : "Data",
+                "TargetId" : "EntityName",
+                "TargetSection" : "DynamicThingTemplates_VMTemplateVerySmart"
+              }, {
+                "Id" : "801328814923038",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetVocabularyTerms1",
+                "SourceSection" : "DataTags_Products",
+                "TargetArea" : "UI",
+                "TargetId" : "List-87",
+                "TargetSection" : ""
+              }, {
+                "Id" : "461328814950848",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetVocabularyTerms11",
+                "SourceSection" : "DataTags_Products",
+                "TargetArea" : "UI",
+                "TargetId" : "List-88",
+                "TargetSection" : ""
+              }, {
+                "Id" : "141328814957000",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetVocabularyTerms111",
+                "SourceSection" : "DataTags_Products",
+                "TargetArea" : "UI",
+                "TargetId" : "List-89",
+                "TargetSection" : ""
+              }, {
+                "Id" : "461328819340710",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "ESN",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetProperties",
+                "SourceSection" : "DynamicThingTemplates_VMTemplateVerySmart",
+                "TargetArea" : "UI",
+                "TargetId" : "Textbox-97",
+                "TargetSection" : ""
+              }, {
+                "Id" : "31328819348937",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "AssetId",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetProperties",
+                "SourceSection" : "DynamicThingTemplates_VMTemplateVerySmart",
+                "TargetArea" : "UI",
+                "TargetId" : "Textbox-96",
+                "TargetSection" : ""
+              }, {
+                "Id" : "251328819354638",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "MEID",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetProperties",
+                "SourceSection" : "DynamicThingTemplates_VMTemplateVerySmart",
+                "TargetArea" : "UI",
+                "TargetId" : "Textbox-98",
+                "TargetSection" : ""
+              }, {
+                "Id" : "401328819372728",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "MEID",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "Textbox-98",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "ProvisionMachine",
+                "TargetSection" : "Things_VendingNetworkServices"
+              }, {
+                "Id" : "531328819384264",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "ESN",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "Textbox-97",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "ProvisionMachine",
+                "TargetSection" : "Things_VendingNetworkServices"
+              }, {
+                "Id" : "271328819431325",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "name",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "machine",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetNewMachines",
+                "SourceSection" : "Things_VendingNetworkServices",
+                "TargetArea" : "Data",
+                "TargetId" : "ProvisionMachine",
+                "TargetSection" : "Things_VendingNetworkServices"
+              }, {
+                "Id" : "401328819474279",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "name",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "Prod1",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetVocabularyTerms",
+                "SourceSection" : "DataTags_Products",
+                "TargetArea" : "Data",
+                "TargetId" : "ProvisionMachine",
+                "TargetSection" : "Things_VendingNetworkServices"
+              }, {
+                "Id" : "511328819482876",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "name",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "Prod2",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetVocabularyTerms1",
+                "SourceSection" : "DataTags_Products",
+                "TargetArea" : "Data",
+                "TargetId" : "ProvisionMachine",
+                "TargetSection" : "Things_VendingNetworkServices"
+              }, {
+                "Id" : "321328819490704",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "name",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "Prod3",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetVocabularyTerms11",
+                "SourceSection" : "DataTags_Products",
+                "TargetArea" : "Data",
+                "TargetId" : "ProvisionMachine",
+                "TargetSection" : "Things_VendingNetworkServices"
+              }, {
+                "Id" : "51328819500233",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "name",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "Prod4",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetVocabularyTerms111",
+                "SourceSection" : "DataTags_Products",
+                "TargetArea" : "Data",
+                "TargetId" : "ProvisionMachine",
+                "TargetSection" : "Things_VendingNetworkServices"
+              }, {
+                "Id" : "831328819508154",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Value",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "TargetProperty" : "Qty1",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "NumericEntry-90",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "ProvisionMachine",
+                "TargetSection" : "Things_VendingNetworkServices"
+              }, {
+                "Id" : "661328819512962",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Value",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "TargetProperty" : "Qty2",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "NumericEntry-91",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "ProvisionMachine",
+                "TargetSection" : "Things_VendingNetworkServices"
+              }, {
+                "Id" : "71328819518088",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Value",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "TargetProperty" : "Qty3",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "NumericEntry-92",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "ProvisionMachine",
+                "TargetSection" : "Things_VendingNetworkServices"
+              }, {
+                "Id" : "981328819528518",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Value",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "TargetProperty" : "Qty4",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "NumericEntry-93",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "ProvisionMachine",
+                "TargetSection" : "Things_VendingNetworkServices"
+              }, {
+                "Id" : "621328820082669",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Location",
+                  "SourcePropertyBaseType" : "LOCATION",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Location",
+                  "TargetPropertyBaseType" : "LOCATION",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "GoogleLocationPicker-100",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "ProvisionMachine",
+                "TargetSection" : "Things_VendingNetworkServices"
+              }, {
+                "Id" : "171328820110710",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "AssetID",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "Textbox-96",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "ProvisionMachine",
+                "TargetSection" : "Things_VendingNetworkServices"
+              }, {
+                "Id" : "631328968636882",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Location",
+                  "SourcePropertyBaseType" : "LOCATION",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Location",
+                  "TargetPropertyBaseType" : "LOCATION",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetProperties",
+                "SourceSection" : "DynamicThingTemplates_VMTemplateVerySmart",
+                "TargetArea" : "UI",
+                "TargetId" : "GoogleLocationPicker-100",
+                "TargetSection" : ""
+              } ],
+              "DesignTimePermissions" : {
+                "Create" : [ ],
+                "Delete" : [ ],
+                "Metadata" : [ ],
+                "Read" : [ ],
+                "Update" : [ ]
+              },
+              "Events" : [ {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "DataTags_Products",
+                "EventHandlerService" : "GetVocabularyTerms",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "781328813167334"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_VendingNetworkServices",
+                "EventHandlerService" : "GetNewMachines",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "471328814703856"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "DynamicThingTemplates_VMTemplateVerySmart",
+                "EventHandlerService" : "GetProperties",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "SelectedRowsChanged",
+                "EventTriggerId" : "GetNewMachines",
+                "EventTriggerSection" : "Things_VendingNetworkServices",
+                "Id" : "911328814758936"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "DataTags_Products",
+                "EventHandlerService" : "GetVocabularyTerms1",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "451328814967788"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "DataTags_Products",
+                "EventHandlerService" : "GetVocabularyTerms11",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "401328814970910"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "DataTags_Products",
+                "EventHandlerService" : "GetVocabularyTerms111",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "631328814974221"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_VendingNetworkServices",
+                "EventHandlerService" : "ProvisionMachine",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "Clicked",
+                "EventTriggerId" : "Button-99",
+                "EventTriggerSection" : "",
+                "Id" : "141328819552508"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "DynamicThingTemplates_VMTemplateVerySmart",
+                "EventHandlerService" : "GetProperties",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "ServiceInvokeCompleted",
+                "EventTriggerId" : "ProvisionMachine",
+                "EventTriggerSection" : "Things_VendingNetworkServices",
+                "Id" : "531328819626475"
+              } ],
+              "RunTimePermissions" : {
+                "permissions" : [ ]
+              },
+              "UI" : {
+                "Properties" : {
+                  "Area" : "Mashup",
+                  "Height" : 523,
+                  "Id" : "mashup-root",
+                  "IgnoreWarningsInViewMashup" : false,
+                  "Left" : 0,
+                  "Master" : "iPadTarget",
+                  "Style" : "DefaultMashupStyle",
+                  "Tags" : [ {
+                    "vocabulary" : "Applications",
+                    "vocabularyTerm" : "AcmeVending"
+                  } ],
+                  "Top" : 0,
+                  "Type" : "mashup",
+                  "Width" : 699,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Mashup",
+                  "_currentParameterDefs" : [ ],
+                  "id_index" : 102
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Height" : 224,
+                    "Id" : "Panel-3",
+                    "Left" : 15,
+                    "Style" : "Default",
+                    "Top" : 290,
+                    "Type" : "panel",
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Panel"
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "AlternateText" : "",
+                      "Area" : "UI",
+                      "Height" : 25,
+                      "Id" : "Image-5",
+                      "Left" : 0,
+                      "SourceURL" : "/Thingworx/MediaEntities/header",
+                      "Top" : 0,
+                      "Type" : "image",
+                      "Width" : 198,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Image"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "left",
+                      "Area" : "UI",
+                      "Height" : 20,
+                      "Id" : "Label-6",
+                      "Left" : 5,
+                      "Style" : "AcmeVendingHdrText",
+                      "Text" : "Vending Machine",
+                      "Top" : 1,
+                      "Type" : "label",
+                      "Width" : 185,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Label"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "AlternateText" : "",
+                      "Area" : "UI",
+                      "Height" : 123,
+                      "Id" : "Image-27",
+                      "Left" : 45,
+                      "SourceURL" : "/Thingworx/MediaEntities/suzieMachine",
+                      "Top" : 75,
+                      "Type" : "image",
+                      "Width" : 95,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Image"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "left",
+                      "Area" : "UI",
+                      "Height" : 22,
+                      "Id" : "ValueDisplay-31",
+                      "Label" : "",
+                      "Left" : 5,
+                      "ShowBorder" : false,
+                      "TextIfNoValue" : "",
+                      "TextIfNoValueStyle" : "DefaultValueDisplayNoTextStyle",
+                      "TextWrap" : true,
+                      "Top" : 30,
+                      "Type" : "valuedisplay",
+                      "ValueDisplayLabelStyle" : "DefaultWidgetLabelStyle",
+                      "ValueDisplayStyle" : "DefaultValueDisplayStyle",
+                      "ValueFormat" : {
+                        "FormatString" : "full",
+                        "renderer" : "STRING"
+                      },
+                      "Width" : 75,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Value Display",
+                      "__supportsLabel" : true
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "left",
+                      "Area" : "UI",
+                      "Height" : 28,
+                      "Id" : "ValueDisplay-32",
+                      "Label" : "",
+                      "Left" : 155,
+                      "ShowBorder" : false,
+                      "TextIfNoValue" : "",
+                      "TextIfNoValueStyle" : "DefaultValueDisplayNoTextStyle",
+                      "TextWrap" : true,
+                      "Top" : 28,
+                      "Type" : "valuedisplay",
+                      "ValueDisplayLabelStyle" : "DefaultWidgetLabelStyle",
+                      "ValueDisplayStyle" : "DefaultValueDisplayStyle",
+                      "ValueFormat" : {
+                        "FormatString" : "checkbox",
+                        "renderer" : "BOOLEAN"
+                      },
+                      "Width" : 39,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Value Display",
+                      "__supportsLabel" : true
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "left",
+                      "Area" : "UI",
+                      "Height" : 22,
+                      "Id" : "Label-33",
+                      "Left" : 90,
+                      "Style" : "DefaultLabelStyle",
+                      "Text" : "In Service:",
+                      "Top" : 30,
+                      "Type" : "label",
+                      "Width" : 65,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Label"
+                    },
+                    "Widgets" : [ ]
+                  } ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Height" : 284,
+                    "Id" : "Panel-16",
+                    "Left" : 227,
+                    "Style" : "DefaultPanelStyle",
+                    "Top" : 70,
+                    "Type" : "panel",
+                    "Width" : 454,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Panel"
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "AlternateText" : "",
+                      "Area" : "UI",
+                      "Height" : 25,
+                      "Id" : "Image-17",
+                      "Left" : 0,
+                      "SourceURL" : "/Thingworx/MediaEntities/header",
+                      "Top" : 0,
+                      "Type" : "image",
+                      "Width" : 453,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Image"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "left",
+                      "Area" : "UI",
+                      "Height" : 20,
+                      "Id" : "Label-28",
+                      "Left" : 5,
+                      "Style" : "AcmeVendingHdrText",
+                      "Text" : "Validate Machine Details",
+                      "Top" : 1,
+                      "Type" : "label",
+                      "Width" : 185,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Label"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "left",
+                      "Area" : "UI",
+                      "Height" : 22,
+                      "Id" : "ValueDisplay-76",
+                      "Label" : "",
+                      "Left" : 90,
+                      "ShowBorder" : true,
+                      "TextIfNoValue" : "",
+                      "TextIfNoValueStyle" : "DefaultValueDisplayNoTextStyle",
+                      "TextWrap" : true,
+                      "Top" : 30,
+                      "Type" : "valuedisplay",
+                      "ValueDisplayLabelStyle" : "DefaultWidgetLabelStyle",
+                      "ValueDisplayStyle" : "DefaultValueDisplayStyle",
+                      "ValueFormat" : {
+                        "FormatString" : "full",
+                        "renderer" : "STRING"
+                      },
+                      "Width" : 115,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Value Display",
+                      "__supportsLabel" : true
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "left",
+                      "Area" : "UI",
+                      "Height" : 22,
+                      "Id" : "ValueDisplay-77",
+                      "Label" : "",
+                      "Left" : 90,
+                      "ShowBorder" : true,
+                      "TextIfNoValue" : "",
+                      "TextIfNoValueStyle" : "DefaultValueDisplayNoTextStyle",
+                      "TextWrap" : true,
+                      "Top" : 60,
+                      "Type" : "valuedisplay",
+                      "ValueDisplayLabelStyle" : "DefaultWidgetLabelStyle",
+                      "ValueDisplayStyle" : "DefaultValueDisplayStyle",
+                      "ValueFormat" : {
+                        "FormatString" : "full",
+                        "renderer" : "STRING"
+                      },
+                      "Width" : 115,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Value Display",
+                      "__supportsLabel" : true
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "right",
+                      "Area" : "UI",
+                      "Height" : 22,
+                      "Id" : "Label-78",
+                      "Left" : 10,
+                      "Style" : "DefaultLabelStyle",
+                      "Text" : "Asset ID:",
+                      "Top" : 30,
+                      "Type" : "label",
+                      "Width" : 75,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Label"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "right",
+                      "Area" : "UI",
+                      "Height" : 22,
+                      "Id" : "Label-79",
+                      "Left" : 10,
+                      "Style" : "DefaultLabelStyle",
+                      "Text" : "ESN:",
+                      "Top" : 60,
+                      "Type" : "label",
+                      "Width" : 75,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Label"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "right",
+                      "Area" : "UI",
+                      "Height" : 22,
+                      "Id" : "Label-80",
+                      "Left" : 10,
+                      "Style" : "DefaultLabelStyle",
+                      "Text" : "MEID:",
+                      "Top" : 90,
+                      "Type" : "label",
+                      "Width" : 75,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Label"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "left",
+                      "Area" : "UI",
+                      "Height" : 22,
+                      "Id" : "ValueDisplay-81",
+                      "Label" : "",
+                      "Left" : 90,
+                      "ShowBorder" : true,
+                      "TextIfNoValue" : "",
+                      "TextIfNoValueStyle" : "DefaultValueDisplayNoTextStyle",
+                      "TextWrap" : true,
+                      "Top" : 90,
+                      "Type" : "valuedisplay",
+                      "ValueDisplayLabelStyle" : "DefaultWidgetLabelStyle",
+                      "ValueDisplayStyle" : "DefaultValueDisplayStyle",
+                      "ValueFormat" : {
+                        "FormatString" : "full",
+                        "renderer" : "STRING"
+                      },
+                      "Width" : 115,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Value Display",
+                      "__supportsLabel" : true
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "right",
+                      "Area" : "UI",
+                      "Height" : 22,
+                      "Id" : "Label-82",
+                      "Left" : 10,
+                      "Style" : "DefaultLabelStyle",
+                      "Text" : "Position 1:",
+                      "Top" : 145,
+                      "Type" : "label",
+                      "Width" : 75,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Label"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "right",
+                      "Area" : "UI",
+                      "Height" : 22,
+                      "Id" : "Label-83",
+                      "Left" : 10,
+                      "Style" : "DefaultLabelStyle",
+                      "Text" : "Position 2:",
+                      "Top" : 180,
+                      "Type" : "label",
+                      "Width" : 75,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Label"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "right",
+                      "Area" : "UI",
+                      "Height" : 22,
+                      "Id" : "Label-84",
+                      "Left" : 10,
+                      "Style" : "DefaultLabelStyle",
+                      "Text" : "Position 3:",
+                      "Top" : 215,
+                      "Type" : "label",
+                      "Width" : 75,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Label"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "right",
+                      "Area" : "UI",
+                      "Height" : 22,
+                      "Id" : "Label-85",
+                      "Left" : 10,
+                      "Style" : "DefaultLabelStyle",
+                      "Text" : "Position 4:",
+                      "Top" : 250,
+                      "Type" : "label",
+                      "Width" : 75,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Label"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "left",
+                      "Area" : "UI",
+                      "AutoSelectFirstRow" : false,
+                      "DisplayField" : "name",
+                      "Height" : 28,
+                      "HeightOfDropdownView" : 200,
+                      "Id" : "List-86",
+                      "Left" : 95,
+                      "ListBackgroundStyle" : "DefaultListBackgroundStyle",
+                      "ListItemAlternateStyle" : "DefaultListItemAlternateStyle",
+                      "ListItemHoverStyle" : "DefaultListItemHoverStyle",
+                      "ListItemSelectedStyle" : "DefaultListItemSelectedStyle",
+                      "ListItemStyle" : "DefaultListItemStyle",
+                      "MultiSelect" : false,
+                      "NumberOfItemsInDropdownView" : 6,
+                      "RowHeight" : 28,
+                      "Top" : 140,
+                      "Type" : "dhxlist",
+                      "View" : "dropdown",
+                      "Width" : 135,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "List"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "left",
+                      "Area" : "UI",
+                      "AutoSelectFirstRow" : false,
+                      "DisplayField" : "name",
+                      "Height" : 28,
+                      "HeightOfDropdownView" : 200,
+                      "Id" : "List-87",
+                      "Left" : 95,
+                      "ListBackgroundStyle" : "DefaultListBackgroundStyle",
+                      "ListItemAlternateStyle" : "DefaultListItemAlternateStyle",
+                      "ListItemHoverStyle" : "DefaultListItemHoverStyle",
+                      "ListItemSelectedStyle" : "DefaultListItemSelectedStyle",
+                      "ListItemStyle" : "DefaultListItemStyle",
+                      "MultiSelect" : false,
+                      "NumberOfItemsInDropdownView" : 6,
+                      "RowHeight" : 28,
+                      "Top" : 175,
+                      "Type" : "dhxlist",
+                      "View" : "dropdown",
+                      "Width" : 135,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "List"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "left",
+                      "Area" : "UI",
+                      "AutoSelectFirstRow" : false,
+                      "DisplayField" : "name",
+                      "Height" : 28,
+                      "HeightOfDropdownView" : 200,
+                      "Id" : "List-88",
+                      "Left" : 95,
+                      "ListBackgroundStyle" : "DefaultListBackgroundStyle",
+                      "ListItemAlternateStyle" : "DefaultListItemAlternateStyle",
+                      "ListItemHoverStyle" : "DefaultListItemHoverStyle",
+                      "ListItemSelectedStyle" : "DefaultListItemSelectedStyle",
+                      "ListItemStyle" : "DefaultListItemStyle",
+                      "MultiSelect" : false,
+                      "NumberOfItemsInDropdownView" : 6,
+                      "RowHeight" : 28,
+                      "Top" : 210,
+                      "Type" : "dhxlist",
+                      "View" : "dropdown",
+                      "Width" : 135,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "List"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "left",
+                      "Area" : "UI",
+                      "AutoSelectFirstRow" : false,
+                      "DisplayField" : "name",
+                      "Height" : 28,
+                      "HeightOfDropdownView" : 200,
+                      "Id" : "List-89",
+                      "Left" : 95,
+                      "ListBackgroundStyle" : "DefaultListBackgroundStyle",
+                      "ListItemAlternateStyle" : "DefaultListItemAlternateStyle",
+                      "ListItemHoverStyle" : "DefaultListItemHoverStyle",
+                      "ListItemSelectedStyle" : "DefaultListItemSelectedStyle",
+                      "ListItemStyle" : "DefaultListItemStyle",
+                      "MultiSelect" : false,
+                      "NumberOfItemsInDropdownView" : 6,
+                      "RowHeight" : 28,
+                      "Top" : 245,
+                      "Type" : "dhxlist",
+                      "View" : "dropdown",
+                      "Width" : 135,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "List"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "AllowDecimals" : true,
+                      "AllowNegatives" : true,
+                      "Area" : "UI",
+                      "ConstrainValue" : false,
+                      "FixedDigits" : 0,
+                      "Height" : 24,
+                      "Id" : "NumericEntry-90",
+                      "Label" : "",
+                      "Left" : 240,
+                      "Maximum" : 100,
+                      "Minimum" : 0,
+                      "NumericEntryFocusStyle" : "DefaultFocusStyle",
+                      "NumericEntryLabelStyle" : "DefaultWidgetLabelStyle",
+                      "Style" : "DefaultTextBoxStyle",
+                      "TabSequence" : 0,
+                      "Top" : 140,
+                      "Type" : "numericentry",
+                      "Value" : 0,
+                      "ValueAlign" : "right",
+                      "Width" : 80,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Numeric Entry",
+                      "__supportsLabel" : true
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "AllowDecimals" : true,
+                      "AllowNegatives" : true,
+                      "Area" : "UI",
+                      "ConstrainValue" : false,
+                      "FixedDigits" : 0,
+                      "Height" : 24,
+                      "Id" : "NumericEntry-91",
+                      "Label" : "",
+                      "Left" : 240,
+                      "Maximum" : 100,
+                      "Minimum" : 0,
+                      "NumericEntryFocusStyle" : "DefaultFocusStyle",
+                      "NumericEntryLabelStyle" : "DefaultWidgetLabelStyle",
+                      "Style" : "DefaultTextBoxStyle",
+                      "TabSequence" : 0,
+                      "Top" : 175,
+                      "Type" : "numericentry",
+                      "Value" : 0,
+                      "ValueAlign" : "right",
+                      "Width" : 80,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Numeric Entry",
+                      "__supportsLabel" : true
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "AllowDecimals" : true,
+                      "AllowNegatives" : true,
+                      "Area" : "UI",
+                      "ConstrainValue" : false,
+                      "FixedDigits" : 0,
+                      "Height" : 24,
+                      "Id" : "NumericEntry-92",
+                      "Label" : "",
+                      "Left" : 240,
+                      "Maximum" : 100,
+                      "Minimum" : 0,
+                      "NumericEntryFocusStyle" : "DefaultFocusStyle",
+                      "NumericEntryLabelStyle" : "DefaultWidgetLabelStyle",
+                      "Style" : "DefaultTextBoxStyle",
+                      "TabSequence" : 0,
+                      "Top" : 210,
+                      "Type" : "numericentry",
+                      "Value" : 0,
+                      "ValueAlign" : "right",
+                      "Width" : 80,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Numeric Entry",
+                      "__supportsLabel" : true
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "AllowDecimals" : true,
+                      "AllowNegatives" : true,
+                      "Area" : "UI",
+                      "ConstrainValue" : false,
+                      "FixedDigits" : 0,
+                      "Height" : 24,
+                      "Id" : "NumericEntry-93",
+                      "Label" : "",
+                      "Left" : 240,
+                      "Maximum" : 100,
+                      "Minimum" : 0,
+                      "NumericEntryFocusStyle" : "DefaultFocusStyle",
+                      "NumericEntryLabelStyle" : "DefaultWidgetLabelStyle",
+                      "Style" : "DefaultTextBoxStyle",
+                      "TabSequence" : 0,
+                      "Top" : 245,
+                      "Type" : "numericentry",
+                      "Value" : 0,
+                      "ValueAlign" : "right",
+                      "Width" : 80,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Numeric Entry",
+                      "__supportsLabel" : true
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "center",
+                      "Area" : "UI",
+                      "Height" : 22,
+                      "Id" : "Label-94",
+                      "Left" : 125,
+                      "Style" : "DefaultLabelStyle",
+                      "Text" : "Product",
+                      "Top" : 120,
+                      "Type" : "label",
+                      "Width" : 75,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Label"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "center",
+                      "Area" : "UI",
+                      "Height" : 22,
+                      "Id" : "Label-95",
+                      "Left" : 245,
+                      "Style" : "DefaultLabelStyle",
+                      "Text" : "Quantity",
+                      "Top" : 120,
+                      "Type" : "label",
+                      "Width" : 75,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Label"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "DefaultTextboxFocusStyle" : "DefaultFocusStyle",
+                      "Height" : 24,
+                      "Id" : "Textbox-96",
+                      "Label" : "",
+                      "Left" : 210,
+                      "MaskInputCharacters" : false,
+                      "ReadOnly" : false,
+                      "Style" : "DefaultTextBoxStyle",
+                      "TabSequence" : 0,
+                      "Text" : "",
+                      "TextAlign" : "left",
+                      "TextboxLabelStyle" : "DefaultWidgetLabelStyle",
+                      "Top" : 30,
+                      "Type" : "textbox",
+                      "Width" : 200,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Textbox",
+                      "__supportsLabel" : true
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "DefaultTextboxFocusStyle" : "DefaultFocusStyle",
+                      "Height" : 24,
+                      "Id" : "Textbox-97",
+                      "Label" : "",
+                      "Left" : 210,
+                      "MaskInputCharacters" : false,
+                      "ReadOnly" : false,
+                      "Style" : "DefaultTextBoxStyle",
+                      "TabSequence" : 0,
+                      "Text" : "",
+                      "TextAlign" : "left",
+                      "TextboxLabelStyle" : "DefaultWidgetLabelStyle",
+                      "Top" : 60,
+                      "Type" : "textbox",
+                      "Width" : 200,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Textbox",
+                      "__supportsLabel" : true
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "DefaultTextboxFocusStyle" : "DefaultFocusStyle",
+                      "Height" : 24,
+                      "Id" : "Textbox-98",
+                      "Label" : "",
+                      "Left" : 210,
+                      "MaskInputCharacters" : false,
+                      "ReadOnly" : false,
+                      "Style" : "DefaultTextBoxStyle",
+                      "TabSequence" : 0,
+                      "Text" : "",
+                      "TextAlign" : "left",
+                      "TextboxLabelStyle" : "DefaultWidgetLabelStyle",
+                      "Top" : 90,
+                      "Type" : "textbox",
+                      "Width" : 200,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Textbox",
+                      "__supportsLabel" : true
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "ActiveStyle" : "DefaultButtonActiveStyle",
+                      "Area" : "UI",
+                      "CancelConfirmationButton" : "button2",
+                      "ConfirmationButton1Label" : "Yes",
+                      "ConfirmationButton2Label" : "No",
+                      "ConfirmationPrompt" : "Do Action?",
+                      "ConfirmationRequired" : false,
+                      "ConfirmationTitle" : "Confirm Action",
+                      "DefaultConfirmationButton" : "button1",
+                      "FocusStyle" : "DefaultButtonFocusStyle",
+                      "Height" : 50,
+                      "HoverStyle" : "DefaultButtonHoverStyle",
+                      "Id" : "Button-99",
+                      "Label" : "Submit",
+                      "Left" : 330,
+                      "Style" : "DefaultButtonStyle",
+                      "TabSequence" : 0,
+                      "Top" : 220,
+                      "Type" : "button",
+                      "Width" : 105,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Button"
+                    },
+                    "Widgets" : [ ]
+                  } ]
+                }, {
+                  "Properties" : {
+                    "Alignment" : "left",
+                    "Area" : "UI",
+                    "AutoSelectFirstRow" : false,
+                    "DisplayField" : "name",
+                    "Height" : 30,
+                    "HeightOfDropdownView" : 200,
+                    "Id" : "List-35",
+                    "Left" : 10,
+                    "ListBackgroundStyle" : "DefaultListBackgroundStyle",
+                    "ListItemAlternateStyle" : "DefaultListItemAlternateStyle",
+                    "ListItemHoverStyle" : "DefaultListItemHoverStyle",
+                    "ListItemSelectedStyle" : "DefaultListItemSelectedStyle",
+                    "ListItemStyle" : "DefaultListItemStyle",
+                    "MultiSelect" : false,
+                    "NumberOfItemsInDropdownView" : 6,
+                    "RowHeight" : 30,
+                    "Top" : 90,
+                    "Type" : "dhxlist",
+                    "View" : "dropdown",
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "List"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "AllowNewPosts" : true,
+                    "Area" : "UI",
+                    "Blog" : "AcmeVendingMaintenanceBlog",
+                    "BlogButtonsStyle" : "DefaultBlogButtonsStyle",
+                    "BlogHeaderStyle" : "DefaultBlogHeaderStyle",
+                    "BlogPostStyle" : "DefaultBlogPostStyle",
+                    "BlogStyle" : "DefaultBlogStyle",
+                    "Description" : "",
+                    "EndDateTime" : "",
+                    "ExpandAll" : false,
+                    "Height" : 145,
+                    "HeightOfFullView" : 600,
+                    "Id" : "Blog-45",
+                    "Left" : 228,
+                    "SearchExpression" : "",
+                    "ShowExpandInSummary" : false,
+                    "ShowSearchInSummary" : false,
+                    "SortOrder" : "Newest",
+                    "Source" : "",
+                    "StartDateTime" : "",
+                    "Title" : "Maintenance Blog",
+                    "Top" : 370,
+                    "Type" : "blog",
+                    "View" : "Summary",
+                    "Width" : 450,
+                    "WidthOfFullView" : 800,
+                    "WordsInPosts" : 100,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Blog"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Alignment" : "left",
+                    "Area" : "UI",
+                    "Height" : 22,
+                    "Id" : "Label-47",
+                    "Left" : 5,
+                    "Style" : "DefaultLabelStyle",
+                    "Text" : "Provision Vending Machine:",
+                    "Top" : 65,
+                    "Type" : "label",
+                    "Width" : 160,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Label"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "AlternateText" : "",
+                    "Area" : "UI",
+                    "Height" : 57,
+                    "Id" : "Image-68",
+                    "Left" : 0,
+                    "SourceURL" : "/Thingworx/MediaEntities/AcmeBGSplash",
+                    "Top" : 0,
+                    "Type" : "image",
+                    "Width" : 699,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Image"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "AlternateText" : "",
+                    "Area" : "UI",
+                    "Height" : 24,
+                    "Id" : "Image-69",
+                    "Left" : 5,
+                    "SourceURL" : "/Thingworx/MediaEntities/AcmeBGLogo",
+                    "Top" : 10,
+                    "Type" : "image",
+                    "Width" : 117,
+                    "Z-index" : 11,
+                    "__TypeDisplayName" : "Image"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "AlternateText" : "",
+                    "Area" : "UI",
+                    "Height" : 57,
+                    "Id" : "Image-70",
+                    "Left" : 225,
+                    "SourceURL" : "/Thingworx/MediaEntities/AcmeBGBeverage",
+                    "Top" : 5,
+                    "Type" : "image",
+                    "Width" : 234,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Image"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Elevation" : 0,
+                    "Height" : 130,
+                    "Id" : "GoogleLocationPicker-100",
+                    "Left" : 25,
+                    "MapHeight" : 200,
+                    "MapWidth" : 300,
+                    "ReadOnly" : false,
+                    "ShowElevation" : false,
+                    "ShowUnits" : false,
+                    "Style" : "DefaultGoogleLocationStyle",
+                    "TabSequence" : 0,
+                    "Top" : 142,
+                    "Type" : "googlelocation",
+                    "Units" : "WGS84",
+                    "UseMap" : true,
+                    "Width" : 175,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Google Location Picker"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Height" : 25,
+                    "Id" : "Chat-101",
+                    "Left" : 476,
+                    "Style" : "DefaultChatStatusStyle",
+                    "Top" : 20,
+                    "Type" : "chat",
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Chat"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "AlternateText" : "",
+                    "Area" : "UI",
+                    "DisplayName" : "Image-102",
+                    "Height" : 10,
+                    "Id" : "Image-102",
+                    "Left" : 5,
+                    "SourceURL" : "/Thingworx/MediaEntities/AcmeBGByline",
+                    "Top" : 35,
+                    "Type" : "image",
+                    "Width" : 199,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Image"
+                  },
+                  "Widgets" : [ ]
+                } ]
+              },
+              "mashupType" : "page"
+            }
+            ]]>
+            </mashupContent>
+        </Mashup>
+    </Mashups>
+</Entities>

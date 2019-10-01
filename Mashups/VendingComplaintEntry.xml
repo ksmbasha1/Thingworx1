@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <Mashups>
+        <Mashup
+         aspect.mashupType="page"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-10-01T12:11:12.778Z"
+         name="VendingComplaintEntry"
+         projectName=""
+         rows="0.0"
+         tags="Applications:AcmeVending">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ParameterDefinitions>
+                <FieldDefinition
+                 aspect.ordinal="0"
+                 baseType="THINGNAME"
+                 description=""
+                 name="ThingName"
+                 ordinal="0"></FieldDefinition>
+            </ParameterDefinitions>
+            <Things>
+                <Thing>ComplaintCodesDT</Thing>
+            </Things>
+            <ThingShapes>
+                <ThingShape>VendingMachine</ThingShape>
+            </ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "Data" : {
+                "DynamicThingShapes_VendingMachine" : {
+                  "DataName" : "DynamicThingShapes_VendingMachine",
+                  "EntityName" : "VendingMachine",
+                  "EntityType" : "DynamicThingShapes",
+                  "Id" : "331320868117234",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "551320868117240",
+                    "Name" : "EnterServiceComplaint",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "EnterServiceComplaint"
+                  } ]
+                },
+                "Things_ComplaintCodesDT" : {
+                  "DataName" : "Things_ComplaintCodesDT",
+                  "EntityName" : "ComplaintCodesDT",
+                  "EntityType" : "Things",
+                  "Id" : "651320868085098",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "931320868085105",
+                    "Name" : "GetDataTableEntries",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetDataTableEntries"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "551320868093494",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetDataTableEntries",
+                "SourceSection" : "Things_ComplaintCodesDT",
+                "TargetArea" : "UI",
+                "TargetId" : "List-3",
+                "TargetSection" : ""
+              }, {
+                "Id" : "691320868125159",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "code",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "TargetProperty" : "code",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetDataTableEntries",
+                "SourceSection" : "Things_ComplaintCodesDT",
+                "TargetArea" : "Data",
+                "TargetId" : "EnterServiceComplaint",
+                "TargetSection" : "DynamicThingShapes_VendingMachine"
+              }, {
+                "Id" : "311320868153598",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "ThingName",
+                  "SourcePropertyBaseType" : "THINGNAME",
+                  "TargetProperty" : "value",
+                  "TargetPropertyBaseType" : "THINGNAME",
+                  "TargetPropertyType" : "Entity"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "EntityName",
+                "TargetSection" : "DynamicThingShapes_VendingMachine"
+              }, {
+                "Id" : "621320871600181",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "comments",
+                  "TargetPropertyBaseType" : "TEXT",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "TextArea-7",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "EnterServiceComplaint",
+                "TargetSection" : "DynamicThingShapes_VendingMachine"
+              } ],
+              "Events" : [ {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_ComplaintCodesDT",
+                "EventHandlerService" : "GetDataTableEntries",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "421320868089782"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "DynamicThingShapes_VendingMachine",
+                "EventHandlerService" : "EnterServiceComplaint",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "Clicked",
+                "EventTriggerId" : "Button-8",
+                "EventTriggerSection" : "",
+                "Id" : "371320871687663"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "Navigation-6",
+                "EventHandlerService" : "Navigate",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "Clicked",
+                "EventTriggerId" : "Button-8",
+                "EventTriggerSection" : "",
+                "Id" : "531320871711209"
+              } ],
+              "UI" : {
+                "Properties" : {
+                  "Area" : "Mashup",
+                  "Height" : 310,
+                  "Id" : "mashup-root",
+                  "Left" : 0,
+                  "Tags" : [ {
+                    "vocabulary" : "Applications",
+                    "vocabularyTerm" : "AcmeVending"
+                  } ],
+                  "Target" : "VendingComplaintFrame",
+                  "Top" : 0,
+                  "Type" : "mashup",
+                  "Width" : 250,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Mashup",
+                  "_currentParameterDefs" : [ {
+                    "BaseType" : "THINGNAME",
+                    "Description" : "",
+                    "ParameterName" : "ThingName"
+                  } ],
+                  "id_index" : 8
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Alignment" : "left",
+                    "Area" : "UI",
+                    "Height" : 22,
+                    "Id" : "Label-1",
+                    "Left" : 12,
+                    "Text" : "Select Complaint Code",
+                    "Top" : 10,
+                    "Type" : "label",
+                    "Width" : 165,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Label"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Alignment" : "left",
+                    "Area" : "UI",
+                    "Height" : 22,
+                    "Id" : "Label-2",
+                    "Left" : 12,
+                    "Text" : "Comments",
+                    "Top" : 80,
+                    "Type" : "label",
+                    "Width" : 75,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Label"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Alignment" : "left",
+                    "Area" : "UI",
+                    "AutoSelectFirstRow" : false,
+                    "DisplayField" : "description",
+                    "Height" : 30,
+                    "HeightOfDropdownView" : 200,
+                    "Id" : "List-3",
+                    "Left" : 12,
+                    "MultiSelect" : false,
+                    "NumberOfItemsInDropdownView" : 6,
+                    "RowHeight" : 30,
+                    "Top" : 30,
+                    "Type" : "dhxlist",
+                    "View" : "dropdown",
+                    "Width" : 225,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "List"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Alignment" : "left",
+                    "Area" : "UI",
+                    "Height" : 30,
+                    "Id" : "Navigation-6",
+                    "Left" : 90,
+                    "MashupName" : "VendingComplaintConfirm",
+                    "MashupParameters" : [ ],
+                    "TargetWindow" : "replace",
+                    "Text" : "Mashup Link",
+                    "Top" : 250,
+                    "Type" : "navigation",
+                    "Width" : 69,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Navigation"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Height" : 125,
+                    "Id" : "TextArea-7",
+                    "Label" : "",
+                    "Left" : 10,
+                    "ReadOnly" : false,
+                    "Text" : "",
+                    "Top" : 100,
+                    "Type" : "textarea",
+                    "Width" : 225,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "TextArea",
+                    "__supportsLabel" : true
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "CancelConfirmationButton" : "button2",
+                    "ConfirmationButton1Label" : "Yes",
+                    "ConfirmationButton2Label" : "No",
+                    "ConfirmationPrompt" : "Do Action?",
+                    "ConfirmationRequired" : false,
+                    "ConfirmationTitle" : "Confirm Action",
+                    "DefaultConfirmationButton" : "button1",
+                    "Height" : 37,
+                    "Id" : "Button-8",
+                    "Label" : "Submit",
+                    "Left" : 81,
+                    "Top" : 245,
+                    "Type" : "button",
+                    "Width" : 80,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Button"
+                  },
+                  "Widgets" : [ ]
+                } ]
+              },
+              "mashupType" : "page"
+            }
+            ]]>
+            </mashupContent>
+        </Mashup>
+    </Mashups>
+</Entities>

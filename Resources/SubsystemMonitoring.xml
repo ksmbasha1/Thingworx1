@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <Resources>
+        <Resource
+         aspect.isCreatable="false"
+         aspect.isSystemObject="true"
+         className="com.thingworx.resources.subsystems.SubsystemMonitoring"
+         description="Subsystem monitoring library"
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-09-26T10:00:09.329Z"
+         name="SubsystemMonitoring"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+        </Resource>
+    </Resources>
+</Entities>

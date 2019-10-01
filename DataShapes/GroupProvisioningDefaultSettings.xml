@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Group Provisioning Default Settings"
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-09-26T10:00:06.677Z"
+         name="GroupProvisioningDefaultSettings"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Group Provisioning Default Description"
+                 name="groupDefaultDescription"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="PROJECTNAME"
+                 description="Group Provisioning Default Project Name"
+                 name="groupDefaultProjectName"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 baseType="TAGS"
+                 description="Group Provisioning Default Tags"
+                 name="groupDefaultTags"
+                 ordinal="2"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

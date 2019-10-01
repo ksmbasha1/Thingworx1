@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <Mashups>
+        <Mashup
+         aspect.mashupType="page"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-10-01T12:11:12.805Z"
+         name="VendingWikiBackup"
+         projectName=""
+         rows="0.0"
+         tags="Applications:AcmeVending">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ParameterDefinitions></ParameterDefinitions>
+            <Things></Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "Data" : {
+                "Session" : {
+                  "DataName" : "Session",
+                  "EntityName" : "",
+                  "EntityType" : "Session",
+                  "Id" : "session",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "SessionInterface",
+                    "Name" : "GetGlobalSessionValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGlobalSessionValues"
+                  } ]
+                },
+                "UserExtensions" : {
+                  "DataName" : "UserExtensions",
+                  "EntityName" : "",
+                  "EntityType" : "UserExtensions",
+                  "Id" : "UserExtensions",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "UserExtensionInterface",
+                    "Name" : "GetCurrentUserExtensionProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetCurrentUserExtensionProperties"
+                  } ]
+                }
+              },
+              "DataBindings" : [ ],
+              "DesignTimePermissions" : {
+                "Create" : [ ],
+                "Delete" : [ ],
+                "Metadata" : [ ],
+                "Read" : [ ],
+                "Update" : [ ]
+              },
+              "Events" : [ ],
+              "RunTimePermissions" : {
+                "permissions" : [ ]
+              },
+              "UI" : {
+                "Properties" : {
+                  "Area" : "Mashup",
+                  "Height" : 563,
+                  "Id" : "mashup-root",
+                  "IgnoreWarningsInViewMashup" : false,
+                  "Left" : 0,
+                  "Master" : "AcmeBeverageTarget",
+                  "Style" : "DefaultMashupStyle",
+                  "Tags" : [ {
+                    "vocabulary" : "Applications",
+                    "vocabularyTerm" : "AcmeVending"
+                  } ],
+                  "Top" : 0,
+                  "Type" : "mashup",
+                  "Width" : 1024,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Mashup",
+                  "id_index" : 2
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "ExpandAllWikiTOC" : true,
+                    "Height" : 563,
+                    "Id" : "Wiki-1",
+                    "Left" : 0,
+                    "MaximumItems" : 5000,
+                    "ShowWikiTOC" : true,
+                    "Title" : "Acme Beverage Vending  Equipment Wiki",
+                    "Top" : 0,
+                    "Type" : "wiki",
+                    "Width" : 1024,
+                    "Wiki" : "AcmeVendingEquiptmentWiki",
+                    "WikiContentStyle" : "DefaultWikiContentStyle",
+                    "WikiEntryIdToShow" : "",
+                    "WikiHeaderStyle" : "DefaultWikiHeaderStyle",
+                    "WikiNavigationStyle" : "DefaultWikiNavigationStyle",
+                    "WikiSearchStyle" : "DefaultWikiSearchStyle",
+                    "WikiToolbarStyle" : "DefaultWikiToolbarStyle",
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Wiki"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Alignment" : "center",
+                    "Area" : "UI",
+                    "Height" : 30,
+                    "Id" : "Navigation-2",
+                    "Left" : 820,
+                    "MashupName" : "VendingMain",
+                    "MashupParameters" : [ ],
+                    "NavigationActiveStyle" : "DefaultNavigationActiveStyle",
+                    "NavigationHoverStyle" : "DefaultNavigationHoverStyle",
+                    "Style" : "AcmeVendingNav",
+                    "TargetWindow" : "replace",
+                    "Text" : "AcmeVending Home",
+                    "Top" : 0,
+                    "Transparent" : false,
+                    "Type" : "navigation",
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Navigation"
+                  },
+                  "Widgets" : [ ]
+                } ]
+              },
+              "mashupType" : "page"
+            }
+            ]]>
+            </mashupContent>
+        </Mashup>
+    </Mashups>
+</Entities>

@@ -1,0 +1,1014 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <Mashups>
+        <Mashup
+         aspect.isResponsive="false"
+         aspect.mashupType="page"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-10-01T12:11:13.169Z"
+         name="VendingOperations"
+         projectName=""
+         rows="0.0"
+         tags="Applications:AcmeVending">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ParameterDefinitions>
+                <FieldDefinition
+                 aspect.ordinal="0"
+                 baseType="THINGNAME"
+                 description=""
+                 name="Entity"
+                 ordinal="0"></FieldDefinition>
+            </ParameterDefinitions>
+            <Things>
+                <Thing>VendingNetworkServices</Thing>
+            </Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "Data" : {
+                "DataTags_ComplaintCodes" : {
+                  "DataName" : "DataTags_ComplaintCodes",
+                  "EntityName" : "ComplaintCodes",
+                  "EntityType" : "DataTags",
+                  "Id" : "341320783768306",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "121320783768314",
+                    "Name" : "GetVocabularyTermUsage",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetVocabularyTermUsage"
+                  } ]
+                },
+                "Session" : {
+                  "DataName" : "Session",
+                  "EntityName" : "",
+                  "EntityType" : "Session",
+                  "Id" : "session",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "SessionInterface",
+                    "Name" : "GetGlobalSessionValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGlobalSessionValues"
+                  } ]
+                },
+                "Things_VendingNetworkServices" : {
+                  "DataName" : "Things_VendingNetworkServices",
+                  "EntityName" : "VendingNetworkServices",
+                  "EntityType" : "Things",
+                  "Id" : "441320782749209",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "221320782749223",
+                    "Name" : "GetReplenishmentOrders",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetReplenishmentOrders"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "61320872665086",
+                    "Name" : "GetDashboardData",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetDashboardData"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "01320872665128",
+                    "Name" : "GetVendingNetwork",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetVendingNetwork"
+                  } ]
+                },
+                "UserExtensions" : {
+                  "DataName" : "UserExtensions",
+                  "EntityName" : "",
+                  "EntityType" : "UserExtensions",
+                  "Id" : "UserExtensions",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "UserExtensionInterface",
+                    "Name" : "GetCurrentUserExtensionProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetCurrentUserExtensionProperties"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "911320782754272",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetReplenishmentOrders",
+                "SourceSection" : "Things_VendingNetworkServices",
+                "TargetArea" : "UI",
+                "TargetId" : "Grid-32",
+                "TargetSection" : ""
+              }, {
+                "Id" : "81320783777248",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetVocabularyTermUsage",
+                "SourceSection" : "DataTags_ComplaintCodes",
+                "TargetArea" : "UI",
+                "TargetId" : "TagCloud-47",
+                "TargetSection" : ""
+              }, {
+                "Id" : "651320872851758",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetVendingNetwork",
+                "SourceSection" : "Things_VendingNetworkServices",
+                "TargetArea" : "UI",
+                "TargetId" : "GoogleMap-48",
+                "TargetSection" : ""
+              }, {
+                "Id" : "381320872857375",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "zoom",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Zoom",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetVendingNetwork",
+                "SourceSection" : "Things_VendingNetworkServices",
+                "TargetArea" : "UI",
+                "TargetId" : "GoogleMap-48",
+                "TargetSection" : ""
+              }, {
+                "Id" : "461329247090430",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "name",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "SearchTerm",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetVocabularyTermUsage",
+                "SourceSection" : "DataTags_ComplaintCodes",
+                "TargetArea" : "UI",
+                "TargetId" : "SQUEALSearch-49",
+                "TargetSection" : ""
+              }, {
+                "Id" : "211348061550506",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "outOfStockPct",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetDashboardData",
+                "SourceSection" : "Things_VendingNetworkServices",
+                "TargetArea" : "UI",
+                "TargetId" : "Gauge-52",
+                "TargetSection" : ""
+              }, {
+                "Id" : "591348061557952",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "complaints",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetDashboardData",
+                "SourceSection" : "Things_VendingNetworkServices",
+                "TargetArea" : "UI",
+                "TargetId" : "Gauge-53",
+                "TargetSection" : ""
+              }, {
+                "Id" : "a0f0c4ba-fe4a-4997-97d0-af146ff3ad35",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Entity",
+                  "SourcePropertyBaseType" : "THINGNAME",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "filter",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "GetVendingNetwork",
+                "TargetSection" : "Things_VendingNetworkServices"
+              }, {
+                "Id" : "0ae9ffd9-7236-4782-8a89-fec68ba84afa",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Entity",
+                  "SourcePropertyBaseType" : "THINGNAME",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "filter",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "GetDashboardData",
+                "TargetSection" : "Things_VendingNetworkServices"
+              }, {
+                "Id" : "8795f6f7-9fa1-4981-a423-477970e54e4a",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Entity",
+                  "SourcePropertyBaseType" : "THINGNAME",
+                  "TargetProperty" : "filter",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "GetReplenishmentOrders",
+                "TargetSection" : "Things_VendingNetworkServices"
+              } ],
+              "DesignTimePermissions" : {
+                "Create" : [ ],
+                "Delete" : [ ],
+                "Metadata" : [ ],
+                "Read" : [ ],
+                "Update" : [ ]
+              },
+              "Events" : [ {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "SQUEALSearch-49",
+                "EventHandlerService" : "Squeal",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "SelectedRowsChanged",
+                "EventTriggerId" : "GetVocabularyTermUsage",
+                "EventTriggerSection" : "DataTags_ComplaintCodes",
+                "Id" : "961329247214339"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "DataTags_ComplaintCodes",
+                "EventHandlerService" : "GetVocabularyTermUsage",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "581352477823669"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_VendingNetworkServices",
+                "EventHandlerService" : "GetVendingNetwork",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "EntityChanged",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "75fd7d66-3e8d-4687-98bc-aca7dd35c1a8"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_VendingNetworkServices",
+                "EventHandlerService" : "GetDashboardData",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "EntityChanged",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "114e3359-fa0e-485a-85e6-47a4aaa11094"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_VendingNetworkServices",
+                "EventHandlerService" : "GetReplenishmentOrders",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "EntityChanged",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "68431b65-6887-4aaa-9279-c845d8d322e2"
+              } ],
+              "RunTimePermissions" : {
+                "permissions" : [ ]
+              },
+              "UI" : {
+                "Properties" : {
+                  "Area" : "Mashup",
+                  "Height" : 558,
+                  "Id" : "mashup-root",
+                  "IgnoreWarningsInViewMashup" : false,
+                  "IsPrintLayout" : false,
+                  "Left" : 0,
+                  "MinHeight" : 0,
+                  "MinWidth" : 0,
+                  "ResponsiveLayout" : false,
+                  "Style" : "VendingShapeStyle",
+                  "Tags" : [ {
+                    "vocabulary" : "Applications",
+                    "vocabularyTerm" : "AcmeVending"
+                  }, {
+                    "vocabulary" : "Applications",
+                    "vocabularyTerm" : "AcmeVending"
+                  } ],
+                  "Top" : 0,
+                  "Type" : "mashup",
+                  "Visible" : true,
+                  "Width" : 817,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Mashup",
+                  "_currentParameterDefs" : [ {
+                    "BaseType" : "THINGNAME",
+                    "Description" : "",
+                    "ParameterName" : "Entity"
+                  } ],
+                  "id_index" : 57
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayToolTip" : false,
+                    "Height" : 210,
+                    "Id" : "TagCloud-47",
+                    "Left" : 477,
+                    "MaxFontSize" : 3,
+                    "ResponsiveLayout" : false,
+                    "SelectedTagStyle" : "DefaultSelectedTagStyle",
+                    "TagCloudBodyBGStyle" : "DefaultTagCloudBodyBG",
+                    "TagCloudBodyHoverStyle" : "DefaultTagCloudBodyHover",
+                    "TagCloudBodyLinkStyle" : "DefaultTagCloudBodyLink",
+                    "TagCloudHeaderStyle" : "AcmeVendingExtraLarge",
+                    "TagCountField" : "count",
+                    "TagNameField" : "name",
+                    "TagStateStyle_StateParameters" : [ ],
+                    "Title" : "Tag Cloud of Complaints",
+                    "ToolTipField" : "count",
+                    "Top" : 347,
+                    "Type" : "tagcloud",
+                    "Visible" : true,
+                    "Width" : 339,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "TagCloud"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "EntityType" : "Thing",
+                    "Height" : 20,
+                    "Id" : "SQUEALSearch-49",
+                    "Left" : 495,
+                    "MessageToShow" : "Entity must be selected",
+                    "Mode" : "squeal",
+                    "Navigation" : "window",
+                    "ResponsiveLayout" : false,
+                    "SearchArea" : "all",
+                    "SearchTerm" : "",
+                    "SearchTermContext" : "",
+                    "SearchUsingStartsWith" : false,
+                    "ShowMessageIfNoEntity" : false,
+                    "ShowUiAtRuntime" : false,
+                    "SquealBGStyle" : "DefaultSquealBGStyle",
+                    "SquealInputBGStyle" : "DefaultSquealInputBGStyle",
+                    "SquealInputTextStyle" : "DefaultSquealInputTextStyle",
+                    "SquealSearchBtnStyle" : "DefaultSquealBtnStyle",
+                    "Top" : 5,
+                    "Type" : "squealsearch",
+                    "TypeInfo" : "",
+                    "Visible" : true,
+                    "Width" : 160,
+                    "Z-index" : 9,
+                    "__TypeDisplayName" : "SQUEAL Search"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "AddNewPostInline" : false,
+                    "AllowNewPosts" : true,
+                    "Area" : "UI",
+                    "Blog" : "AcmeVendingOperationsBlog",
+                    "BlogButtonsActiveStyle" : "DefaultBlogButtonsActiveStyle",
+                    "BlogButtonsHoverStyle" : "DefaultBlogButtonsHoverStyle",
+                    "BlogButtonsStyle" : "VendingGaugeFaceStyle",
+                    "BlogHeaderStyle" : "AcmeVendingExtraLarge",
+                    "BlogLinksStyle" : "DefaultBlogLinksStyle",
+                    "BlogPostStyle" : "DefaultBlogPostStyle",
+                    "BlogPostToolbarStyle" : "DefaultBlogPostToolbarStyle",
+                    "BlogStyle" : "DefaultBlogStyle",
+                    "EndDateTime" : "",
+                    "ExpandAll" : true,
+                    "FileRepository" : "SystemRepository",
+                    "FileRepositoryPath" : "/",
+                    "FilterTagVocabularyRestriction" : "",
+                    "Height" : 210,
+                    "HeightOfFullView" : 600,
+                    "Id" : "Blog-19",
+                    "Left" : 0,
+                    "ResponsiveLayout" : false,
+                    "SearchExpression" : "",
+                    "ShowExpandInSummary" : true,
+                    "ShowSearchInSummary" : false,
+                    "SortOrder" : "Newest",
+                    "Source" : "",
+                    "StartDateTime" : "",
+                    "TagsForPostVocabularyRestriction" : "",
+                    "Title" : "Operations Collaboration",
+                    "Top" : 347,
+                    "Type" : "blog",
+                    "View" : "Summary",
+                    "Visible" : true,
+                    "Width" : 473,
+                    "WidthOfFullView" : 800,
+                    "WordsInPosts" : 100,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Blog"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "AutoZoomBehavior" : "every-data-change",
+                    "EnableLocationSelection" : false,
+                    "EnableMarkerSelection" : false,
+                    "EnableRegionSelection" : false,
+                    "EndMarkerStyle" : "DefaultMapEndStyle",
+                    "Height" : 343,
+                    "Id" : "GoogleMap-48",
+                    "Left" : 0,
+                    "LocationField" : "location",
+                    "MapType" : "roadmap",
+                    "MarkerField" : "",
+                    "MarkerFormatting" : {
+                      "FieldName" : "assetType",
+                      "StateDefinition" : "AcmeVendingNetwork",
+                      "StateDefinitionType" : "string",
+                      "StateFormats" : [ {
+                        "comparator" : "==",
+                        "state" : "AcmeVendingRegionIcon",
+                        "stateName" : "Region",
+                        "value" : "Region:"
+                      }, {
+                        "comparator" : "==",
+                        "state" : "AcmeVendingSiteIcon",
+                        "stateName" : "Site",
+                        "value" : "Site:"
+                      }, {
+                        "comparator" : "==",
+                        "state" : "AcmeVendingVMIcon",
+                        "stateName" : "VMTemplateVerySmart",
+                        "value" : "VerySmartVendingMach:true"
+                      }, {
+                        "comparator" : "==",
+                        "state" : "AcmeVendingVMIconOOS",
+                        "stateName" : "VMTemplateVerySmart",
+                        "value" : "VerySmartVendingMach:false"
+                      }, {
+                        "state" : "",
+                        "stateName" : ""
+                      } ]
+                    },
+                    "MarkerFormatting_StateParameters" : [ {
+                      "BaseType" : "STRING",
+                      "DefaultValue" : "Region:",
+                      "Description" : "Region",
+                      "ParameterName" : "MarkerFormatting_Region"
+                    }, {
+                      "BaseType" : "STRING",
+                      "DefaultValue" : "Site:",
+                      "Description" : "Site",
+                      "ParameterName" : "MarkerFormatting_Site"
+                    }, {
+                      "BaseType" : "STRING",
+                      "DefaultValue" : "VerySmartVendingMach:true",
+                      "Description" : "VMTemplateVerySmart",
+                      "ParameterName" : "MarkerFormatting_VMTemplateVerySmart"
+                    }, {
+                      "BaseType" : "STRING",
+                      "DefaultValue" : "VerySmartVendingMach:false",
+                      "Description" : "VMTemplateVerySmart",
+                      "ParameterName" : "MarkerFormatting_VMTemplateVerySmart"
+                    } ],
+                    "MarkerStyle" : "DefaultMapMarkerStyle",
+                    "MashupParameters" : [ ],
+                    "MultiSelect" : false,
+                    "PathStyle" : "DefaultMapPathStyle",
+                    "RegionFillOpacity" : "1.0",
+                    "RegionFormatting_StateParameters" : [ ],
+                    "RegionLocationField" : "location",
+                    "RegionLocationsField" : "locations",
+                    "RegionMultiSelect" : false,
+                    "RegionStyle" : "DefaultMapRegionStyle",
+                    "RegionTooltipField" : "name",
+                    "ResponsiveLayout" : false,
+                    "RouteLocationField" : "location",
+                    "RouteStyle" : "DefaultMapRouteStyle",
+                    "SelectedMarkerStyle" : "DefaultMapSelectedStyle",
+                    "SelectedRegionStyle" : "DefaultMapRegionSelectedStyle",
+                    "SelectionMarkerStyle" : "DefaultMapSelectionStyle",
+                    "ShowEndMarker" : false,
+                    "ShowMarkerTooltips" : true,
+                    "ShowMarkers" : true,
+                    "ShowPathBetweenMarkers" : false,
+                    "ShowRegionTooltips" : false,
+                    "ShowRegions" : false,
+                    "ShowRoute" : false,
+                    "ShowSelectionMarker" : false,
+                    "ShowStartMarker" : false,
+                    "ShowTraffic" : false,
+                    "StartMarkerStyle" : "DefaultMapStartStyle",
+                    "TooltipField1" : "description",
+                    "TooltipMashupHeight" : 300,
+                    "TooltipMashupName" : "",
+                    "TooltipMashupWidth" : 400,
+                    "Top" : 0,
+                    "Type" : "googlemap",
+                    "Visible" : true,
+                    "Width" : 473,
+                    "Z-index" : 10,
+                    "Zoom" : 8,
+                    "__TypeDisplayName" : "Google Map"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "Fieldset-51",
+                    "FieldsetLabelStyle" : "VendingNavStyle",
+                    "FieldsetStyle" : "VendingFieldsetStyle",
+                    "Height" : 188,
+                    "Id" : "Fieldset-51",
+                    "Left" : 477,
+                    "ResponsiveLayout" : false,
+                    "Title" : "Orders",
+                    "Top" : 15,
+                    "Type" : "fieldset",
+                    "Visible" : true,
+                    "Width" : 339,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Fieldset"
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "AutoSelectFirstRow" : false,
+                      "CellTextWrapping" : false,
+                      "ColumnFormat" : {
+                        "formatInfo" : [ {
+                          "Align" : "left",
+                          "FieldName" : "executionOrder",
+                          "FormatOptions" : {
+                            "FormatString" : "",
+                            "formatInfo" : {
+                              "FieldName" : "",
+                              "StateDefinition" : "",
+                              "StateDefinitionType" : "fixed",
+                              "StateFormats" : [ {
+                                "state" : "",
+                                "stateName" : "fixed"
+                              } ]
+                            },
+                            "renderer" : "STRING"
+                          },
+                          "Title" : "Order Number",
+                          "Width" : "90"
+                        }, {
+                          "Align" : "left",
+                          "FieldName" : "inventoryLocation",
+                          "FormatOptions" : {
+                            "FormatString" : "",
+                            "formatInfo" : {
+                              "FieldName" : "",
+                              "StateDefinition" : "",
+                              "StateDefinitionType" : "fixed",
+                              "StateFormats" : [ {
+                                "state" : "",
+                                "stateName" : "fixed"
+                              } ]
+                            },
+                            "renderer" : "STRING"
+                          },
+                          "Title" : "Machine",
+                          "Width" : "70"
+                        }, {
+                          "Align" : "right",
+                          "FieldName" : "vendPosition",
+                          "FormatOptions" : {
+                            "FormatString" : "0.00",
+                            "formatInfo" : {
+                              "FieldName" : "",
+                              "StateDefinition" : "",
+                              "StateDefinitionType" : "fixed",
+                              "StateFormats" : [ {
+                                "state" : "",
+                                "stateName" : "fixed"
+                              } ]
+                            },
+                            "renderer" : "STRING"
+                          },
+                          "Title" : "Product",
+                          "Width" : "70"
+                        }, {
+                          "Align" : "right",
+                          "FieldName" : "qtyRequired",
+                          "FormatOptions" : {
+                            "FormatString" : "0.00",
+                            "formatInfo" : {
+                              "FieldName" : "",
+                              "StateDefinition" : "",
+                              "StateDefinitionType" : "fixed",
+                              "StateFormats" : [ {
+                                "state" : "",
+                                "stateName" : "fixed"
+                              } ]
+                            },
+                            "renderer" : "NUMBER"
+                          },
+                          "Title" : "Quantity",
+                          "Width" : "80"
+                        } ]
+                      },
+                      "CurrentScrollTop" : 0,
+                      "GridBackgroundStyle" : "DefaultGridBackgroundStyle",
+                      "GridEditableFieldStyle" : "DefaultGridEditableFieldStyle",
+                      "GridHeaderStyle" : "VendingGridHeaderStyle",
+                      "GridInvalidFieldStyle" : "DefaultGridInvalidFieldStyle",
+                      "Height" : 160,
+                      "Id" : "Grid-32",
+                      "IsEditable" : false,
+                      "IsPrintLayout" : false,
+                      "Left" : 10,
+                      "MultiSelect" : false,
+                      "ResponsiveLayout" : false,
+                      "RowAlternateBackgroundStyle" : "VendingRowAltBGStyle",
+                      "RowBackgroundStyle" : "DefaultRowBackgroundStyle",
+                      "RowFormat_StateParameters" : [ ],
+                      "RowHeight" : 30,
+                      "RowHoverStyle" : "VendingHoverStyle",
+                      "RowSelectedStyle" : "VendingSelectedStyle",
+                      "RowStyle" : "DefaultGridStyle",
+                      "ScrollTop" : 0,
+                      "ShowAllColumns" : false,
+                      "Top" : 15,
+                      "Type" : "dhxgrid",
+                      "Visible" : true,
+                      "Width" : 318,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Grid"
+                    },
+                    "Widgets" : [ ]
+                  } ]
+                }, {
+                  "Properties" : {
+                    "Aperture" : 270,
+                    "Area" : "UI",
+                    "CenterDiameter" : 16,
+                    "CenterStyle" : "DefaultGaugeCenterStyle",
+                    "ChartStyle" : "DefaultChartStyle",
+                    "Decimals" : 0,
+                    "DisplayName" : "Gauge-52",
+                    "FaceDiameter" : 80,
+                    "FormatNeedle" : true,
+                    "GaugeBorder" : 8,
+                    "GaugeBorderStyle" : "DefaultGaugeBorderStyle",
+                    "GaugeFaceStyle" : "VendingGaugeFaceStyle",
+                    "GaugeOffset" : 0,
+                    "GaugeScaling" : 70,
+                    "GaugeStyle" : "VendingGaugeStyle",
+                    "Height" : 138,
+                    "Id" : "Gauge-52",
+                    "Intervals" : 4,
+                    "IntervalsPerLabel" : 1,
+                    "LabelDecimals" : 0,
+                    "LabelDigits" : 3,
+                    "LabelDisplayMode" : "inside",
+                    "LabelStyle" : "DefaultGaugeLabelStyle",
+                    "Left" : 477,
+                    "Legend" : "Stock Out %",
+                    "LegendDisplayMode" : "bottom",
+                    "LegendStyle" : "VendingLegendStyle",
+                    "MaxValue" : 20,
+                    "MinValue" : 0,
+                    "MinorTickLength" : 1,
+                    "MinorTicks" : 5,
+                    "NeedleDiameter" : 12,
+                    "NeedleFormatter" : {
+                      "FieldName" : "outOfStockPct",
+                      "StateDefinition" : "AcmeVendingGauge1",
+                      "StateDefinitionType" : "numeric",
+                      "StateFormats" : [ {
+                        "comparator" : "<",
+                        "state" : "GreenIndicatorMarker",
+                        "stateName" : "",
+                        "value" : "5"
+                      }, {
+                        "comparator" : "<",
+                        "state" : "YellowIndicatorMarker",
+                        "stateName" : "",
+                        "value" : "10"
+                      }, {
+                        "state" : "RedIndicatorMarker",
+                        "stateName" : ""
+                      } ]
+                    },
+                    "NeedleLength" : 30,
+                    "NeedleStyle" : "DefaultGaugeNeedleStyle",
+                    "ReferenceAngle" : 225,
+                    "ResponsiveLayout" : false,
+                    "RingWidth" : 10,
+                    "ShowRanges" : true,
+                    "TickLength" : 2,
+                    "TickStyle" : "DefaultGaugeTickStyle",
+                    "Top" : 205,
+                    "Type" : "gauge",
+                    "ValueDecimals" : 0,
+                    "ValueDigits" : 3,
+                    "ValueDisplayMode" : "none",
+                    "ValueFormatter" : {
+                      "FieldName" : "outOfStockPct",
+                      "StateDefinition" : "Vending3State",
+                      "StateDefinitionType" : "numeric",
+                      "StateFormats" : [ {
+                        "comparator" : "<",
+                        "state" : "VendingLoAlarm",
+                        "stateName" : "Lo",
+                        "value" : "5"
+                      }, {
+                        "comparator" : "<",
+                        "state" : "VendingNormalAlarm",
+                        "stateName" : "Normal",
+                        "value" : "10"
+                      }, {
+                        "state" : "VendingHiAlarm",
+                        "stateName" : "Hi"
+                      } ]
+                    },
+                    "ValueFormatter_StateParameters" : [ {
+                      "BaseType" : "NUMBER",
+                      "DefaultValue" : 5,
+                      "Description" : "Lo",
+                      "ParameterName" : "ValueFormatter_Lo"
+                    }, {
+                      "BaseType" : "NUMBER",
+                      "DefaultValue" : 10,
+                      "Description" : "Normal",
+                      "ParameterName" : "ValueFormatter_Normal"
+                    } ],
+                    "ValueStyle" : "DefaultGaugeStyle",
+                    "Visible" : true,
+                    "Width" : 165,
+                    "Z-index" : 12,
+                    "__TypeDisplayName" : "Gauge"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Aperture" : 270,
+                    "Area" : "UI",
+                    "CenterDiameter" : 16,
+                    "CenterStyle" : "DefaultGaugeCenterStyle",
+                    "ChartStyle" : "DefaultChartStyle",
+                    "Decimals" : 0,
+                    "DisplayName" : "Gauge-53",
+                    "FaceDiameter" : 80,
+                    "FormatNeedle" : true,
+                    "GaugeBorder" : 8,
+                    "GaugeBorderStyle" : "DefaultGaugeBorderStyle",
+                    "GaugeFaceStyle" : "VendingGaugeFaceStyle",
+                    "GaugeOffset" : 0,
+                    "GaugeScaling" : 70,
+                    "GaugeStyle" : "VendingGaugeStyle",
+                    "Height" : 138,
+                    "Id" : "Gauge-53",
+                    "Intervals" : 5,
+                    "IntervalsPerLabel" : 1,
+                    "LabelDecimals" : 0,
+                    "LabelDigits" : 3,
+                    "LabelDisplayMode" : "inside",
+                    "LabelStyle" : "DefaultGaugeLabelStyle",
+                    "Left" : 651,
+                    "Legend" : "Complaints",
+                    "LegendDisplayMode" : "bottom",
+                    "LegendStyle" : "VendingLegendStyle",
+                    "MaxValue" : 25,
+                    "MinValue" : 0,
+                    "MinorTickLength" : 1,
+                    "MinorTicks" : 5,
+                    "NeedleDiameter" : 12,
+                    "NeedleFormatter" : {
+                      "FieldName" : "complaints",
+                      "StateDefinition" : "AcmeVendingGauge1",
+                      "StateDefinitionType" : "numeric",
+                      "StateFormats" : [ {
+                        "comparator" : "<",
+                        "state" : "GreenIndicatorMarker",
+                        "stateName" : "",
+                        "value" : "5"
+                      }, {
+                        "comparator" : "<",
+                        "state" : "YellowIndicatorMarker",
+                        "stateName" : "",
+                        "value" : "15"
+                      }, {
+                        "state" : "RedIndicatorMarker",
+                        "stateName" : ""
+                      } ]
+                    },
+                    "NeedleLength" : 30,
+                    "NeedleStyle" : "DefaultGaugeNeedleStyle",
+                    "ReferenceAngle" : 225,
+                    "ResponsiveLayout" : false,
+                    "RingWidth" : 10,
+                    "ShowRanges" : true,
+                    "TickLength" : 2,
+                    "TickStyle" : "DefaultGaugeTickStyle",
+                    "Top" : 205,
+                    "Type" : "gauge",
+                    "ValueDecimals" : 0,
+                    "ValueDigits" : 3,
+                    "ValueDisplayMode" : "none",
+                    "ValueFormatter" : {
+                      "FieldName" : "complaints",
+                      "StateDefinition" : "Vending3State",
+                      "StateDefinitionType" : "numeric",
+                      "StateFormats" : [ {
+                        "comparator" : "<",
+                        "state" : "VendingLoAlarm",
+                        "stateName" : "Lo",
+                        "value" : "5"
+                      }, {
+                        "comparator" : "<",
+                        "state" : "VendingNormalAlarm",
+                        "stateName" : "Normal",
+                        "value" : "15"
+                      }, {
+                        "state" : "VendingHiAlarm",
+                        "stateName" : "Hi"
+                      } ]
+                    },
+                    "ValueFormatter_StateParameters" : [ {
+                      "BaseType" : "NUMBER",
+                      "DefaultValue" : 5,
+                      "Description" : "Lo",
+                      "ParameterName" : "ValueFormatter_Lo"
+                    }, {
+                      "BaseType" : "NUMBER",
+                      "DefaultValue" : 15,
+                      "Description" : "Normal",
+                      "ParameterName" : "ValueFormatter_Normal"
+                    } ],
+                    "ValueStyle" : "DefaultGaugeStyle",
+                    "Visible" : true,
+                    "Width" : 165,
+                    "Z-index" : 12,
+                    "__TypeDisplayName" : "Gauge"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "Shape-54",
+                    "DynamicFillOrientation" : "vertical",
+                    "DynamicRangeMaximum" : 100,
+                    "DynamicRangeMinimum" : 0,
+                    "EnableDynamicFill" : true,
+                    "GradientOrientation" : "horizontal",
+                    "GradientType" : "radial",
+                    "Height" : 138,
+                    "Id" : "Shape-54",
+                    "Left" : 477,
+                    "RectangleCornerRadius" : 10,
+                    "ResponsiveLayout" : false,
+                    "ShapeFormatter_StateParameters" : [ ],
+                    "ShapeStyle" : "VendingShapeStyle3",
+                    "ShapeType" : "circle",
+                    "Top" : 205,
+                    "Type" : "shape",
+                    "UnfilledBackgroundStyle" : "DefaultShapeUnfilledBackgroundStyle",
+                    "Visible" : true,
+                    "Width" : 165,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Shape"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "Shape-56",
+                    "DynamicFillOrientation" : "vertical",
+                    "DynamicRangeMaximum" : 100,
+                    "DynamicRangeMinimum" : 0,
+                    "EnableDynamicFill" : true,
+                    "GradientOrientation" : "horizontal",
+                    "GradientType" : "radial",
+                    "Height" : 138,
+                    "Id" : "Shape-56",
+                    "Left" : 650,
+                    "RectangleCornerRadius" : 10,
+                    "ResponsiveLayout" : false,
+                    "ShapeFormatter_StateParameters" : [ ],
+                    "ShapeStyle" : "VendingShapeStyle3",
+                    "ShapeType" : "circle",
+                    "Top" : 205,
+                    "Type" : "shape",
+                    "UnfilledBackgroundStyle" : "DefaultShapeUnfilledBackgroundStyle",
+                    "Visible" : true,
+                    "Width" : 165,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Shape"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "Shape-57",
+                    "DynamicFillOrientation" : "vertical",
+                    "DynamicRangeMaximum" : 100,
+                    "DynamicRangeMinimum" : 0,
+                    "EnableDynamicFill" : false,
+                    "GradientOrientation" : "vertical",
+                    "GradientType" : "linear",
+                    "Height" : 138,
+                    "Id" : "Shape-57",
+                    "Left" : 477,
+                    "RectangleCornerRadius" : 10,
+                    "ResponsiveLayout" : false,
+                    "ShapeFormatter_StateParameters" : [ ],
+                    "ShapeStyle" : "VendingShapeStyle",
+                    "ShapeType" : "rectangle",
+                    "Top" : 205,
+                    "Type" : "shape",
+                    "UnfilledBackgroundStyle" : "DefaultShapeUnfilledBackgroundStyle",
+                    "Visible" : true,
+                    "Width" : 340,
+                    "Z-index" : 8,
+                    "__TypeDisplayName" : "Shape"
+                  },
+                  "Widgets" : [ ]
+                } ]
+              },
+              "mashupType" : "page"
+            }
+            ]]>
+            </mashupContent>
+        </Mashup>
+    </Mashups>
+</Entities>

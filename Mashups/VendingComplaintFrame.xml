@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <Mashups>
+        <Mashup
+         aspect.mashupType="target"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-10-01T12:11:12.686Z"
+         name="VendingComplaintFrame"
+         projectName=""
+         rows="0.0"
+         tags="Applications:AcmeVending">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ParameterDefinitions></ParameterDefinitions>
+            <Things></Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "Data" : { },
+              "DataBindings" : [ ],
+              "Events" : [ ],
+              "UI" : {
+                "Properties" : {
+                  "Area" : "Mashup",
+                  "Height" : 360,
+                  "Id" : "mashup-root",
+                  "Left" : 0,
+                  "Tags" : [ {
+                    "vocabulary" : "Applications",
+                    "vocabularyTerm" : "AcmeVending"
+                  } ],
+                  "Top" : 0,
+                  "Type" : "targetmashup",
+                  "Width" : 250,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Target Mashup",
+                  "id_index" : 4
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Height" : 310,
+                    "Id" : "pagemashupcontainer-1",
+                    "Left" : 0,
+                    "Name" : "",
+                    "Top" : 50,
+                    "Type" : "pagemashupcontainer",
+                    "Width" : 250,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Page Mashup Container"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "AlternateText" : "",
+                    "Area" : "UI",
+                    "Height" : 50,
+                    "Id" : "Image-2",
+                    "Left" : 0,
+                    "SourceURL" : "/Thingworx/MediaEntities/header",
+                    "Top" : 0,
+                    "Type" : "image",
+                    "Width" : 250,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Image"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "AlternateText" : "",
+                    "Area" : "UI",
+                    "Height" : 32,
+                    "Id" : "Image-3",
+                    "Left" : 105,
+                    "SourceURL" : "/Thingworx/MediaEntities/acmeIcon",
+                    "Top" : 2,
+                    "Type" : "image",
+                    "Width" : 32,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Image"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Alignment" : "left",
+                    "Area" : "UI",
+                    "Height" : 22,
+                    "Id" : "Label-4",
+                    "Left" : 31,
+                    "Style" : "AcmeVendingExtraLarge",
+                    "Text" : "Vending Complaint Form",
+                    "Top" : 25,
+                    "Type" : "label",
+                    "Width" : 180,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Label"
+                  },
+                  "Widgets" : [ ]
+                } ]
+              },
+              "mashupType" : "target"
+            }
+            ]]>
+            </mashupContent>
+        </Mashup>
+    </Mashups>
+</Entities>

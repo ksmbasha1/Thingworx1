@@ -1,0 +1,2030 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <Things>
+        <Thing
+         description="Services to Load Data and Refresh the Demo Objects"
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         lastModifiedDate="2019-10-01T12:11:13.834Z"
+         name="VendingDemoSupport"
+         projectName=""
+         published="false"
+         tags="Applications:AcmeVending"
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions>
+                    <PropertyDefinition
+                     aspect.dataChangeThreshold="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.defaultValue="0.0"
+                     aspect.isPersistent="true"
+                     aspect.isReadOnly="false"
+                     baseType="NUMBER"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="DynamicPricingMarginContribution"
+                     ordinal="0"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.dataChangeThreshold="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.defaultValue="0.0"
+                     aspect.isPersistent="true"
+                     aspect.isReadOnly="false"
+                     baseType="NUMBER"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="ProductDUnitSales"
+                     ordinal="0"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.dataChangeThreshold="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isPersistent="true"
+                     aspect.isReadOnly="false"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="VMLoaded"
+                     ordinal="0"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.dataChangeThreshold="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.defaultValue="0.0"
+                     aspect.isPersistent="true"
+                     aspect.isReadOnly="false"
+                     baseType="NUMBER"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="ProductAUnitSales"
+                     ordinal="0"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.dataChangeThreshold="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.defaultValue="0.0"
+                     aspect.isPersistent="true"
+                     aspect.isReadOnly="false"
+                     baseType="NUMBER"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="DynamicPricingUnitSales"
+                     ordinal="0"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.dataChangeThreshold="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.defaultValue="0.0"
+                     aspect.isPersistent="true"
+                     aspect.isReadOnly="false"
+                     baseType="NUMBER"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="FixedPricingUnitSales"
+                     ordinal="0"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.dataChangeThreshold="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.defaultValue="0.0"
+                     aspect.isPersistent="true"
+                     aspect.isReadOnly="false"
+                     baseType="NUMBER"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="ProductBUnitSales"
+                     ordinal="0"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.dataChangeThreshold="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.defaultValue="0.0"
+                     aspect.isPersistent="true"
+                     aspect.isReadOnly="false"
+                     baseType="NUMBER"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="ProductCUnitSales"
+                     ordinal="0"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.dataChangeThreshold="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.defaultValue="0.0"
+                     aspect.isPersistent="true"
+                     aspect.isReadOnly="false"
+                     baseType="NUMBER"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="FixedPricingGrossMargin"
+                     ordinal="0"></PropertyDefinition>
+                </PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetSalesByProduct">
+                        <ResultType
+                         aspect.dataShape="SBPShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetSalesBySite">
+                        <ResultType
+                         aspect.dataShape="SBSShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="LoadComplaintCodesXML">
+                        <ResultType
+                         baseType="XML"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="LoadEquiptmentBlogXML">
+                        <ResultType
+                         baseType="XML"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="LoadEquiptmentFaultsXML">
+                        <ResultType
+                         baseType="XML"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="LoadInventoryXML">
+                        <ResultType
+                         baseType="XML"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="LoadMaintenanceBlogXML">
+                        <ResultType
+                         baseType="XML"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="LoadMaintenanceOrderXML">
+                        <ResultType
+                         baseType="XML"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="LoadMarketingBlog">
+                        <ResultType
+                         baseType="XML"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="LoadOperationsBlogXML">
+                        <ResultType
+                         baseType="XML"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="LoadReplenishmentOrderXML">
+                        <ResultType
+                         baseType="XML"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="PurgeComplaintStream">
+                        <ResultType
+                         baseType="BOOLEAN"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="PurgeDemoData">
+                        <ResultType
+                         baseType="BOOLEAN"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="RestDemoData">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name=""
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="SetupComplaintCodes">
+                        <ResultType
+                         baseType="BOOLEAN"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="SetupEquiptmentBlog">
+                        <ResultType
+                         baseType="BOOLEAN"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="SetupEquiptmentFaults">
+                        <ResultType
+                         baseType="BOOLEAN"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="SetupInventoryData">
+                        <ResultType
+                         baseType="BOOLEAN"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="SetupMaintenanceBlog">
+                        <ResultType
+                         baseType="BOOLEAN"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="SetupMaintenanceOrders">
+                        <ResultType
+                         baseType="BOOLEAN"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="SetupMarketingBlog">
+                        <ResultType
+                         baseType="BOOLEAN"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="SetupOperationsBlog">
+                        <ResultType
+                         baseType="BOOLEAN"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="SetupReplenishmentOrders">
+                        <ResultType
+                         baseType="BOOLEAN"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="GetSalesByProduct"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="GetSalesBySite"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="LoadComplaintCodesXML"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="LoadEquiptmentBlogXML"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="LoadEquiptmentFaultsXML"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="LoadInventoryXML"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="LoadMaintenanceBlogXML"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="LoadMaintenanceOrderXML"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="LoadMarketingBlog"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="LoadOperationsBlogXML"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="LoadReplenishmentOrderXML"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="PurgeComplaintStream"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="PurgeDemoData"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="RestDemoData"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="SetupComplaintCodes"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="SetupEquiptmentBlog"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="SetupEquiptmentFaults"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="SetupInventoryData"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="SetupMaintenanceBlog"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="SetupMaintenanceOrders"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="SetupMarketingBlog"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="SetupOperationsBlog"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="SetupReplenishmentOrders"
+                     queryService=""></ServiceMapping>
+                </ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetSalesByProduct">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var params = {
+                                        	infoTableName : "true",
+                                        	dataShapeName : "SBPShape"
+                                        };
+                                        
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("true"), dataShapeName:STRING):INFOTABLE(Undefined)
+                                        var result = Resources['InfoTableFunctions'].CreateInfoTableFromDataShape(params);
+                                        
+                                        var data = new Object();
+                                        data.product = "A";
+                                        data.sales = me.ProductAUnitSales;
+                                        result.AddRow(data);
+                                         
+                                        data.product = "B";
+                                        data.sales = me.ProductBUnitSales;
+                                        result.AddRow(data);
+                                        
+                                        data.product = "C";
+                                        data.sales = me.ProductCUnitSales;
+                                        result.AddRow(data);
+                                        
+                                        data.product = "D";
+                                        data.sales = me.ProductDUnitSales;
+                                        result.AddRow(data);
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetSalesBySite">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var params = {
+                                        	infoTableName : "true",
+                                        	dataShapeName : "SBSShape"
+                                        };
+                                        
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("true"), dataShapeName:STRING):INFOTABLE(Undefined)
+                                        var result = Resources['InfoTableFunctions'].CreateInfoTableFromDataShape(params);
+                                        
+                                        var data = new Object();
+                                        data.site = "1";
+                                        data.sales = me.ProductAUnitSales*.35 + me.ProductBUnitSales*.35 + me.ProductCUnitSales*.35 + me.ProductDUnitSales*.35;
+                                        result.AddRow(data);
+                                         
+                                        data.site = "2";
+                                        data.sales = me.ProductAUnitSales*.18 + me.ProductBUnitSales*.18 + me.ProductCUnitSales*.18 + me.ProductDUnitSales*.18;
+                                        result.AddRow(data);
+                                        
+                                        data.site = "3";
+                                        data.sales = me.ProductAUnitSales*.20 + me.ProductBUnitSales*.20 + me.ProductCUnitSales*.20 + me.ProductDUnitSales*.20;
+                                        result.AddRow(data);
+                                        
+                                        data.site = "4";
+                                        data.sales = me.ProductAUnitSales*.27 + me.ProductBUnitSales*.27 + me.ProductCUnitSales*.27 + me.ProductDUnitSales*.27;
+                                        result.AddRow(data);
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="LoadComplaintCodesXML">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var result = Resources['ContentLoaderFunctions'].LoadXML({
+                                        		url : Things['ThisServer'].Url + '/Thingworx/demos/AcmeVending/assets/AcmeVendingComplaintCodes.xml',
+                                        		username : Things['ThisServer'].FileLoadUser,
+                                        		password : Things['ThisServer'].FileLoadPassword,
+                                        		timeout : 30000
+                                        	});
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="LoadEquiptmentBlogXML">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var result = Resources['ContentLoaderFunctions'].LoadXML({
+                                        		url : Things['ThisServer'].Url + '/Thingworx/demos/AcmeVending/assets/EquiptmentBlogEntriesWithComments.xml',
+                                        		username : Things['ThisServer'].FileLoadUser,
+                                        		password : Things['ThisServer'].FileLoadPassword,
+                                        		timeout : 30000
+                                        	});
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="LoadEquiptmentFaultsXML">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var result = Resources['ContentLoaderFunctions'].LoadXML({
+                                        		url : Things['ThisServer'].Url + '/Thingworx/demos/AcmeVending/assets/AcmeVendingEquiptmentFaults.xml',
+                                        		username : Things['ThisServer'].FileLoadUser,
+                                        		password : Things['ThisServer'].FileLoadPassword,
+                                        		timeout : 30000
+                                        	});
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="LoadInventoryXML">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var result = Resources['ContentLoaderFunctions'].LoadXML({
+                                        		url : Things['ThisServer'].Url + '/Thingworx/demos/AcmeVending/assets/AcmeVendingInventoryTable.xml',
+                                        		username : Things['ThisServer'].FileLoadUser,
+                                        		password : Things['ThisServer'].FileLoadPassword,
+                                        		timeout : 30000
+                                        	});
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="LoadMaintenanceBlogXML">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var result = Resources['ContentLoaderFunctions'].LoadXML({
+                                        		url : Things['ThisServer'].Url + '/Thingworx/demos/AcmeVending/assets/MaintenanceBlogEntriesWithComments.xml',
+                                        		username : Things['ThisServer'].FileLoadUser,
+                                        		password : Things['ThisServer'].FileLoadPassword,
+                                        		timeout : 30000
+                                        	});
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="LoadMaintenanceOrderXML">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // headers:VALUES
+                                        var headers = new Object();
+                                        
+                                        var params = {
+                                        	password : Things['ThisServer'].FileLoadPassword,
+                                        	ignoreSSLErrors : false,
+                                        	url : Things['ThisServer'].Url + '/Thingworx/demos/AcmeVending/assets/AcmeVendingMaintenaceOrders.xml',
+                                        	timeout : 60,
+                                        	headers : headers,
+                                        	username : Things['ThisServer'].FileLoadUser
+                                        };
+                                        
+                                        // LoadXML(password:STRING, ignoreSSLErrors:BOOLEAN, url:STRING, timeout:NUMBER(60), headers:VALUES, username:STRING):XML
+                                        var result = Resources['ContentLoaderFunctions'].LoadXML(params);
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="LoadMarketingBlog">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var result = Resources['ContentLoaderFunctions'].LoadXML({
+                                        		url : Things['ThisServer'].Url + '/Thingworx/demos/AcmeVending/assets/MarketingBlogEntriesWithComments.xml',
+                                        		username : Things['ThisServer'].FileLoadUser,
+                                        		password : Things['ThisServer'].FileLoadPassword,
+                                        		timeout : 30000
+                                        	});
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="LoadOperationsBlogXML">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var result = Resources['ContentLoaderFunctions'].LoadXML({
+                                        		url : Things['ThisServer'].Url + '/Thingworx/demos/AcmeVending/assets/OperationsBlogEntriesWithComments.xml',
+                                        		username : Things['ThisServer'].FileLoadUser,
+                                        		password : Things['ThisServer'].FileLoadPassword,
+                                        		timeout : 30000
+                                        	});
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="LoadReplenishmentOrderXML">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var result = Resources['ContentLoaderFunctions'].LoadXML({
+                                        		url : Things['ThisServer'].Url + '/Thingworx/demos/AcmeVending/assets/AcmeVendingReplenishmentOrders.xml',
+                                        		username : Things['ThisServer'].FileLoadUser,
+                                        		password : Things['ThisServer'].FileLoadPassword,
+                                        		timeout : 30000
+                                        	});
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="PurgeComplaintStream">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // endDate:DATETIME
+                                        var endDate = new Date();
+                                        
+                                        // startDate:DATETIME
+                                        var startDate = new Date();
+                                        startDate.setYear(2000);
+                                        
+                                        var params = {
+                                        	endDate : endDate,
+                                        	startDate : startDate
+                                        };
+                                        
+                                        // PurgeStreamEntries(endDate:DATETIME, startDate:DATETIME):BOOLEAN
+                                        Things['ComplaintStream'].PurgeStreamEntries(params);
+                                        
+                                        var result = true;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="PurgeDemoData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // endDate:DATETIME
+                                        var endDate = new Date();
+                                        
+                                        // startDate:DATETIME
+                                        var startDate = new Date();
+                                        startDate.setYear(2000);
+                                        
+                                        var params = {
+                                        	endDate : endDate,
+                                        	startDate : startDate
+                                        };
+                                        
+                                        // PurgeBlogEntries(endDate:DATETIME, startDate:DATETIME):BOOLEAN
+                                        Things['AcmeVendingEquiptmentBlog'].PurgeBlogEntries(params);
+                                        Things['AcmeVendingMaintenanceBlog'].PurgeBlogEntries(params);
+                                        Things['AcmeVendingMarketingBlog'].PurgeBlogEntries(params);
+                                        Things['AcmeVendingOperationsBlog'].PurgeBlogEntries(params);
+                                        
+                                        // PurgeDataTableEntries():BOOLEAN
+                                        Things['ComplaintCodesDT'].PurgeDataTableEntries();
+                                        Things['EquiptmentStatusCodesDT'].PurgeDataTableEntries();
+                                        Things['ReplenishmentOrderDT'].PurgeDataTableEntries();
+                                        Things['WorkOrderDT'].PurgeDataTableEntries();
+                                        Things['InventoryDT'].PurgeDataTableEntries();
+                                        
+                                        // PurgeStreamEntries(endDate:DATETIME, startDate:DATETIME):BOOLEAN
+                                        Things['ComplaintStream'].PurgeStreamEntries(params);
+                                        Things['EquiptmentStatusStream'].PurgeStreamEntries(params);
+                                        
+                                        result = true;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="RestDemoData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var proceed = me.PurgeDemoData();
+                                        
+                                        if (proceed === true) {
+                                        	proceed = me.SetupMaintenanceOrders();
+                                        }
+                                        if (proceed === true) {
+                                        	proceed = me.SetupReplenishmentOrders();
+                                        }
+                                        if (proceed === true) {
+                                        	proceed = me.SetupMaintenanceBlog();
+                                        }
+                                        if (proceed === true) {
+                                        	proceed = SetupMarketingBlog();
+                                        }
+                                        if (proceed === true) {
+                                        	proceed = SetupEquiptmentBlog();
+                                        }
+                                        if (proceed === true) {
+                                        	proceed = SetupSalesBlog();
+                                        }
+                                        if (proceed === true) {
+                                        	proceed = SetupComplaintCodes();
+                                        }
+                                        if (proceed === true) {
+                                        	proceed = SetupEquiptmentFaults();
+                                        }
+                                        if (proceed === true) {
+                                        	proceed = SetupInventoryData();
+                                        }
+                                        
+                                        if (proceed === false) {
+                                        	me.PurgeDemoData();
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="SetupComplaintCodes">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var xml = me.LoadComplaintCodesXML();
+                                        
+                                        for each (var row in xml.Rowset[0].Row) {
+                                        	// location:LOCATION
+                                        	var location = new Object();
+                                        	location.latitude = 0;
+                                        	location.longitude = 0;
+                                        	location.elevation = 0;
+                                        	location.units = 'WGS84';
+                                        
+                                        	// tags:TAGS
+                                        	var tags = new Array();
+                                        
+                                        	// values:VALUES
+                                        	var values = Things['ComplaintCodesDT'].CreateValues();
+                                        	values.code = Number(row["code"]);
+                                           values.description = row["description"].toString();
+                                        
+                                        	var params = {
+                                        		location : location,
+                                        		tags : tags,
+                                        		values : values
+                                        	};
+                                        
+                                        	// AddDataTableEntry(location:LOCATION, tags:TAGS, values:VALUES):BOOLEAN
+                                        	var Result = Things['ComplaintCodesDT'].AddDataTableEntry(params);
+                                        
+                                        };
+                                        
+                                        result = true;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="SetupEquiptmentBlog">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // timestamp:DATETIME
+                                        var timestamp = new Date();
+                                        
+                                        // location:LOCATION
+                                        var location = new Object();
+                                        location.latitude = 0;
+                                        location.longitude = 0;
+                                        location.elevation = 0;
+                                        location.units = 'WGS84';
+                                        
+                                        var xml = me.LoadEquiptmentBlogXML();
+                                        
+                                        var getComments = function(comRow, blogId){
+                                        	try {
+                                        			var strComTags = "";
+                                        			strComTags = strComTags + row["tags"];
+                                        			
+                                        			var strContentCheck = "";
+                                        			strContentCheck = strContentCheck + comRow["content"]
+                                        			if (strContentCheck != "") {
+                                        					// addComment(blogEntryID:STRING, blogCommentID:STRING, timestamp:DATETIME, location:LOCATION, source:STRING, content:STRING, tags:TAGS):STRING
+                                        					Things['AcmeVendingEquiptmentBlog'].AddComment({"blogEntryID":blogId, "blogCommentID":blogId, "timestamp":timestamp, "location":location, "source":comRow["source"], "content":comRow["content"], "tags":strComTags});
+                                        			}
+                                        
+                                        			for each (var comment in comRow["comments"].infoTable.Rows[0]) {
+                                        					getComments(comment, blogId);
+                                        			}
+                                        	}
+                                        	catch (err) {
+                                        			strComTags = strComTags;
+                                        	}
+                                        };
+                                        
+                                        for each (var row in xml.Rows[0].Row) { 
+                                        	var strTags = "";
+                                        	strTags = strTags + row["tags"];
+                                        
+                                        	var sDate = "";
+                                        	sDate = sDate + row["timestamp"];
+                                        
+                                        	var strTitleCheck = "";
+                                        	strTitleCheck = strTitleCheck + row["title"]
+                                        	if (strTitleCheck !== "") {     
+                                        			// addBlogEntry(title:STRING, timestamp:DATETIME, location:LOCATION, source:STRING, content:STRING, tags:TAGS):STRING
+                                        			Things['AcmeVendingEquiptmentBlog'].AddBlogEntry({"title":row["title"], "timestamp":sDate, "location":location, "source":row["source"], "content":row["content"], "tags":strTags});
+                                        	}
+                                        
+                                        	var returnBlogs = Things['AcmeVendingEquiptmentBlog'].GetBlogEntries({"maxItems":9999});
+                                        	
+                                        	returnBlogs = Resources['InfoTableFunctions'].EQFilter({"t":returnBlogs, "fieldName":"timestamp", "value":sDate})
+                                        
+                                        	for each (var comment in row["comments"].infoTable.Rows[0].Row) {
+                                        			getComments(comment, returnBlogs[0].id);
+                                        	};
+                                        };
+                                        
+                                        result = true;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="SetupEquiptmentFaults">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var xml = me.LoadEquiptmentFaultsXML();
+                                        
+                                        for each (var row in xml.Rowset[0].Row) {
+                                        	// location:LOCATION
+                                        	var location = new Object();
+                                        	location.latitude = 0;
+                                        	location.longitude = 0;
+                                        	location.elevation = 0;
+                                        	location.units = 'WGS84';
+                                        
+                                        	// tags:TAGS
+                                        	var tags = new Array();
+                                        
+                                        	// values:VALUES
+                                        	var values = Things['EquiptmentStatusCodesDT'].CreateValues();
+                                        	values.statusCode = Number(row["statusCode"]);
+                                           values.statusDescription = row["statusDescription"].toString();
+                                        
+                                        	var params = {
+                                        		location : location,
+                                        		tags : tags,
+                                        		values : values
+                                        	};
+                                        
+                                        	// AddDataTableEntry(location:LOCATION, tags:TAGS, values:VALUES):BOOLEAN
+                                        	var Result = Things['EquiptmentStatusCodesDT'].AddDataTableEntry(params);
+                                        
+                                        };
+                                        
+                                        result = true;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="SetupInventoryData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var xml = me.LoadInventoryXML();
+                                        
+                                        for each (var row in xml.Rowset[0].Row) {
+                                        	// location:LOCATION
+                                        	var location = new Object();
+                                        	location.latitude = 0;
+                                        	location.longitude = 0;
+                                        	location.elevation = 0;
+                                        	location.units = 'WGS84';
+                                        
+                                        	// tags:TAGS
+                                        	var tags = new Array();
+                                        
+                                        	// values:VALUES
+                                        	var values = Things['InventoryDT'].CreateValues();
+                                        	values.currentInvQty = Number(row["currentInvQty"]);
+                                           values.inventoryLocation = row["inventoryLocation"].toString();
+                                           values.positionCapacity = Number(row["positionCapacity"]);
+                                           values.productId = row["productId"].toString();
+                                           values.productImage = row["productImage"].toString();
+                                           values.productPrice = Number(row["productPrice"]);
+                                           values.salesGoal = Number(row["salesGoal"]);
+                                           values.unitsSold = Number(row["unitsSold"]);
+                                           values.vendPosition = Number(row["vendPosition"]);
+                                        
+                                        	var params = {
+                                        		location : location,
+                                        		tags : tags,
+                                        		values : values
+                                        	};
+                                        
+                                        	// AddDataTableEntry(location:LOCATION, tags:TAGS, values:VALUES):BOOLEAN
+                                        	var Result = Things['InventoryDT'].AddDataTableEntry(params);
+                                        
+                                        };
+                                        
+                                        result = true;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="SetupMaintenanceBlog">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // timestamp:DATETIME
+                                        var timestamp = new Date();
+                                        
+                                        // location:LOCATION
+                                        var location = new Object();
+                                        location.latitude = 0;
+                                        location.longitude = 0;
+                                        location.elevation = 0;
+                                        location.units = 'WGS84';
+                                        
+                                        var xml = me.LoadMaintenanceBlogXML();
+                                        
+                                        var getComments = function(comRow, blogId){
+                                        	try {
+                                        			var strComTags = "";
+                                        			strComTags = strComTags + row["tags"];
+                                        			
+                                        			var strContentCheck = "";
+                                        			strContentCheck = strContentCheck + comRow["content"]
+                                        			if (strContentCheck != "") {
+                                        					// addComment(blogEntryID:STRING, blogCommentID:STRING, timestamp:DATETIME, location:LOCATION, source:STRING, content:STRING, tags:TAGS):STRING
+                                        					Things['AcmeMfgBlog'].AddComment({"blogEntryID":blogId, "blogCommentID":blogId, "timestamp":timestamp, "location":location, "source":comRow["source"], "content":comRow["content"], "tags":strComTags});
+                                        			}
+                                        
+                                        			for each (var comment in comRow["comments"].infoTable.Rows[0]) {
+                                        					getComments(comment, blogId);
+                                        			}
+                                        	}
+                                        	catch (err) {
+                                        			strComTags = strComTags;
+                                        	}
+                                        };
+                                        
+                                        for each (var row in xml.Rows[0].Row) { 
+                                        	var strTags = "";
+                                        	strTags = strTags + row["tags"];
+                                        
+                                        	var sDate = "";
+                                        	sDate = sDate + row["timestamp"];
+                                        
+                                        	var strTitleCheck = "";
+                                        	strTitleCheck = strTitleCheck + row["title"]
+                                        	if (strTitleCheck !== "") {     
+                                        			// addBlogEntry(title:STRING, timestamp:DATETIME, location:LOCATION, source:STRING, content:STRING, tags:TAGS):STRING
+                                        			Things['AcmeMfgBlog'].AddBlogEntry({"title":row["title"], "timestamp":sDate, "location":location, "source":row["source"], "content":row["content"], "tags":strTags});
+                                        	}
+                                        
+                                        	var returnBlogs = Things['AcmeVendingMaintenanceBlog'].GetBlogEntries({"maxItems":9999});
+                                        	
+                                        	returnBlogs = Resources['InfoTableFunctions'].Filter({"t":returnBlogs, "fieldName":"timestamp", "filterFunction":"EQ", "matchValues":sDate})
+                                        
+                                        	for each (var comment in row["comments"].infoTable.Rows[0].Row) {
+                                        			getComments(comment, returnBlogs[0].id);
+                                        	};
+                                        };
+                                        
+                                        result = true;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="SetupMaintenanceOrders">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var xml = me.LoadMaintenanceOrderXML();
+                                        logger.warn("TEST1");
+                                        for each (var row in xml.Rowset[0].Row) {
+                                        	// location:LOCATION
+                                        	var location = new Object();
+                                        	location.latitude = 0;
+                                        	location.longitude = 0;
+                                        	location.elevation = 0;
+                                        	location.units = 'WGS84';
+                                        
+                                        	// tags:TAGS
+                                        	var tags = new Array();
+                                        
+                                        	// values:VALUES
+                                        	var values = Things['WorkOrderDT'].CreateValues();
+                                        	values.workOrder = row["WORK_ORDER"].toString();
+                                           values.userStatus = row["USER_STATUS"].toString();
+                                           values.systemStatus = row["SYSTEM_STATUS"].toString();
+                                           values.shortText = row["SHORT_TEXT"].toString();
+                                           values.priority = row["PRIORITY"].toString();
+                                           values.plannerGroup = row["PLANNER_GROUP"].toString();
+                                           values.notification = row["NOTIFICATION"].toString();
+                                           values.mainWorkCenter = row["MAIN_WORK_CENTER"].toString();
+                                           values.functionalLocation = row["FUNCTIONAL_LOCATION"].toString();
+                                        logger.warn("HERE");
+                                        	if (row["BASIC_START_DATE"].toString() != "") {
+                                        		values.basicStartDate = new Date(row["BASIC_START_DATE"].toString());
+                                        	}
+                                        	if (row["BASIC_FINISH_DATE"].toString() != "") {
+                                        		values.basicFinishDate = new Date(row["BASIC_FINISH_DATE"].toString());
+                                        	}
+                                        	if (row["ACTUAL_START"].toString() != "") {
+                                        		values.actualStart = new Date(row["ACTUAL_START"].toString());
+                                        	}
+                                        	if (row["ACTUAL_FINISH"].toString() != "") {
+                                        		values.actualFinish = new Date(row["ACTUAL_FINISH"].toString());
+                                        	}
+                                        
+                                        	var params = {
+                                        		location : location,
+                                        		tags : tags,
+                                        		values : values
+                                        	};
+                                        
+                                        	// AddDataTableEntry(location:LOCATION, tags:TAGS, values:VALUES):BOOLEAN
+                                        	var Result = Things['WorkOrderDT'].AddDataTableEntry(params);
+                                        
+                                        };
+                                        
+                                        result = true;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="SetupMarketingBlog">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // timestamp:DATETIME
+                                        var timestamp = new Date();
+                                        
+                                        // location:LOCATION
+                                        var location = new Object();
+                                        location.latitude = 0;
+                                        location.longitude = 0;
+                                        location.elevation = 0;
+                                        location.units = 'WGS84';
+                                        
+                                        var xml = me.LoadMarketingBlogXML();
+                                        
+                                        var getComments = function(comRow, blogId){
+                                        	try {
+                                        			var strComTags = "";
+                                        			strComTags = strComTags + row["tags"];
+                                        			
+                                        			var strContentCheck = "";
+                                        			strContentCheck = strContentCheck + comRow["content"]
+                                        			if (strContentCheck != "") {
+                                        					// addComment(blogEntryID:STRING, blogCommentID:STRING, timestamp:DATETIME, location:LOCATION, source:STRING, content:STRING, tags:TAGS):STRING
+                                        					Things['AcmeMfgBlog'].AddComment({"blogEntryID":blogId, "blogCommentID":blogId, "timestamp":timestamp, "location":location, "source":comRow["source"], "content":comRow["content"], "tags":strComTags});
+                                        			}
+                                        
+                                        			for each (var comment in comRow["comments"].infoTable.Rows[0]) {
+                                        					getComments(comment, blogId);
+                                        			}
+                                        	}
+                                        	catch (err) {
+                                        			strComTags = strComTags;
+                                        	}
+                                        };
+                                        
+                                        for each (var row in xml.Rows[0].Row) { 
+                                        	var strTags = "";
+                                        	strTags = strTags + row["tags"];
+                                        
+                                        	var sDate = "";
+                                        	sDate = sDate + row["timestamp"];
+                                        
+                                        	var strTitleCheck = "";
+                                        	strTitleCheck = strTitleCheck + row["title"]
+                                        	if (strTitleCheck !== "") {     
+                                        			// addBlogEntry(title:STRING, timestamp:DATETIME, location:LOCATION, source:STRING, content:STRING, tags:TAGS):STRING
+                                        			Things['AcmeMfgBlog'].AddBlogEntry({"title":row["title"], "timestamp":sDate, "location":location, "source":row["source"], "content":row["content"], "tags":strTags});
+                                        	}
+                                        
+                                        	var returnBlogs = Things['AcmeVendingMarketingBlog'].GetBlogEntries({"maxItems":9999});
+                                        	
+                                        	returnBlogs = Resources['InfoTableFunctions'].Filter({"t":returnBlogs, "fieldName":"timestamp", "filterFunction":"EQ", "matchValues":sDate})
+                                        
+                                        	for each (var comment in row["comments"].infoTable.Rows[0].Row) {
+                                        			getComments(comment, returnBlogs[0].id);
+                                        	};
+                                        };
+                                        
+                                        result = true;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="SetupOperationsBlog">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // timestamp:DATETIME
+                                        var timestamp = new Date();
+                                        
+                                        // location:LOCATION
+                                        var location = new Object();
+                                        location.latitude = 0;
+                                        location.longitude = 0;
+                                        location.elevation = 0;
+                                        location.units = 'WGS84';
+                                        
+                                        var xml = me.LoadOperationsBlogXML();
+                                        
+                                        var getComments = function(comRow, blogId){
+                                        	try {
+                                        			var strComTags = "";
+                                        			strComTags = strComTags + row["tags"];
+                                        			
+                                        			var strContentCheck = "";
+                                        			strContentCheck = strContentCheck + comRow["content"]
+                                        			if (strContentCheck != "") {
+                                        					// addComment(blogEntryID:STRING, blogCommentID:STRING, timestamp:DATETIME, location:LOCATION, source:STRING, content:STRING, tags:TAGS):STRING
+                                        					Things['AcmeMfgBlog'].AddComment({"blogEntryID":blogId, "blogCommentID":blogId, "timestamp":timestamp, "location":location, "source":comRow["source"], "content":comRow["content"], "tags":strComTags});
+                                        			}
+                                        
+                                        			for each (var comment in comRow["comments"].infoTable.Rows[0]) {
+                                        					getComments(comment, blogId);
+                                        			}
+                                        	}
+                                        	catch (err) {
+                                        			strComTags = strComTags;
+                                        	}
+                                        };
+                                        
+                                        for each (var row in xml.Rows[0].Row) { 
+                                        	var strTags = "";
+                                        	strTags = strTags + row["tags"];
+                                        
+                                        	var sDate = "";
+                                        	sDate = sDate + row["timestamp"];
+                                        
+                                        	var strTitleCheck = "";
+                                        	strTitleCheck = strTitleCheck + row["title"]
+                                        	if (strTitleCheck !== "") {     
+                                        			// addBlogEntry(title:STRING, timestamp:DATETIME, location:LOCATION, source:STRING, content:STRING, tags:TAGS):STRING
+                                        			Things['AcmeMfgBlog'].AddBlogEntry({"title":row["title"], "timestamp":sDate, "location":location, "source":row["source"], "content":row["content"], "tags":strTags});
+                                        	}
+                                        
+                                        	var returnBlogs = Things['AcmeVendingOperationsBlog'].GetBlogEntries({"maxItems":9999});
+                                        	
+                                        	returnBlogs = Resources['InfoTableFunctions'].Filter({"t":returnBlogs, "fieldName":"timestamp", "filterFunction":"EQ", "matchValues":sDate})
+                                        
+                                        	for each (var comment in row["comments"].infoTable.Rows[0].Row) {
+                                        			getComments(comment, returnBlogs[0].id);
+                                        	};
+                                        };
+                                        
+                                        result = true;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="SetupReplenishmentOrders">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var xml = me.LoadReplenishmentOrderXML();
+                                        
+                                        for each (var row in xml.Rowset[0].Row) {
+                                        	// location:LOCATION
+                                        	var location = new Object();
+                                        	location.latitude = 0;
+                                        	location.longitude = 0;
+                                        	location.elevation = 0;
+                                        	location.units = 'WGS84';
+                                        
+                                        	// tags:TAGS
+                                        	var tags = new Array();
+                                        
+                                        	// values:VALUES
+                                        	var values = Things['ReplenishmentOrderDT'].CreateValues();
+                                        	values.executionOrder = row["executionOrder"].toString();
+                                           values.inventoryLocation = row["inventoryLocation"].toString();
+                                        	values.vendPosition = row["vendPosition"].toString();
+                                        	values.qtyRequired = Number(row["qtyRequired"]);
+                                        
+                                        	var params = {
+                                        		location : location,
+                                        		tags : tags,
+                                        		values : values
+                                        	};
+                                        
+                                        	// AddDataTableEntry(location:LOCATION, tags:TAGS, values:VALUES):BOOLEAN
+                                        	var Result = Things['ReplenishmentOrderDT'].AddDataTableEntry(params);
+                                        
+                                        };
+                                        
+                                        result = true;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions>
+                    <Subscription
+                     enabled="true"
+                     eventName="DataChange"
+                     source=""
+                     sourceProperty="VMLoaded"
+                     sourceType="Thing">
+                        <ServiceImplementation
+                         description=""
+                         handlerName="Script"
+                         name="Event.DataChange:Property.VMLoaded">
+                            <ConfigurationTables>
+                                <ConfigurationTable
+                                 description=""
+                                 isMultiRow="false"
+                                 name="Script"
+                                 ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition
+                                             baseType="STRING"
+                                             description="code"
+                                             name="code"
+                                             ordinal="0"></FieldDefinition>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code>
+                                            <![CDATA[
+                                            if (me.VMLoaded.indexOf("VM") < 0) {
+                                            	logger.warn(me.VMLoaded + ":" + me.VMLoaded.indexOf("VM"));
+                                            	me.VMLoaded = "VM-001E"
+                                            }
+                                            ]]>
+                                            </code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                </Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties>
+                <DynamicPricingMarginContribution>
+                    <Value>937.0</Value>
+                    <Timestamp>2019-09-27T10:03:08.312Z</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </DynamicPricingMarginContribution>
+                <ProductDUnitSales>
+                    <Value>67.5</Value>
+                    <Timestamp>2019-09-27T10:03:08.312Z</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </ProductDUnitSales>
+                <VMLoaded>
+                    <Value>
+                    <![CDATA[
+                    VM-005E
+                    ]]>
+                    </Value>
+                    <Timestamp>2019-09-27T10:03:08.312Z</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </VMLoaded>
+                <ProductAUnitSales>
+                    <Value>102.0</Value>
+                    <Timestamp>2019-09-27T10:03:08.312Z</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </ProductAUnitSales>
+                <DynamicPricingUnitSales>
+                    <Value>922.0</Value>
+                    <Timestamp>2019-09-27T10:03:08.312Z</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </DynamicPricingUnitSales>
+                <FixedPricingUnitSales>
+                    <Value>877.0</Value>
+                    <Timestamp>2019-09-27T10:03:08.312Z</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </FixedPricingUnitSales>
+                <ProductBUnitSales>
+                    <Value>88.0</Value>
+                    <Timestamp>2019-09-27T10:03:08.312Z</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </ProductBUnitSales>
+                <ProductCUnitSales>
+                    <Value>127.0</Value>
+                    <Timestamp>2019-09-27T10:03:08.312Z</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </ProductCUnitSales>
+                <FixedPricingGrossMargin>
+                    <Value>910.0</Value>
+                    <Timestamp>2019-09-27T10:03:08.312Z</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </FixedPricingGrossMargin>
+            </ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

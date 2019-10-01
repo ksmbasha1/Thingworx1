@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <ThingShapes>
+        <ThingShape
+         className=""
+         description="Maintenance Asset Shape for Build Demo"
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-10-01T12:11:07.809Z"
+         name="BuildDemoMaintenance"
+         projectName=""
+         tags="Applications:AcmeVending">
+            <PropertyDefinitions>
+                <PropertyDefinition
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="BOOLEAN"
+                 category=""
+                 description=""
+                 isLocalOnly="false"
+                 name="InService"
+                 ordinal="0"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description=""
+                 isLocalOnly="false"
+                 name="PercentTimeInService"
+                 ordinal="0"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description=""
+                 isLocalOnly="false"
+                 name="TotalComplaints"
+                 ordinal="0"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description=""
+                 isLocalOnly="false"
+                 name="StatusCode"
+                 ordinal="0"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="STRING"
+                 category=""
+                 description=""
+                 isLocalOnly="false"
+                 name="MaintenanceStatus"
+                 ordinal="0"></PropertyDefinition>
+            </PropertyDefinitions>
+            <ServiceDefinitions>
+                <ServiceDefinition
+                 category=""
+                 description=""
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="EnterServiceComplaint">
+                    <ResultType
+                     baseType="NOTHING"
+                     description=""
+                     name=""
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         aspect.defaultValue="0.0"
+                         baseType="NUMBER"
+                         description=""
+                         name="code"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="TEXT"
+                         description=""
+                         name="comments"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+            </ServiceDefinitions>
+            <EventDefinitions></EventDefinitions>
+            <ServiceMappings>
+                <ServiceMapping
+                 deleteService=""
+                 description=""
+                 listService=""
+                 name="EnterServiceComplaint"
+                 queryService=""></ServiceMapping>
+            </ServiceMappings>
+            <ServiceImplementations>
+                <ServiceImplementation
+                 description=""
+                 handlerName="Script"
+                 name="EnterServiceComplaint">
+                    <ConfigurationTables>
+                        <ConfigurationTable
+                         description="Script"
+                         isMultiRow="false"
+                         name="Script"
+                         ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     baseType="STRING"
+                                     description="code"
+                                     name="code"
+                                     ordinal="0"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code>
+                                    <![CDATA[
+                                    var query = 
+                                    	{filters :
+                                    			{fieldName : "code",
+                                    			type : "EQ",
+                                    			value : code}
+                                    	};
+                                    
+                                    var tags = new Array();
+                                    
+                                    var params = {
+                                    	query : query,
+                                    	queryExpression : "",
+                                    	maxItems : 1,
+                                    	tags : tags
+                                    };
+                                    
+                                    var compaintData = Things['ComplaintCodesDT'].QueryDataTableEntries(params);
+                                    
+                                    // values:VALUES
+                                    var values = Things['ComplaintStream'].CreateValues();
+                                    values.comments = comments;
+                                    values.complaintCode = code;
+                                    values.complaintDescription = compaintData.rows[0].description;
+                                    
+                                    // timestamp:DATETIME
+                                    var timestamp = new Date();
+                                    tags = "ComplaintCodes:" + compaintData.rows[0].description
+                                    
+                                    var params = {
+                                    	values : values,
+                                    	tags : tags,
+                                    	location : me.Location,
+                                    	timestamp : timestamp,
+                                    	source : me.name
+                                    };
+                                    
+                                    // AddStreamEntry(values:VALUES, tags:TAGS, location:LOCATION, timestamp:DATETIME, source:STRING):BOOLEAN
+                                    Things['ComplaintStream'].AddStreamEntry(params);
+                                    me.TotalComplaints = me.TotalComplaints + 1;
+                                    ]]>
+                                    </code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+            </ServiceImplementations>
+            <Subscriptions>
+                <Subscription
+                 enabled="true"
+                 eventName="DataChange"
+                 source=""
+                 sourceProperty="InService"
+                 sourceType="Thing">
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="Event.DataChange:Property.InService">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        if (me.InService == false) {
+                                        	var curDate = new Date();
+                                        	var query = 
+                                        		{filters :
+                                        				{fieldName : "statusCode",
+                                        				type : "EQ",
+                                        				value : me.StatusCode}
+                                        		};
+                                        
+                                        	var tags = new Array();
+                                        
+                                        	var params = {
+                                        		query : query,
+                                        		queryExpression : "",
+                                        		maxItems : 1,
+                                        		tags : tags
+                                        	};
+                                        
+                                        	var statusData = Things['EquiptmentStatusCodesDT'].QueryDataTableEntries(params);
+                                        	me.MaintenanceStatus = statusData.rows[0].statusDescription;
+                                        
+                                        
+                                        	//Add Maintenance Order
+                                        	var values = Things['WorkOrderDT'].CreateValues();
+                                        	values.workOrder = 'WO-' + curDate.getMonth() + curDate.getDay() + curDate.getHours() + curDate.getMinutes() + curDate.getSeconds();
+                                           values.userStatus = '';
+                                           values.systemStatus = 'Emergency';
+                                           values.shortText = 'Maintenance Order Created by Machine Fault';
+                                           values.priority = 50;
+                                           values.plannerGroup = '';
+                                           values.notification = '';
+                                           values.mainWorkCenter = me.name;
+                                           values.functionalLocation = me.Location;
+                                        	values.basicStartDate = eventTime;
+                                        	values.basicFinishDate = null;
+                                        	values.actualStart = null;
+                                        	values.actualFinish = null;
+                                        
+                                        	var tags = new Array();
+                                        	tags = 'EquiptmentStatusCodes:' + statusData.rows[0].statusDescription;
+                                        
+                                        	var params = {
+                                        		location : me.Location,
+                                        		values : values,
+                                        		tags : tags
+                                        	};
+                                        
+                                        	Things['WorkOrderDT'].AddDataTableEntry(params);
+                                        }
+                                        else {
+                                        	me.StatusCode = 10;
+                                        }
+                                        
+                                        // Write this new status out to the Phidget
+                                        var headers = new Object();
+                                        headers["content-type"]="application/x-www-form-urlencoded"
+                                        
+                                        var val;
+                                        if (me.InService) {val = 1;} else {val = 0;}
+                                        
+                                        var content = "to=" + me.rap + "@public.palantirisystems.com&body=PUT /" + me.SerialNumber + "/Properties/Output/00 " + val;
+                                        
+                                        var params = {
+                                        	username : "",
+                                        	headers : headers,
+                                        	timeout : 60,
+                                        	contentType : "",
+                                        	url : "http://localhost:8000/messages",
+                                        	content : content,
+                                        	password : "",
+                                        	ignoreSSLErrors : true
+                                        };
+                                        
+                                        // PostText(username:STRING, headers:VALUES, timeout:NUMBER(60), contentType:STRING, url:STRING, content:STRING, password:STRING, ignoreSSLErrors:BOOLEAN):STRING
+                                        var Result = Resources['ContentLoaderFunctions'].PostText(params);
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </Subscription>
+                <Subscription
+                 enabled="true"
+                 eventName="DataChange"
+                 source=""
+                 sourceProperty="StatusCode"
+                 sourceType="Thing">
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="Event.DataChange:Property.StatusCode">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var curDate = new Date();
+                                        var query = 
+                                        	{filters :
+                                        			{fieldName : "statusCode",
+                                        			type : "EQ",
+                                        			value : me.StatusCode}
+                                        	};
+                                        
+                                        var tags = new Array();
+                                        
+                                        var params = {
+                                        	query : query,
+                                        	queryExpression : "",
+                                        	maxItems : 1,
+                                        	tags : tags
+                                        };
+                                        
+                                        var statusData = Things['EquiptmentStatusCodesDT'].QueryDataTableEntries(params);
+                                        me.MaintenanceStatus = statusData.rows[0].statusDescription;
+                                        
+                                        // values:VALUES
+                                        var values = Things['EquiptmentStatusStream'].CreateValues();
+                                        values.statusCode = me.StatusCode;
+                                        values.statusDescription = me.MaintenanceStatus;
+                                        
+                                        var params = {
+                                        	source : me.name,
+                                        	location : me.Location,
+                                        	values : values,
+                                        	tags : tags,
+                                        	timestamp : curDate
+                                        };
+                                        
+                                        // AddStreamEntry(source:STRING, location:LOCATION, values:VALUES, tags:TAGS, timestamp:DATETIME):BOOLEAN
+                                        var Result = Things['EquiptmentStatusStream'].AddStreamEntry(params);
+                                        
+                                        if (me.StatusCode > 10) {
+                                        	//Add Blog
+                                        	var tags = new Array();
+                                        	tags = 'EquiptmentStatusCodes:' + me.MaintenanceStatus;
+                                        
+                                        	var params = {
+                                        		title : me.MaintenanceStatus + " on " + me.name,
+                                        		source : me.name,
+                                        		location : me.Location,
+                                        		content : "A equiptment status code has changed on " + me.name + ".  The new status is " + me.MaintenanceStatus + ".",
+                                        		timestamp : curDate,
+                                        		tags : tags
+                                        	};
+                                        
+                                        	Things['AcmeVendingEquiptmentBlog'].AddBlogEntry(params);
+                                        
+                                        	//Send Text Message	
+                                        }
+                                        if (me.StatusCode > 100 || me.StatusCode == 20) {
+                                        	me.InService = false;
+                                        }
+                                        if (me.StatusCode == 10 && me.InService == false) {
+                                        	me.InService = true;
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </Subscription>
+            </Subscriptions>
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+        </ThingShape>
+    </ThingShapes>
+</Entities>

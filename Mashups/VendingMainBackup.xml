@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <Mashups>
+        <Mashup
+         aspect.mashupType="page"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-10-01T12:11:12.786Z"
+         name="VendingMainBackup"
+         projectName=""
+         rows="0.0"
+         tags="Applications:AcmeVending">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ParameterDefinitions></ParameterDefinitions>
+            <Things>
+                <Thing>VendingNetworkServices</Thing>
+                <Thing>VendingDemoSupport</Thing>
+            </Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "Data" : {
+                "Resources_CurrentSessionInfo" : {
+                  "DataName" : "Resources_CurrentSessionInfo",
+                  "EntityName" : "CurrentSessionInfo",
+                  "EntityType" : "Resources",
+                  "Id" : "961328823459998",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "151328823460006",
+                    "Name" : "GetConnectionListWithStatus",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetConnectionListWithStatus"
+                  } ]
+                },
+                "Session" : {
+                  "DataName" : "Session",
+                  "EntityName" : "",
+                  "EntityType" : "Session",
+                  "Id" : "session",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "SessionInterface",
+                    "Name" : "GetGlobalSessionValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGlobalSessionValues"
+                  } ]
+                },
+                "Things_VendingDemoSupport" : {
+                  "DataName" : "Things_VendingDemoSupport",
+                  "EntityName" : "VendingDemoSupport",
+                  "EntityType" : "Things",
+                  "Id" : "881320972372019",
+                  "Services" : [ {
+                    "APIMethod" : "get",
+                    "Characteristic" : "Services",
+                    "Id" : "471320972372026",
+                    "Name" : "SetProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "SetProperties"
+                  } ]
+                },
+                "Things_VendingNetworkServices" : {
+                  "DataName" : "Things_VendingNetworkServices",
+                  "EntityName" : "VendingNetworkServices",
+                  "EntityType" : "Things",
+                  "Id" : "981320869403432",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "791320869403439",
+                    "Name" : "GetVendingNetwork",
+                    "Parameters" : {
+                      "filter" : "blank"
+                    },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetVendingNetwork"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "311320869403480",
+                    "Name" : "MashupNav",
+                    "Parameters" : {
+                      "MashupName" : "VendingDashboard"
+                    },
+                    "RefreshInterval" : 0,
+                    "Target" : "MashupNav"
+                  } ]
+                },
+                "UserExtensions" : {
+                  "DataName" : "UserExtensions",
+                  "EntityName" : "",
+                  "EntityType" : "UserExtensions",
+                  "Id" : "UserExtensions",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "UserExtensionInterface",
+                    "Name" : "GetCurrentUserExtensionProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetCurrentUserExtensionProperties"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "391320870312581",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetVendingNetwork",
+                "SourceSection" : "Things_VendingNetworkServices",
+                "TargetArea" : "UI",
+                "TargetId" : "Tree-4",
+                "TargetSection" : ""
+              }, {
+                "Id" : "841320870449835",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "to",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "ThingName",
+                  "TargetPropertyBaseType" : "THINGNAME",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetVendingNetwork",
+                "SourceSection" : "Things_VendingNetworkServices",
+                "TargetArea" : "UI",
+                "TargetId" : "MashupContainer-15",
+                "TargetSection" : ""
+              }, {
+                "Id" : "341320870452279",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "zoom",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "ZoomLevel",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetVendingNetwork",
+                "SourceSection" : "Things_VendingNetworkServices",
+                "TargetArea" : "UI",
+                "TargetId" : "MashupContainer-15",
+                "TargetSection" : ""
+              }, {
+                "Id" : "941320871613962",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "result",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Name",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "MashupNav",
+                "SourceSection" : "Things_VendingNetworkServices",
+                "TargetArea" : "UI",
+                "TargetId" : "MashupContainer-15",
+                "TargetSection" : ""
+              }, {
+                "Id" : "601320972385278",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "to",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "VMLoaded",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetVendingNetwork",
+                "SourceSection" : "Things_VendingNetworkServices",
+                "TargetArea" : "Data",
+                "TargetId" : "SetProperties",
+                "TargetSection" : "Things_VendingDemoSupport"
+              }, {
+                "Id" : "361328823503083",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetConnectionListWithStatus",
+                "SourceSection" : "Resources_CurrentSessionInfo",
+                "TargetArea" : "UI",
+                "TargetId" : "Grid-31",
+                "TargetSection" : ""
+              } ],
+              "DesignTimePermissions" : {
+                "Create" : [ ],
+                "Delete" : [ ],
+                "Metadata" : [ ],
+                "Read" : [ ],
+                "Update" : [ ]
+              },
+              "Events" : [ {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_VendingNetworkServices",
+                "EventHandlerService" : "GetVendingNetwork",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "931320869408589"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_VendingNetworkServices",
+                "EventHandlerService" : "MashupNav",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "SelectionChanged",
+                "EventTriggerId" : "ButtonSet-23",
+                "EventTriggerSection" : "",
+                "Id" : "211320869779839"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_VendingNetworkServices",
+                "EventHandlerService" : "MashupNav",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "01320872021487"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_VendingDemoSupport",
+                "EventHandlerService" : "SetProperties",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "SelectedRowsChanged",
+                "EventTriggerId" : "GetVendingNetwork",
+                "EventTriggerSection" : "Things_VendingNetworkServices",
+                "Id" : "471320972398444"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Resources_CurrentSessionInfo",
+                "EventHandlerService" : "GetConnectionListWithStatus",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "811328823498462"
+              } ],
+              "RunTimePermissions" : {
+                "permissions" : [ ]
+              },
+              "UI" : {
+                "Properties" : {
+                  "Area" : "Mashup",
+                  "Height" : 563,
+                  "Id" : "mashup-root",
+                  "IgnoreWarningsInViewMashup" : false,
+                  "Left" : 0,
+                  "Master" : "AcmeBeverageTarget",
+                  "Style" : "DefaultMashupStyle",
+                  "Tags" : [ {
+                    "vocabulary" : "Applications",
+                    "vocabularyTerm" : "AcmeVending"
+                  } ],
+                  "Top" : 0,
+                  "Type" : "mashup",
+                  "Width" : 1024,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Mashup",
+                  "id_index" : 31
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Height" : 219,
+                    "Id" : "Panel-3",
+                    "Left" : 10,
+                    "Style" : "Default",
+                    "Top" : 10,
+                    "Type" : "panel",
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Panel"
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "AutoSelectFirstRow" : true,
+                      "CollapseChildrenOfLevel" : 99,
+                      "Height" : 190,
+                      "IDField" : "to",
+                      "Id" : "Tree-4",
+                      "LabelField" : "to",
+                      "Left" : 0,
+                      "ParentIDField" : "from",
+                      "RootParentID" : "",
+                      "TooltipField" : "description",
+                      "Top" : 25,
+                      "TreeBGStyle" : "DefaultTreeBGStyle",
+                      "TreeFormatter" : {
+                        "FieldName" : "assetType",
+                        "StateDefinition" : "AcmeVendingNetwork",
+                        "StateDefinitionType" : "string",
+                        "StateFormats" : [ {
+                          "comparator" : "==",
+                          "state" : "AcmeVendingRegionIcon",
+                          "stateName" : "Region",
+                          "value" : "Region:"
+                        }, {
+                          "comparator" : "==",
+                          "state" : "AcmeVendingSiteIcon",
+                          "stateName" : "Site",
+                          "value" : "Site:"
+                        }, {
+                          "comparator" : "==",
+                          "state" : "AcmeVendingVMIcon",
+                          "stateName" : "VMTemplateVerySmart",
+                          "value" : "VMTemplateVerySmart:true"
+                        }, {
+                          "comparator" : "==",
+                          "state" : "AcmeVendingVMIconOOS",
+                          "stateName" : "VMTemplateVerySmart",
+                          "value" : "VMTemplateVerySmart:false"
+                        }, {
+                          "comparator" : "==",
+                          "state" : "AcmeVendingVMIcon",
+                          "stateName" : "BuildDemoVendingMachine",
+                          "value" : "BuildDemoVendingMachine:true"
+                        }, {
+                          "comparator" : "==",
+                          "state" : "AcmeVendingVMIconOOS",
+                          "stateName" : "BuildDemoVendingMachine",
+                          "value" : "BuildDemoVendingMachine:false"
+                        }, {
+                          "state" : "AcmeVendingIcon",
+                          "stateName" : ""
+                        } ]
+                      },
+                      "TreeFormatter_StateParameters" : [ {
+                        "BaseType" : "STRING",
+                        "DefaultValue" : "Region:",
+                        "Description" : "Region",
+                        "ParameterName" : "TreeFormatter_Region"
+                      }, {
+                        "BaseType" : "STRING",
+                        "DefaultValue" : "Site:",
+                        "Description" : "Site",
+                        "ParameterName" : "TreeFormatter_Site"
+                      }, {
+                        "BaseType" : "STRING",
+                        "DefaultValue" : "VMTemplateVerySmart:true",
+                        "Description" : "VMTemplateVerySmart",
+                        "ParameterName" : "TreeFormatter_VMTemplateVerySmart"
+                      }, {
+                        "BaseType" : "STRING",
+                        "DefaultValue" : "VMTemplateVerySmart:false",
+                        "Description" : "VMTemplateVerySmart",
+                        "ParameterName" : "TreeFormatter_VMTemplateVerySmart"
+                      }, {
+                        "BaseType" : "STRING",
+                        "DefaultValue" : "BuildDemoVendingMachine:true",
+                        "Description" : "BuildDemoVendingMachine",
+                        "ParameterName" : "TreeFormatter_BuildDemoVendingMachine"
+                      }, {
+                        "BaseType" : "STRING",
+                        "DefaultValue" : "BuildDemoVendingMachine:false",
+                        "Description" : "BuildDemoVendingMachine",
+                        "ParameterName" : "TreeFormatter_BuildDemoVendingMachine"
+                      } ],
+                      "TreeSelectedStyle" : "DefaultTreeSelectedStyle",
+                      "Type" : "tree",
+                      "ValueField" : "description",
+                      "Width" : 200,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Tree"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "AlternateText" : "",
+                      "Area" : "UI",
+                      "Height" : 25,
+                      "Id" : "Image-5",
+                      "Left" : 0,
+                      "SourceURL" : "/Thingworx/MediaEntities/header",
+                      "Top" : 0,
+                      "Type" : "image",
+                      "Width" : 198,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Image"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "left",
+                      "Area" : "UI",
+                      "Height" : 20,
+                      "Id" : "Label-6",
+                      "Left" : 5,
+                      "Style" : "AcmeVendingHdrText",
+                      "Text" : "My Community",
+                      "Top" : 1,
+                      "Type" : "label",
+                      "Width" : 185,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Label"
+                    },
+                    "Widgets" : [ ]
+                  } ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Height" : 104,
+                    "Id" : "Panel-7",
+                    "Left" : 10,
+                    "Style" : "Default",
+                    "Top" : 240,
+                    "Type" : "panel",
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Panel"
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "AlternateText" : "",
+                      "Area" : "UI",
+                      "Height" : 25,
+                      "Id" : "Image-9",
+                      "Left" : 0,
+                      "SourceURL" : "/Thingworx/MediaEntities/header",
+                      "Top" : 0,
+                      "Type" : "image",
+                      "Width" : 198,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Image"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "left",
+                      "Area" : "UI",
+                      "Height" : 20,
+                      "Id" : "Label-10",
+                      "Left" : 5,
+                      "Style" : "AcmeVendingHdrText",
+                      "Text" : "Actions",
+                      "Top" : 1,
+                      "Type" : "label",
+                      "Width" : 185,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Label"
+                    },
+                    "Widgets" : [ ]
+                  } ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Height" : 200,
+                    "Id" : "Panel-11",
+                    "Left" : 10,
+                    "Style" : "Default",
+                    "Top" : 355,
+                    "Type" : "panel",
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Panel"
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "AlternateText" : "",
+                      "Area" : "UI",
+                      "Height" : 25,
+                      "Id" : "Image-12",
+                      "Left" : 0,
+                      "SourceURL" : "/Thingworx/MediaEntities/header",
+                      "Top" : 0,
+                      "Type" : "image",
+                      "Width" : 198,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Image"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "left",
+                      "Area" : "UI",
+                      "Height" : 20,
+                      "Id" : "Label-13",
+                      "Left" : 5,
+                      "Style" : "AcmeVendingHdrText",
+                      "Text" : "Community Members",
+                      "Top" : 1,
+                      "Type" : "label",
+                      "Width" : 185,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Label"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "AutoSelectFirstRow" : false,
+                      "ColumnFormat" : {
+                        "formatInfo" : [ {
+                          "Align" : "left",
+                          "FieldName" : "connectionName",
+                          "FormatOptions" : {
+                            "FormatString" : "full",
+                            "formatInfo" : {
+                              "FieldName" : "",
+                              "StateDefinition" : "",
+                              "StateDefinitionType" : "fixed",
+                              "StateFormats" : [ {
+                                "state" : "",
+                                "stateName" : "fixed"
+                              } ]
+                            },
+                            "renderer" : "STRING"
+                          },
+                          "Title" : "Name",
+                          "Width" : "57"
+                        }, {
+                          "Align" : "left",
+                          "FieldName" : "avatar",
+                          "FormatOptions" : {
+                            "FormatString" : "image",
+                            "formatInfo" : {
+                              "FieldName" : "",
+                              "StateDefinition" : "",
+                              "StateDefinitionType" : "fixed",
+                              "StateFormats" : [ {
+                                "state" : "",
+                                "stateName" : "fixed"
+                              } ]
+                            },
+                            "renderer" : "IMAGELINK"
+                          },
+                          "Title" : "Avatar",
+                          "Width" : "auto"
+                        }, {
+                          "Align" : "left",
+                          "FieldName" : "status",
+                          "FormatOptions" : {
+                            "FormatString" : "full",
+                            "formatInfo" : {
+                              "FieldName" : "status",
+                              "StateDefinition" : "StatusState",
+                              "StateDefinitionType" : "string",
+                              "StateFormats" : [ {
+                                "comparator" : "==",
+                                "state" : "StatusAvailable",
+                                "stateName" : "AVAILABLE",
+                                "value" : "AVAILABLE"
+                              }, {
+                                "comparator" : "==",
+                                "state" : "StatusOffline",
+                                "stateName" : "OFFLINE",
+                                "value" : "OFFLINE"
+                              }, {
+                                "comparator" : "==",
+                                "state" : "StatusBusy",
+                                "stateName" : "BUSY",
+                                "value" : "BUSY"
+                              }, {
+                                "comparator" : "==",
+                                "state" : "StatusError",
+                                "stateName" : "ERROR",
+                                "value" : "ERROR"
+                              }, {
+                                "state" : "StatusUnknown",
+                                "stateName" : "UNKNOWN"
+                              } ]
+                            },
+                            "renderer" : "STRING"
+                          },
+                          "Title" : "Status",
+                          "Width" : "auto"
+                        } ]
+                      },
+                      "GridBackgroundStyle" : "DefaultGridBackgroundStyle",
+                      "GridHeaderStyle" : "DefaultGridHeaderStyle",
+                      "Height" : 165,
+                      "Id" : "Grid-31",
+                      "Left" : 5,
+                      "MultiSelect" : false,
+                      "RowAlternateBackgroundStyle" : "DefaultRowAlternateBackgroundStyle",
+                      "RowBackgroundStyle" : "DefaultRowBackgroundStyle",
+                      "RowFormat_StateParameters" : [ ],
+                      "RowHeight" : 30,
+                      "RowHoverStyle" : "DefaultRowHoverStyle",
+                      "RowSelectedStyle" : "DefaultRowSelectedStyle",
+                      "ShowAllColumns" : false,
+                      "Top" : 30,
+                      "Type" : "dhxgrid",
+                      "Width" : 190,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Grid"
+                    },
+                    "Widgets" : [ ]
+                  } ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Height" : 544,
+                    "Id" : "Panel-16",
+                    "Left" : 219,
+                    "Style" : "DefaultPanelStyle",
+                    "Top" : 10,
+                    "Type" : "panel",
+                    "Width" : 794,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Panel"
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "Height" : 520,
+                      "Id" : "MashupContainer-15",
+                      "Left" : 0,
+                      "MashupParameters" : [ {
+                        "BaseType" : "THINGNAME",
+                        "Description" : "ThingName",
+                        "ParameterName" : "ThingName",
+                        "ParmDef" : {
+                          "aspects" : {
+                            "ordinal" : "0"
+                          },
+                          "baseType" : "THINGNAME",
+                          "description" : "ThingName",
+                          "name" : "ThingName",
+                          "ordinal" : 0
+                        }
+                      }, {
+                        "BaseType" : "NUMBER",
+                        "Description" : "ZoomLevel",
+                        "ParameterName" : "ZoomLevel",
+                        "ParmDef" : {
+                          "aspects" : {
+                            "ordinal" : "1"
+                          },
+                          "baseType" : "NUMBER",
+                          "description" : "ZoomLevel",
+                          "name" : "ZoomLevel",
+                          "ordinal" : 0
+                        }
+                      } ],
+                      "Name" : "VendingDashboard",
+                      "Top" : 25,
+                      "Type" : "mashupcontainer",
+                      "Width" : 793,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Mashup Container"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "AlternateText" : "",
+                      "Area" : "UI",
+                      "Height" : 25,
+                      "Id" : "Image-17",
+                      "Left" : 0,
+                      "SourceURL" : "/Thingworx/MediaEntities/header",
+                      "Top" : 0,
+                      "Type" : "image",
+                      "Width" : 793,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Image"
+                    },
+                    "Widgets" : [ ]
+                  } ]
+                } ]
+              },
+              "mashupType" : "page"
+            }
+            ]]>
+            </mashupContent>
+        </Mashup>
+    </Mashups>
+</Entities>

@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <ThingTemplates>
+        <ThingTemplate
+         baseThingTemplate="RemoteThingWithTunnelsAndFileTransfer"
+         description="Template for a remote thing"
+         documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;"
+         effectiveThingPackage="RemoteThingWithTunnelsAndFileTransfer"
+         homeMashup=""
+         lastModifiedDate="2019-10-01T12:11:07.870Z"
+         name="VerySmartVendingMach"
+         projectName=""
+         tags="Applications:AcmeVending"
+         thingPackage=""
+         valueStream="">
+            <avatar>
+            <![CDATA[
+            iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAABTElEQVR42u1Y7Q0CIQy9Xx3D3y7i
+            GMZFnMI12OYW0iYkpIG2FKR+9oUQQgs+eu9xF7ctYMLlA1ATOl63NzYA4AmllOZ6PUHfXCO07/uN
+            Ay7Qo3nrNiEvlDYvUZEQJp045JVKNBNqEyghJfo3hIADVa4U9SK0XtQgoBv1IjS9o5fLkhnVzeYl
+            6vvd1L+OkHL70SLTB0Rn1rsMTy9ZqZypVAjH5ZReola8TYtMN7K8BOcJDVWo1dB6l9krxPrOxWXP
+            VMjFZXYNfb3LZr4Y/VzG3u99Qnh66GHOZWUJfdCmClneHpKGFNnSolZi7xAy1p/VkIUQfdCLCbUa
+            0l02KWrjRwirIalvdVPNmCqkmDaNgNVNNbOA0FAv6WZMQ2sJjWnocBZbFqaSYGlgQE0ILxhs7SCn
+            KgmWQf17XQShIPRzhBBdN8ITiH9xA4FAYBoPSLrZh1kYsPsAAAAASUVORK5CYII=
+            ]]>
+            </avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 description="General Settings"
+                 isMultiRow="false"
+                 name="TunnelSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Enable Tunneling"
+                             aspect.isNullable="true"
+                             baseType="BOOLEAN"
+                             description="Enable tunneling"
+                             name="enableTunneling"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row></Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 description="Tunneling Destinations"
+                 isMultiRow="true"
+                 name="Tunnels"
+                 ordinal="1">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue=""
+                             aspect.friendlyName="Application Path"
+                             baseType="STRING"
+                             description="Location of the client app that will use this tunnel"
+                             name="appUri"
+                             ordinal="5"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue=""
+                             aspect.friendlyName="Description"
+                             baseType="STRING"
+                             description="A description of the tunnel"
+                             name="description"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="127.0.0.1"
+                             aspect.friendlyName="Host"
+                             baseType="STRING"
+                             description="Host or IP that this tunnel will connect to at the edge"
+                             name="host"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="vnc"
+                             aspect.friendlyName="Name"
+                             baseType="STRING"
+                             description="Name of the tunnel"
+                             name="name"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="1.0"
+                             aspect.friendlyName="Number of Connects"
+                             baseType="NUMBER"
+                             description="The number of connections required to establish this tunnel"
+                             name="numConnects"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="5900.0"
+                             aspect.friendlyName="Port"
+                             baseType="NUMBER"
+                             description="Port that this tunnel will connect to at the edge"
+                             name="port"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="tcp"
+                             aspect.friendlyName="Protocol"
+                             baseType="STRING"
+                             description="The protocol used over this tunnel"
+                             name="proto"
+                             ordinal="6"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows></Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="ItemPurchase">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="NUMBER"
+                             description=""
+                             name="Item"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="ItemPurchase">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        //The item purchase will lower the inventory by 1
+                                        //It will reduce the change available
+                                        
+                                        var query = {
+                                            filters: {
+                                                        type: "EQ",
+                                                        fieldName: "vendPosition",
+                                                        value: Item 
+                                                    }
+                                            };
+                                        
+                                        
+                                        var itemRow = Resources['InfoTableFunctions'].Query({
+                                        	query : query,
+                                        	t : me.CurrentInventory
+                                        });
+                                        
+                                        logger.warn("Query succes");
+                                        logger.warn(itemRow.currentInvQty);
+                                        var currentInventory = me.CurrentInventory
+                                        
+                                        if (itemRow.currentInvQty >= 1) {
+                                        
+                                        	currentInventory.Delete({vendPosition : Item});
+                                        
+                                        	currentInventory.AddRow({
+                                        		salesGoal : itemRow.salesGoal,
+                                        		productId : itemRow.productId,
+                                        		productImage : itemRow.productImage,
+                                        		vendPosition : itemRow.vendPosition,
+                                        		inventoryLocation : itemRow.inventoryLocation,
+                                        		positionCapacity : itemRow.positionCapacity,
+                                        		productPrice : itemRow.productPrice,
+                                        		unitsSold : itemRow.unitsSold + 1,
+                                        		currentInvQty : itemRow.currentInvQty - 1
+                                        	});
+                                        	me.CurrentInventory = currentInventory;
+                                        
+                                        	var changeAvailable = me.CoinOpChangeAvailable - (me.CoinOpMoneyReceived - itemRow.productPrice);
+                                        	if (changeAvailable < 0) {
+                                        		me.CoinOpChangeAvailable = 0;
+                                        	} else {
+                                        		me.CoinOpChangeAvailable = me.CoinOpChangeAvailable - (me.CoinOpMoneyReceived - itemRow.productPrice);
+                                        	}
+                                        
+                                        //Add to sales stream
+                                        
+                                        	var timestamp = new Date();
+                                        	// values:INFOTABLE(Datashape: VendingMachineSalesShape)
+                                        	var values = Things['VendingMachineSalesStream'].CreateValues();
+                                        
+                                        	values.Product = itemRow.productId;
+                                        	values.Price = itemRow.productPrice;
+                                        
+                                        	var params = {
+                                        		timestamp : timestamp,
+                                        		location : me.Location,
+                                        		source : me.name,
+                                        		values : values
+                                        	};
+                                        		
+                                        	// AddStreamEntry(timestamp:DATETIME, location:LOCATION, tags:TAGS, source:STRING("me.name"), values:INFOTABLE(VendingMachineSalesShape)):NOTHING
+                                        	var Result = Things['VendingMachineSalesStream'].AddStreamEntry(params);
+                                        
+                                        
+                                        
+                                        //Reset some properties.
+                                        	me.CoinOpMoneyReceived = 0;
+                                        	var result = "Enjoy Your Drink.";
+                                        	me.CoinOpPurchaseStatus = "Please Insert Money.";
+                                        } else {
+                                        	var result = "Item Out of Stock.";
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <ImplementedShapes>
+                <ImplementedShape
+                 name="InventoryAsset"
+                 type="ThingShape"></ImplementedShape>
+                <ImplementedShape
+                 name="VendingMachine"
+                 type="ThingShape"></ImplementedShape>
+            </ImplementedShapes>
+            <SharedConfigurationTables>
+                <ConfigurationTable
+                 description="Shared Remote Tunneling Settings"
+                 isMultiRow="false"
+                 name="SharedTunnelSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Enable Tunneling"
+                             baseType="BOOLEAN"
+                             description="Enable tunneling"
+                             name="enableTunneling"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <enableTunneling>false</enableTunneling>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 description="Shared Tunneling Destinations"
+                 isMultiRow="true"
+                 name="SharedTunnels"
+                 ordinal="1">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Application Path"
+                             baseType="STRING"
+                             description="Location of the client app that will use this tunnel"
+                             name="appUri"
+                             ordinal="5"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Description"
+                             baseType="STRING"
+                             description="A description of the tunnel"
+                             name="description"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Host"
+                             baseType="STRING"
+                             description="Host or IP that this tunnel will connect to at the edge"
+                             name="host"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Name"
+                             baseType="STRING"
+                             description="Name of the tunnel"
+                             name="name"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Number of Connects"
+                             baseType="NUMBER"
+                             description="The number of connections required to establish this tunnel"
+                             name="numConnects"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Port"
+                             baseType="NUMBER"
+                             description="Port that this tunnel will connect to at the edge"
+                             name="port"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Protocol"
+                             baseType="STRING"
+                             description="The protocol used over this tunnel"
+                             name="proto"
+                             ordinal="6"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows></Rows>
+                </ConfigurationTable>
+            </SharedConfigurationTables>
+            <InstanceDesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </InstanceDesignTimePermissions>
+            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+            <InstanceVisibilityPermissions>
+                <Visibility></Visibility>
+            </InstanceVisibilityPermissions>
+        </ThingTemplate>
+    </ThingTemplates>
+</Entities>

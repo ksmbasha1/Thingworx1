@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <ThingShapes>
+        <ThingShape
+         className=""
+         description="Inventory Asset Shape for Buld Demo"
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-10-01T12:11:07.827Z"
+         name="BuildDemoInventory"
+         projectName=""
+         tags="Applications:AcmeVending">
+            <PropertyDefinitions>
+                <PropertyDefinition
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.dataShape="InventoryDS"
+                 aspect.isDataTableEntry="true"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="INFOTABLE"
+                 category=""
+                 description=""
+                 isLocalOnly="false"
+                 name="CurrentInventory"
+                 ordinal="0"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description=""
+                 isLocalOnly="false"
+                 name="PercentTimeOutOfStock"
+                 ordinal="0"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isPersistent="false"
+                 aspect.isReadOnly="false"
+                 baseType="STRING"
+                 category=""
+                 description=""
+                 isLocalOnly="false"
+                 name="AssetId"
+                 ordinal="0"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description=""
+                 isLocalOnly="false"
+                 name="SalesVsGoal"
+                 ordinal="0"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description=""
+                 isLocalOnly="false"
+                 name="NumberOfPositions"
+                 ordinal="0"></PropertyDefinition>
+            </PropertyDefinitions>
+            <ServiceDefinitions>
+                <ServiceDefinition
+                 category=""
+                 description=""
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetInvPerPosition">
+                    <ResultType
+                     aspect.dataShape="InventoryPerVMDS"
+                     baseType="INFOTABLE"
+                     description=""
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions></ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category=""
+                 description=""
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetVMInventory">
+                    <ResultType
+                     aspect.dataShape="InventoryDS"
+                     baseType="INFOTABLE"
+                     description=""
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions></ParameterDefinitions>
+                </ServiceDefinition>
+            </ServiceDefinitions>
+            <EventDefinitions></EventDefinitions>
+            <ServiceMappings>
+                <ServiceMapping
+                 deleteService=""
+                 description=""
+                 listService=""
+                 name="GetInvPerPosition"
+                 queryService=""></ServiceMapping>
+                <ServiceMapping
+                 deleteService=""
+                 description=""
+                 listService=""
+                 name="GetVMInventory"
+                 queryService=""></ServiceMapping>
+            </ServiceMappings>
+            <ServiceImplementations>
+                <ServiceImplementation
+                 description=""
+                 handlerName="Script"
+                 name="GetInvPerPosition">
+                    <ConfigurationTables>
+                        <ConfigurationTable
+                         description="Script"
+                         isMultiRow="false"
+                         name="Script"
+                         ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     baseType="STRING"
+                                     description="code"
+                                     name="code"
+                                     ordinal="0"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code>
+                                    <![CDATA[
+                                    var params = {
+                                    	dataShapeName : "InventoryPerVMDS",
+                                    	infoTableName : ""
+                                    };
+                                    
+                                    // CreateInfoTableFromDataShape(dataShapeName:STRING, infoTableName:STRING("true")):INFOTABLE(Undefined)
+                                    var result = Resources['InfoTableFunctions'].CreateInfoTableFromDataShape(params);
+                                    
+                                    var curInv = me.CurrentInventory;
+                                    var values = new Object();
+                                    var invRow;
+                                    var count = 1;
+                                    
+                                    for each(invRow in curInv.rows) {
+                                    	if (count == 1) {
+                                    		values.InvItem1 = invRow.productImage;
+                                    		values.InvQty1 = invRow.currentInvQty;
+                                    	}
+                                    	else if (count == 2) {
+                                    		values.InvItem2 = invRow.productImage;
+                                    		values.InvQty2 = invRow.currentInvQty;
+                                    	}
+                                    	else if (count == 3) {
+                                    		values.InvItem3 = invRow.productImage;
+                                    		values.InvQty3 = invRow.currentInvQty;
+                                    	}
+                                    	else if (count == 4) {
+                                    		values.InvItem4 = invRow.productImage;
+                                    		values.InvQty4 = invRow.currentInvQty;
+                                    	}
+                                    	count = count + 1;
+                                    }
+                                    
+                                    result.AddRow(values);
+                                    ]]>
+                                    </code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description=""
+                 handlerName="Script"
+                 name="GetVMInventory">
+                    <ConfigurationTables>
+                        <ConfigurationTable
+                         description="Script"
+                         isMultiRow="false"
+                         name="Script"
+                         ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     baseType="STRING"
+                                     description="code"
+                                     name="code"
+                                     ordinal="0"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code>
+                                    <![CDATA[
+                                    // tags:TAGS
+                                    var tags = new Array();
+                                    
+                                    // query:VALUES
+                                    var query = 
+                                    		{filters : 
+                                    			{fieldName : "inventoryLocation",
+                                              type : "EQ",
+                                              value : me.name
+                                             }
+                                    		}; 
+                                    
+                                    var params = {
+                                    	tags : tags,
+                                    	queryExpression : "",
+                                    	maxItems : 500,
+                                    	query : query
+                                    };
+                                    
+                                    logger.warn("Q:" + me.name);
+                                    
+                                    // QueryDataTableEntries(tags:TAGS, queryExpression:STRING, maxItems:NUMBER(500), query:VALUES):INFOTABLE(InventoryDS)
+                                    var result = Things['InventoryDT'].QueryDataTableEntries(params);
+                                    ]]>
+                                    </code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+            </ServiceImplementations>
+            <Subscriptions>
+                <Subscription
+                 enabled="true"
+                 eventName="Add"
+                 source="InventoryDT"
+                 sourceProperty=""
+                 sourceType="Thing">
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="Type.Thing:Entity.InventoryDT:Event.Add">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        me.CurrentInventory = me.GetVMInventory();
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </Subscription>
+            </Subscriptions>
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+        </ThingShape>
+    </ThingShapes>
+</Entities>

@@ -1,0 +1,1878 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <Mashups>
+        <Mashup
+         aspect.mashupType="page"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-10-01T12:11:12.718Z"
+         name="VendingMachineProfileBackup"
+         projectName=""
+         rows="0.0"
+         tags="Applications:AcmeVending">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ParameterDefinitions></ParameterDefinitions>
+            <Things>
+                <Thing>VendingNetworkServices</Thing>
+                <Thing>VendingDemoSupport</Thing>
+                <Thing>EquiptmentEnvDataStream</Thing>
+            </Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "Data" : {
+                "DynamicThingTemplates_VMTemplateVerySmart" : {
+                  "DataName" : "DynamicThingTemplates_VMTemplateVerySmart",
+                  "EntityName" : "VMTemplateVerySmart",
+                  "EntityType" : "DynamicThingTemplates",
+                  "Id" : "861320972582618",
+                  "Services" : [ {
+                    "APIMethod" : "get",
+                    "Characteristic" : "Services",
+                    "Id" : "351320972582626",
+                    "Name" : "GetProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetProperties"
+                  }, {
+                    "APIMethod" : "get",
+                    "Characteristic" : "Services",
+                    "Id" : "761321028116407",
+                    "Name" : "SetProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "SetProperties"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "771321473729652",
+                    "Name" : "GetInvPerPosition",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetInvPerPosition"
+                  } ]
+                },
+                "Session" : {
+                  "DataName" : "Session",
+                  "EntityName" : "",
+                  "EntityType" : "Session",
+                  "Id" : "session",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "SessionInterface",
+                    "Name" : "GetGlobalSessionValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGlobalSessionValues"
+                  } ]
+                },
+                "ThingTemplates_VMTemplateVerySmart" : {
+                  "DataName" : "ThingTemplates_VMTemplateVerySmart",
+                  "EntityName" : "VMTemplateVerySmart",
+                  "EntityType" : "ThingTemplates",
+                  "Id" : "261320972838877",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "641320972838884",
+                    "Name" : "GetImplementingThingsWithData",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetImplementingThingsWithData"
+                  } ]
+                },
+                "Things_EquiptmentEnvDataStream" : {
+                  "DataName" : "Things_EquiptmentEnvDataStream",
+                  "EntityName" : "EquiptmentEnvDataStream",
+                  "EntityType" : "Things",
+                  "Id" : "661321020702532",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "171321020702541",
+                    "Name" : "QueryStreamEntriesWithData",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "QueryStreamEntriesWithData"
+                  } ]
+                },
+                "Things_VendingDemoSupport" : {
+                  "DataName" : "Things_VendingDemoSupport",
+                  "EntityName" : "VendingDemoSupport",
+                  "EntityType" : "Things",
+                  "Id" : "441320972545610",
+                  "Services" : [ {
+                    "APIMethod" : "get",
+                    "Characteristic" : "Services",
+                    "Id" : "301320972545620",
+                    "Name" : "GetProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetProperties"
+                  }, {
+                    "APIMethod" : "get",
+                    "Characteristic" : "Services",
+                    "Id" : "51320972872838",
+                    "Name" : "SetProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "SetProperties"
+                  } ]
+                },
+                "Things_VendingNetworkServices" : {
+                  "DataName" : "Things_VendingNetworkServices",
+                  "EntityName" : "VendingNetworkServices",
+                  "EntityType" : "Things",
+                  "Id" : "211320974872688",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "821320974872696",
+                    "Name" : "GetEquiptmentFaults",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetEquiptmentFaults"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "211320975029749",
+                    "Name" : "GetWorkOrders",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetWorkOrders"
+                  } ]
+                },
+                "UserExtensions" : {
+                  "DataName" : "UserExtensions",
+                  "EntityName" : "",
+                  "EntityType" : "UserExtensions",
+                  "Id" : "UserExtensions",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "UserExtensionInterface",
+                    "Name" : "GetCurrentUserExtensionProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetCurrentUserExtensionProperties"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "41320972611248",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "InService",
+                  "SourcePropertyBaseType" : "BOOLEAN",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "ANYSCALAR",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetProperties",
+                "SourceSection" : "DynamicThingTemplates_VMTemplateVerySmart",
+                "TargetArea" : "UI",
+                "TargetId" : "ValueDisplay-32",
+                "TargetSection" : ""
+              }, {
+                "Id" : "91320972616730",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "name",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "ANYSCALAR",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetProperties",
+                "SourceSection" : "DynamicThingTemplates_VMTemplateVerySmart",
+                "TargetArea" : "UI",
+                "TargetId" : "ValueDisplay-31",
+                "TargetSection" : ""
+              }, {
+                "Id" : "141320972849073",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetImplementingThingsWithData",
+                "SourceSection" : "ThingTemplates_VMTemplateVerySmart",
+                "TargetArea" : "UI",
+                "TargetId" : "List-35",
+                "TargetSection" : ""
+              }, {
+                "Id" : "591320972931903",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "name",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "VMLoaded",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetImplementingThingsWithData",
+                "SourceSection" : "ThingTemplates_VMTemplateVerySmart",
+                "TargetArea" : "Data",
+                "TargetId" : "SetProperties",
+                "TargetSection" : "Things_VendingDemoSupport"
+              }, {
+                "Id" : "351320974234868",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "VMLoaded",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Source",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetProperties",
+                "SourceSection" : "Things_VendingDemoSupport",
+                "TargetArea" : "UI",
+                "TargetId" : "Blog-45",
+                "TargetSection" : ""
+              }, {
+                "Id" : "711320974920704",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "VMLoaded",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "filter",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetProperties",
+                "SourceSection" : "Things_VendingDemoSupport",
+                "TargetArea" : "Data",
+                "TargetId" : "GetEquiptmentFaults",
+                "TargetSection" : "Things_VendingNetworkServices"
+              }, {
+                "Id" : "101320974996161",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetEquiptmentFaults",
+                "SourceSection" : "Things_VendingNetworkServices",
+                "TargetArea" : "UI",
+                "TargetId" : "Grid-48",
+                "TargetSection" : ""
+              }, {
+                "Id" : "801320975042672",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "VMLoaded",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "filter",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetProperties",
+                "SourceSection" : "Things_VendingDemoSupport",
+                "TargetArea" : "Data",
+                "TargetId" : "GetWorkOrders",
+                "TargetSection" : "Things_VendingNetworkServices"
+              }, {
+                "Id" : "361320975058888",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetWorkOrders",
+                "SourceSection" : "Things_VendingNetworkServices",
+                "TargetArea" : "UI",
+                "TargetId" : "Grid-46",
+                "TargetSection" : ""
+              }, {
+                "Id" : "521321020729093",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "VMLoaded",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "source",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetProperties",
+                "SourceSection" : "Things_VendingDemoSupport",
+                "TargetArea" : "Data",
+                "TargetId" : "QueryStreamEntriesWithData",
+                "TargetSection" : "Things_EquiptmentEnvDataStream"
+              }, {
+                "Id" : "211321020751718",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "QueryStreamEntriesWithData",
+                "SourceSection" : "Things_EquiptmentEnvDataStream",
+                "TargetArea" : "UI",
+                "TargetId" : "TimeSeriesChart-41",
+                "TargetSection" : ""
+              }, {
+                "Id" : "91321020921806",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "CurrentTemp",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetProperties",
+                "SourceSection" : "DynamicThingTemplates_VMTemplateVerySmart",
+                "TargetArea" : "UI",
+                "TargetId" : "Gauge-37",
+                "TargetSection" : ""
+              }, {
+                "Id" : "171321020923660",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "CurrentHumidity",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetProperties",
+                "SourceSection" : "DynamicThingTemplates_VMTemplateVerySmart",
+                "TargetArea" : "UI",
+                "TargetId" : "Gauge-38",
+                "TargetSection" : ""
+              }, {
+                "Id" : "31321021236541",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "PercentTimeInService",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetProperties",
+                "SourceSection" : "DynamicThingTemplates_VMTemplateVerySmart",
+                "TargetArea" : "UI",
+                "TargetId" : "Gauge-39",
+                "TargetSection" : ""
+              }, {
+                "Id" : "401321021246215",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "SalesVsGoal",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetProperties",
+                "SourceSection" : "DynamicThingTemplates_VMTemplateVerySmart",
+                "TargetArea" : "UI",
+                "TargetId" : "Gauge-40",
+                "TargetSection" : ""
+              }, {
+                "Id" : "361321466573210",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "VMLoaded",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "value",
+                  "TargetPropertyBaseType" : "THINGNAME",
+                  "TargetPropertyType" : "Entity"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetProperties",
+                "SourceSection" : "Things_VendingDemoSupport",
+                "TargetArea" : "Data",
+                "TargetId" : "EntityName",
+                "TargetSection" : "DynamicThingTemplates_VMTemplateVerySmart"
+              }, {
+                "Id" : "931321474027533",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "InvItem1",
+                  "SourcePropertyBaseType" : "IMAGELINK",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "SourceURL",
+                  "TargetPropertyBaseType" : "IMAGELINK",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetInvPerPosition",
+                "SourceSection" : "DynamicThingTemplates_VMTemplateVerySmart",
+                "TargetArea" : "UI",
+                "TargetId" : "Image-61",
+                "TargetSection" : ""
+              }, {
+                "Id" : "221321474727635",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "InvItem2",
+                  "SourcePropertyBaseType" : "IMAGELINK",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "SourceURL",
+                  "TargetPropertyBaseType" : "IMAGELINK",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetInvPerPosition",
+                "SourceSection" : "DynamicThingTemplates_VMTemplateVerySmart",
+                "TargetArea" : "UI",
+                "TargetId" : "Image-63",
+                "TargetSection" : ""
+              }, {
+                "Id" : "911321474739242",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "InvItem3",
+                  "SourcePropertyBaseType" : "IMAGELINK",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "SourceURL",
+                  "TargetPropertyBaseType" : "IMAGELINK",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetInvPerPosition",
+                "SourceSection" : "DynamicThingTemplates_VMTemplateVerySmart",
+                "TargetArea" : "UI",
+                "TargetId" : "Image-65",
+                "TargetSection" : ""
+              }, {
+                "Id" : "641321474750084",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "InvItem4",
+                  "SourcePropertyBaseType" : "IMAGELINK",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "SourceURL",
+                  "TargetPropertyBaseType" : "IMAGELINK",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetInvPerPosition",
+                "SourceSection" : "DynamicThingTemplates_VMTemplateVerySmart",
+                "TargetArea" : "UI",
+                "TargetId" : "Image-67",
+                "TargetSection" : ""
+              } ],
+              "DesignTimePermissions" : {
+                "Create" : [ ],
+                "Delete" : [ ],
+                "Metadata" : [ ],
+                "Read" : [ ],
+                "Update" : [ ]
+              },
+              "Events" : [ {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_VendingDemoSupport",
+                "EventHandlerService" : "GetProperties",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "741320972549541"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "DynamicThingTemplates_VMTemplateVerySmart",
+                "EventHandlerService" : "GetProperties",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "ServiceInvokeCompleted",
+                "EventTriggerId" : "GetProperties",
+                "EventTriggerSection" : "Things_VendingDemoSupport",
+                "Id" : "431320972599022"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "ThingTemplates_VMTemplateVerySmart",
+                "EventHandlerService" : "GetImplementingThingsWithData",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "371320972846210"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_VendingDemoSupport",
+                "EventHandlerService" : "SetProperties",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "SelectedRowsChanged",
+                "EventTriggerId" : "GetImplementingThingsWithData",
+                "EventTriggerSection" : "ThingTemplates_VMTemplateVerySmart",
+                "Id" : "631320972944940"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_VendingDemoSupport",
+                "EventHandlerService" : "GetProperties",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "ServiceInvokeCompleted",
+                "EventTriggerId" : "SetProperties",
+                "EventTriggerSection" : "Things_VendingDemoSupport",
+                "Id" : "41320973085278"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_VendingNetworkServices",
+                "EventHandlerService" : "GetEquiptmentFaults",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "ServiceInvokeCompleted",
+                "EventTriggerId" : "GetProperties",
+                "EventTriggerSection" : "Things_VendingDemoSupport",
+                "Id" : "251320974944740"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_VendingNetworkServices",
+                "EventHandlerService" : "GetWorkOrders",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "ServiceInvokeCompleted",
+                "EventTriggerId" : "GetProperties",
+                "EventTriggerSection" : "Things_VendingDemoSupport",
+                "Id" : "41320975054128"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_EquiptmentEnvDataStream",
+                "EventHandlerService" : "QueryStreamEntriesWithData",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "ServiceInvokeCompleted",
+                "EventTriggerId" : "GetProperties",
+                "EventTriggerSection" : "Things_VendingDemoSupport",
+                "Id" : "191321020747566"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "DynamicThingTemplates_VMTemplateVerySmart",
+                "EventHandlerService" : "SetProperties",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "SelectionChanged",
+                "EventTriggerId" : "ButtonSet-49",
+                "EventTriggerSection" : "",
+                "Id" : "651321028495770"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "DynamicThingTemplates_VMTemplateVerySmart",
+                "EventHandlerService" : "GetProperties",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "ServiceInvokeCompleted",
+                "EventTriggerId" : "SetProperties",
+                "EventTriggerSection" : "DynamicThingTemplates_VMTemplateVerySmart",
+                "Id" : "321321036965617"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "DynamicThingTemplates_VMTemplateVerySmart",
+                "EventHandlerService" : "GetInvPerPosition",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "ServiceInvokeCompleted",
+                "EventTriggerId" : "GetProperties",
+                "EventTriggerSection" : "Things_VendingDemoSupport",
+                "Id" : "481321474063895"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "DynamicThingTemplates_VMTemplateVerySmart",
+                "EventHandlerService" : "GetInvPerPosition",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "ServiceInvokeCompleted",
+                "EventTriggerId" : "SetProperties",
+                "EventTriggerSection" : "DynamicThingTemplates_VMTemplateVerySmart",
+                "Id" : "261321474080799"
+              }, {
+                "EventHandlerArea" : "Mashup",
+                "EventHandlerId" : "mashup-root",
+                "EventHandlerService" : "CloseIfPopup",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "Clicked",
+                "EventTriggerId" : "Button-69",
+                "EventTriggerSection" : "",
+                "Id" : "01344515824183"
+              } ],
+              "RunTimePermissions" : {
+                "permissions" : [ ]
+              },
+              "UI" : {
+                "Properties" : {
+                  "Area" : "Mashup",
+                  "Height" : 563,
+                  "Id" : "mashup-root",
+                  "IgnoreWarningsInViewMashup" : false,
+                  "Left" : 0,
+                  "Master" : "AcmeBeverageTarget",
+                  "Style" : "DefaultMashupStyle",
+                  "Tags" : [ {
+                    "vocabulary" : "Applications",
+                    "vocabularyTerm" : "AcmeVending"
+                  } ],
+                  "Top" : 0,
+                  "Type" : "mashup",
+                  "Width" : 1024,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Mashup",
+                  "_currentParameterDefs" : [ ],
+                  "id_index" : 70
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Height" : 219,
+                    "Id" : "Panel-3",
+                    "Left" : 5,
+                    "Style" : "Default",
+                    "Top" : 0,
+                    "Type" : "panel",
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Panel"
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "AlternateText" : "",
+                      "Area" : "UI",
+                      "Height" : 25,
+                      "Id" : "Image-5",
+                      "Left" : 0,
+                      "SourceURL" : "/Thingworx/MediaEntities/header",
+                      "Top" : 0,
+                      "Type" : "image",
+                      "Width" : 198,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Image"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "left",
+                      "Area" : "UI",
+                      "Height" : 20,
+                      "Id" : "Label-6",
+                      "Left" : 5,
+                      "Style" : "AcmeVendingHdrText",
+                      "Text" : "Vending Machine",
+                      "Top" : 1,
+                      "Type" : "label",
+                      "Width" : 185,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Label"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "AlternateText" : "",
+                      "Area" : "UI",
+                      "Height" : 123,
+                      "Id" : "Image-27",
+                      "Left" : 45,
+                      "SourceURL" : "/Thingworx/MediaEntities/suzieMachine",
+                      "Top" : 75,
+                      "Type" : "image",
+                      "Width" : 95,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Image"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "left",
+                      "Area" : "UI",
+                      "Height" : 22,
+                      "Id" : "ValueDisplay-31",
+                      "Label" : "",
+                      "Left" : 5,
+                      "ShowBorder" : false,
+                      "TextIfNoValue" : "",
+                      "TextIfNoValueStyle" : "DefaultValueDisplayNoTextStyle",
+                      "TextWrap" : true,
+                      "Top" : 30,
+                      "Type" : "valuedisplay",
+                      "ValueDisplayLabelStyle" : "DefaultWidgetLabelStyle",
+                      "ValueDisplayStyle" : "DefaultValueDisplayStyle",
+                      "ValueFormat" : {
+                        "FormatString" : "",
+                        "formatInfo" : {
+                          "FieldName" : "",
+                          "StateDefinition" : "",
+                          "StateDefinitionType" : "fixed",
+                          "StateFormats" : [ {
+                            "state" : "DefaultTitle",
+                            "stateName" : "fixed"
+                          } ]
+                        },
+                        "renderer" : "DEFAULT"
+                      },
+                      "Width" : 75,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Value Display",
+                      "__supportsLabel" : true
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "left",
+                      "Area" : "UI",
+                      "Height" : 28,
+                      "Id" : "ValueDisplay-32",
+                      "Label" : "",
+                      "Left" : 155,
+                      "ShowBorder" : false,
+                      "TextIfNoValue" : "",
+                      "TextIfNoValueStyle" : "DefaultValueDisplayNoTextStyle",
+                      "TextWrap" : true,
+                      "Top" : 28,
+                      "Type" : "valuedisplay",
+                      "ValueDisplayLabelStyle" : "DefaultWidgetLabelStyle",
+                      "ValueDisplayStyle" : "DefaultValueDisplayStyle",
+                      "Width" : 39,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Value Display",
+                      "__supportsLabel" : true
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "left",
+                      "Area" : "UI",
+                      "Height" : 22,
+                      "Id" : "Label-33",
+                      "Left" : 90,
+                      "Style" : "DefaultLabelStyle",
+                      "Text" : "In Service:",
+                      "Top" : 30,
+                      "Type" : "label",
+                      "Width" : 65,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Label"
+                    },
+                    "Widgets" : [ ]
+                  } ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Height" : 239,
+                    "Id" : "Panel-7",
+                    "Left" : 5,
+                    "Style" : "Default",
+                    "Top" : 280,
+                    "Type" : "panel",
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Panel"
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "AlternateText" : "",
+                      "Area" : "UI",
+                      "Height" : 25,
+                      "Id" : "Image-9",
+                      "Left" : 0,
+                      "SourceURL" : "/Thingworx/MediaEntities/header",
+                      "Top" : 0,
+                      "Type" : "image",
+                      "Width" : 198,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Image"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "left",
+                      "Area" : "UI",
+                      "Height" : 20,
+                      "Id" : "Label-10",
+                      "Left" : 5,
+                      "Style" : "AcmeVendingHdrText",
+                      "Text" : "Actions",
+                      "Top" : 1,
+                      "Type" : "label",
+                      "Width" : 185,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Label"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "left",
+                      "AllButTopRememberLastChoice" : true,
+                      "Area" : "UI",
+                      "ConfiguredOrDataDriven" : "configured",
+                      "DisplayName" : "Menu-70",
+                      "DrivePageMashupOrBindToMashup" : "pagemashup",
+                      "Height" : 200,
+                      "IconMaxWidth" : 22,
+                      "Id" : "Menu-70",
+                      "Left" : 5,
+                      "Levels" : "all",
+                      "Menu" : "ACMEVendingProvisionMenu",
+                      "MenuBackgroundStyle" : "DefaultMenuBackgroundStyle",
+                      "MenuHoverStyle" : "DefaultMenuHoverStyle",
+                      "MenuItemDisplay" : "iconleftoftext",
+                      "MenuLevelHoverStyle" : "DefaultMenuLevelHoverStyle",
+                      "MenuLevelSelectedStyle" : "DefaultMenuLevelSelectedStyle",
+                      "MenuLevelStyle" : "DefaultMenuLevelStyle",
+                      "MenuSelectedStyle" : "DefaultMenuSelectedStyle",
+                      "MenuStyle" : "DefaultMenuStyle",
+                      "Top" : 30,
+                      "Type" : "menu",
+                      "View" : "vert",
+                      "Width" : 185,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Menu"
+                    },
+                    "Widgets" : [ ]
+                  } ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Height" : 334,
+                    "Id" : "Panel-16",
+                    "Left" : 212,
+                    "Style" : "DefaultPanelStyle",
+                    "Top" : 0,
+                    "Type" : "panel",
+                    "Width" : 804,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Panel"
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "AlternateText" : "",
+                      "Area" : "UI",
+                      "Height" : 25,
+                      "Id" : "Image-17",
+                      "Left" : 0,
+                      "SourceURL" : "/Thingworx/MediaEntities/header",
+                      "Top" : 0,
+                      "Type" : "image",
+                      "Width" : 803,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Image"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "left",
+                      "Area" : "UI",
+                      "Height" : 20,
+                      "Id" : "Label-28",
+                      "Left" : 5,
+                      "Style" : "AcmeVendingHdrText",
+                      "Text" : "Operational Status",
+                      "Top" : 1,
+                      "Type" : "label",
+                      "Width" : 185,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Label"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Aperture" : 235,
+                      "Area" : "UI",
+                      "CenterDiameter" : 20,
+                      "CenterStyle" : "DefaultGaugeCenterStyle",
+                      "ChartStyle" : "DefaultChartStyle",
+                      "Decimals" : 0,
+                      "FaceDiameter" : 80,
+                      "FormatNeedle" : true,
+                      "GaugeBorder" : 20,
+                      "GaugeBorderStyle" : "DefaultGaugeBorderStyle",
+                      "GaugeFaceStyle" : "DefaultGaugeFaceStyle",
+                      "GaugeOffset" : 0,
+                      "GaugeScaling" : 70,
+                      "GaugeStyle" : "DefaultGaugeStyle",
+                      "Height" : 140,
+                      "Id" : "Gauge-37",
+                      "Intervals" : 10,
+                      "IntervalsPerLabel" : 1,
+                      "LabelDecimals" : 0,
+                      "LabelDigits" : 3,
+                      "LabelDisplayMode" : "inside",
+                      "LabelStyle" : "DefaultGaugeLabelStyle",
+                      "Left" : 495,
+                      "Legend" : "Temperature",
+                      "LegendDisplayMode" : "bottom",
+                      "LegendStyle" : "DefaultGaugeLegendStyle",
+                      "MaxValue" : 100,
+                      "MinValue" : 0,
+                      "MinorTickLength" : 4,
+                      "MinorTicks" : 4,
+                      "NeedleDiameter" : 12,
+                      "NeedleFormatter" : {
+                        "FieldName" : "CurrentTemp",
+                        "StateDefinition" : "AcmeVendingGauge3",
+                        "StateDefinitionType" : "numeric",
+                        "StateFormats" : [ {
+                          "comparator" : "<",
+                          "state" : "RedIndicatorMarker",
+                          "stateName" : "",
+                          "value" : "30"
+                        }, {
+                          "comparator" : "<",
+                          "state" : "YellowIndicatorMarker",
+                          "stateName" : "",
+                          "value" : "40"
+                        }, {
+                          "comparator" : "<",
+                          "state" : "GreenIndicatorMarker",
+                          "stateName" : "",
+                          "value" : "50"
+                        }, {
+                          "comparator" : "<",
+                          "state" : "YellowIndicatorMarker",
+                          "stateName" : "",
+                          "value" : "60"
+                        }, {
+                          "state" : "RedIndicatorMarker",
+                          "stateName" : ""
+                        } ]
+                      },
+                      "NeedleLength" : 30,
+                      "NeedleStyle" : "DefaultGaugeNeedleStyle",
+                      "ReferenceAngle" : 270,
+                      "RingWidth" : 10,
+                      "ShowRanges" : true,
+                      "TickLength" : 8,
+                      "TickStyle" : "DefaultGaugeTickStyle",
+                      "Top" : 35,
+                      "Type" : "gauge",
+                      "ValueDecimals" : 0,
+                      "ValueDigits" : 3,
+                      "ValueDisplayMode" : "none",
+                      "ValueFormatter_StateParameters" : [ ],
+                      "ValueStyle" : "DefaultGaugeStyle",
+                      "Width" : 145,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Gauge"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Aperture" : 235,
+                      "Area" : "UI",
+                      "CenterDiameter" : 20,
+                      "CenterStyle" : "DefaultGaugeCenterStyle",
+                      "ChartStyle" : "DefaultChartStyle",
+                      "Decimals" : 0,
+                      "FaceDiameter" : 80,
+                      "FormatNeedle" : true,
+                      "GaugeBorder" : 20,
+                      "GaugeBorderStyle" : "DefaultGaugeBorderStyle",
+                      "GaugeFaceStyle" : "DefaultGaugeFaceStyle",
+                      "GaugeOffset" : 0,
+                      "GaugeScaling" : 70,
+                      "GaugeStyle" : "DefaultGaugeStyle",
+                      "Height" : 140,
+                      "Id" : "Gauge-38",
+                      "Intervals" : 10,
+                      "IntervalsPerLabel" : 1,
+                      "LabelDecimals" : 0,
+                      "LabelDigits" : 3,
+                      "LabelDisplayMode" : "inside",
+                      "LabelStyle" : "DefaultGaugeLabelStyle",
+                      "Left" : 650,
+                      "Legend" : "Humidity",
+                      "LegendDisplayMode" : "bottom",
+                      "LegendStyle" : "DefaultGaugeLegendStyle",
+                      "MaxValue" : 100,
+                      "MinValue" : 0,
+                      "MinorTickLength" : 4,
+                      "MinorTicks" : 4,
+                      "NeedleDiameter" : 12,
+                      "NeedleFormatter" : {
+                        "FieldName" : "CurrentHumidity",
+                        "StateDefinition" : "AcmeVendingGauge1",
+                        "StateDefinitionType" : "numeric",
+                        "StateFormats" : [ {
+                          "comparator" : "<",
+                          "state" : "GreenIndicatorMarker",
+                          "stateName" : "",
+                          "value" : "60"
+                        }, {
+                          "comparator" : "<",
+                          "state" : "YellowIndicatorMarker",
+                          "stateName" : "",
+                          "value" : "80"
+                        }, {
+                          "state" : "RedIndicatorMarker",
+                          "stateName" : ""
+                        } ]
+                      },
+                      "NeedleLength" : 30,
+                      "NeedleStyle" : "DefaultGaugeNeedleStyle",
+                      "ReferenceAngle" : 270,
+                      "RingWidth" : 10,
+                      "ShowRanges" : true,
+                      "TickLength" : 8,
+                      "TickStyle" : "DefaultGaugeTickStyle",
+                      "Top" : 35,
+                      "Type" : "gauge",
+                      "ValueDecimals" : 0,
+                      "ValueDigits" : 3,
+                      "ValueDisplayMode" : "none",
+                      "ValueFormatter_StateParameters" : [ ],
+                      "ValueStyle" : "DefaultGaugeStyle",
+                      "Width" : 145,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Gauge"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Aperture" : 235,
+                      "Area" : "UI",
+                      "CenterDiameter" : 20,
+                      "CenterStyle" : "DefaultGaugeCenterStyle",
+                      "ChartStyle" : "DefaultChartStyle",
+                      "Decimals" : 0,
+                      "FaceDiameter" : 80,
+                      "FormatNeedle" : true,
+                      "GaugeBorder" : 20,
+                      "GaugeBorderStyle" : "DefaultGaugeBorderStyle",
+                      "GaugeFaceStyle" : "DefaultGaugeFaceStyle",
+                      "GaugeOffset" : 0,
+                      "GaugeScaling" : 70,
+                      "GaugeStyle" : "DefaultGaugeStyle",
+                      "Height" : 140,
+                      "Id" : "Gauge-39",
+                      "Intervals" : 10,
+                      "IntervalsPerLabel" : 1,
+                      "LabelDecimals" : 0,
+                      "LabelDigits" : 3,
+                      "LabelDisplayMode" : "inside",
+                      "LabelStyle" : "DefaultGaugeLabelStyle",
+                      "Left" : 495,
+                      "Legend" : "In Service %",
+                      "LegendDisplayMode" : "bottom",
+                      "LegendStyle" : "DefaultGaugeLegendStyle",
+                      "MaxValue" : 100,
+                      "MinValue" : 70,
+                      "MinorTickLength" : 4,
+                      "MinorTicks" : 4,
+                      "NeedleDiameter" : 12,
+                      "NeedleFormatter" : {
+                        "FieldName" : "PercentTimeInService",
+                        "StateDefinition" : "AcmeVendingGauge2",
+                        "StateDefinitionType" : "numeric",
+                        "StateFormats" : [ {
+                          "comparator" : "<",
+                          "state" : "RedIndicatorMarker",
+                          "stateName" : "",
+                          "value" : "93"
+                        }, {
+                          "comparator" : "<",
+                          "state" : "YellowIndicatorMarker",
+                          "stateName" : "",
+                          "value" : "97"
+                        }, {
+                          "state" : "GreenIndicatorMarker",
+                          "stateName" : ""
+                        } ]
+                      },
+                      "NeedleLength" : 30,
+                      "NeedleStyle" : "DefaultGaugeNeedleStyle",
+                      "ReferenceAngle" : 270,
+                      "RingWidth" : 10,
+                      "ShowRanges" : true,
+                      "TickLength" : 8,
+                      "TickStyle" : "DefaultGaugeTickStyle",
+                      "Top" : 185,
+                      "Type" : "gauge",
+                      "ValueDecimals" : 0,
+                      "ValueDigits" : 3,
+                      "ValueDisplayMode" : "none",
+                      "ValueFormatter_StateParameters" : [ ],
+                      "ValueStyle" : "DefaultGaugeStyle",
+                      "Width" : 145,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Gauge"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Aperture" : 235,
+                      "Area" : "UI",
+                      "CenterDiameter" : 20,
+                      "CenterStyle" : "DefaultGaugeCenterStyle",
+                      "ChartStyle" : "DefaultChartStyle",
+                      "Decimals" : 0,
+                      "FaceDiameter" : 80,
+                      "FormatNeedle" : true,
+                      "GaugeBorder" : 20,
+                      "GaugeBorderStyle" : "DefaultGaugeBorderStyle",
+                      "GaugeFaceStyle" : "DefaultGaugeFaceStyle",
+                      "GaugeOffset" : 0,
+                      "GaugeScaling" : 70,
+                      "GaugeStyle" : "DefaultGaugeStyle",
+                      "Height" : 140,
+                      "Id" : "Gauge-40",
+                      "Intervals" : 10,
+                      "IntervalsPerLabel" : 1,
+                      "LabelDecimals" : 0,
+                      "LabelDigits" : 3,
+                      "LabelDisplayMode" : "inside",
+                      "LabelStyle" : "DefaultGaugeLabelStyle",
+                      "Left" : 650,
+                      "Legend" : "Sales vs. Goal",
+                      "LegendDisplayMode" : "bottom",
+                      "LegendStyle" : "DefaultGaugeLegendStyle",
+                      "MaxValue" : 150,
+                      "MinValue" : 0,
+                      "MinorTickLength" : 4,
+                      "MinorTicks" : 4,
+                      "NeedleDiameter" : 12,
+                      "NeedleFormatter" : {
+                        "FieldName" : "SalesVsGoal",
+                        "StateDefinition" : "AcmeVendingGauge2",
+                        "StateDefinitionType" : "numeric",
+                        "StateFormats" : [ {
+                          "comparator" : "<",
+                          "state" : "RedIndicatorMarker",
+                          "stateName" : "",
+                          "value" : "75"
+                        }, {
+                          "comparator" : "<",
+                          "state" : "YellowIndicatorMarker",
+                          "stateName" : "",
+                          "value" : "105"
+                        }, {
+                          "state" : "GreenIndicatorMarker",
+                          "stateName" : ""
+                        } ]
+                      },
+                      "NeedleLength" : 30,
+                      "NeedleStyle" : "DefaultGaugeNeedleStyle",
+                      "ReferenceAngle" : 270,
+                      "RingWidth" : 10,
+                      "ShowRanges" : true,
+                      "TickLength" : 8,
+                      "TickStyle" : "DefaultGaugeTickStyle",
+                      "Top" : 185,
+                      "Type" : "gauge",
+                      "ValueDecimals" : 0,
+                      "ValueDigits" : 3,
+                      "ValueDisplayMode" : "none",
+                      "ValueFormatter_StateParameters" : [ ],
+                      "ValueStyle" : "DefaultGaugeStyle",
+                      "Width" : 145,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Gauge"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "AllowSelection" : true,
+                      "AllowXAxisZoom" : true,
+                      "AllowYAxisZoom" : true,
+                      "Area" : "UI",
+                      "ChartAreaStyle" : "DefaultChartAreaStyle",
+                      "ChartIndicatorStyle" : "DefaultChartIndicatorStyle",
+                      "ChartLegendStyle" : "DefaultChartLegendStyle",
+                      "ChartOrientation" : "vertical",
+                      "ChartStyle" : "DefaultChartStyle",
+                      "ChartTitle" : "",
+                      "ChartTitleStyle" : "DefaultChartTitleStyle",
+                      "ChartType" : "linemarker",
+                      "DataField1" : "temperature",
+                      "DataField2" : "humidity",
+                      "DataLabel1" : "Temperature",
+                      "DataLabel2" : "Humidity",
+                      "Decimals" : 0,
+                      "GridStyle" : "DefaultChartGridStyle",
+                      "Height" : 175,
+                      "Id" : "TimeSeriesChart-41",
+                      "Left" : 5,
+                      "LegendLocation" : "bottom",
+                      "LegendOrientation" : "horizontal",
+                      "LegendWidth" : 120,
+                      "MarkerSize" : 3,
+                      "MarkerType" : "circle",
+                      "NumberOfSeries" : 2,
+                      "SelectedItemStyle" : "DefaultChartSelectionStyle",
+                      "SeriesDataStyle1" : {
+                        "FieldName" : "temperature",
+                        "StateDefinition" : "AcmeVendingGauge3",
+                        "StateDefinitionType" : "numeric",
+                        "StateFormats" : [ {
+                          "comparator" : "<",
+                          "state" : "RedIndicatorMarker",
+                          "stateName" : "",
+                          "value" : "30"
+                        }, {
+                          "comparator" : "<",
+                          "state" : "YellowIndicatorMarker",
+                          "stateName" : "",
+                          "value" : "40"
+                        }, {
+                          "comparator" : "<",
+                          "state" : "GreenIndicatorMarker",
+                          "stateName" : "",
+                          "value" : "50"
+                        }, {
+                          "comparator" : "<",
+                          "state" : "YellowIndicatorMarker",
+                          "stateName" : "",
+                          "value" : "60"
+                        }, {
+                          "state" : "RedIndicatorMarker",
+                          "stateName" : ""
+                        } ]
+                      },
+                      "SeriesDataStyle10_StateParameters" : [ ],
+                      "SeriesDataStyle11_StateParameters" : [ ],
+                      "SeriesDataStyle12_StateParameters" : [ ],
+                      "SeriesDataStyle13_StateParameters" : [ ],
+                      "SeriesDataStyle14_StateParameters" : [ ],
+                      "SeriesDataStyle15_StateParameters" : [ ],
+                      "SeriesDataStyle16_StateParameters" : [ ],
+                      "SeriesDataStyle1_StateParameters" : [ {
+                        "BaseType" : "NUMBER",
+                        "DefaultValue" : 30,
+                        "Description" : "",
+                        "ParameterName" : "SeriesDataStyle1_"
+                      }, {
+                        "BaseType" : "NUMBER",
+                        "DefaultValue" : 40,
+                        "Description" : "",
+                        "ParameterName" : "SeriesDataStyle1_"
+                      }, {
+                        "BaseType" : "NUMBER",
+                        "DefaultValue" : 50,
+                        "Description" : "",
+                        "ParameterName" : "SeriesDataStyle1_"
+                      }, {
+                        "BaseType" : "NUMBER",
+                        "DefaultValue" : 60,
+                        "Description" : "",
+                        "ParameterName" : "SeriesDataStyle1_"
+                      } ],
+                      "SeriesDataStyle2" : {
+                        "FieldName" : "humidity",
+                        "StateDefinition" : "AcmeVendingGauge1",
+                        "StateDefinitionType" : "numeric",
+                        "StateFormats" : [ {
+                          "comparator" : "<",
+                          "state" : "GreenIndicatorMarker",
+                          "stateName" : "",
+                          "value" : "60"
+                        }, {
+                          "comparator" : "<",
+                          "state" : "YellowIndicatorMarker",
+                          "stateName" : "",
+                          "value" : "80"
+                        }, {
+                          "state" : "RedIndicatorMarker",
+                          "stateName" : ""
+                        } ]
+                      },
+                      "SeriesDataStyle2_StateParameters" : [ {
+                        "BaseType" : "NUMBER",
+                        "DefaultValue" : 60,
+                        "Description" : "",
+                        "ParameterName" : "SeriesDataStyle2_"
+                      }, {
+                        "BaseType" : "NUMBER",
+                        "DefaultValue" : 80,
+                        "Description" : "",
+                        "ParameterName" : "SeriesDataStyle2_"
+                      } ],
+                      "SeriesDataStyle3_StateParameters" : [ ],
+                      "SeriesDataStyle4_StateParameters" : [ ],
+                      "SeriesDataStyle5_StateParameters" : [ ],
+                      "SeriesDataStyle6_StateParameters" : [ ],
+                      "SeriesDataStyle7_StateParameters" : [ ],
+                      "SeriesDataStyle8_StateParameters" : [ ],
+                      "SeriesDataStyle9_StateParameters" : [ ],
+                      "SeriesFormat1" : "0000.0",
+                      "SeriesFormat10" : "0000.0",
+                      "SeriesFormat11" : "0000.0",
+                      "SeriesFormat12" : "0000.0",
+                      "SeriesFormat13" : "0000.0",
+                      "SeriesFormat14" : "0000.0",
+                      "SeriesFormat15" : "0000.0",
+                      "SeriesFormat16" : "0000.0",
+                      "SeriesFormat2" : "0000.0",
+                      "SeriesFormat3" : "0000.0",
+                      "SeriesFormat4" : "0000.0",
+                      "SeriesFormat5" : "0000.0",
+                      "SeriesFormat6" : "0000.0",
+                      "SeriesFormat7" : "0000.0",
+                      "SeriesFormat8" : "0000.0",
+                      "SeriesFormat9" : "0000.0",
+                      "SeriesMarkerType1" : "chart",
+                      "SeriesMarkerType10" : "chart",
+                      "SeriesMarkerType11" : "chart",
+                      "SeriesMarkerType12" : "chart",
+                      "SeriesMarkerType13" : "chart",
+                      "SeriesMarkerType14" : "chart",
+                      "SeriesMarkerType15" : "chart",
+                      "SeriesMarkerType16" : "chart",
+                      "SeriesMarkerType2" : "chart",
+                      "SeriesMarkerType3" : "chart",
+                      "SeriesMarkerType4" : "chart",
+                      "SeriesMarkerType5" : "chart",
+                      "SeriesMarkerType6" : "chart",
+                      "SeriesMarkerType7" : "chart",
+                      "SeriesMarkerType8" : "chart",
+                      "SeriesMarkerType9" : "chart",
+                      "SeriesStyle1" : "DefaultChartStyle1",
+                      "SeriesStyle10" : "DefaultChartStyle10",
+                      "SeriesStyle11" : "DefaultChartStyle11",
+                      "SeriesStyle12" : "DefaultChartStyle12",
+                      "SeriesStyle13" : "DefaultChartStyle13",
+                      "SeriesStyle14" : "DefaultChartStyle14",
+                      "SeriesStyle15" : "DefaultChartStyle15",
+                      "SeriesStyle16" : "DefaultChartStyle16",
+                      "SeriesStyle2" : "DefaultChartStyle2",
+                      "SeriesStyle3" : "DefaultChartStyle3",
+                      "SeriesStyle4" : "DefaultChartStyle4",
+                      "SeriesStyle5" : "DefaultChartStyle5",
+                      "SeriesStyle6" : "DefaultChartStyle6",
+                      "SeriesStyle7" : "DefaultChartStyle7",
+                      "SeriesStyle8" : "DefaultChartStyle8",
+                      "SeriesStyle9" : "DefaultChartStyle9",
+                      "SeriesType1" : "chart",
+                      "SeriesType10" : "chart",
+                      "SeriesType11" : "chart",
+                      "SeriesType12" : "chart",
+                      "SeriesType13" : "chart",
+                      "SeriesType14" : "chart",
+                      "SeriesType15" : "chart",
+                      "SeriesType16" : "chart",
+                      "SeriesType2" : "chart",
+                      "SeriesType3" : "chart",
+                      "SeriesType4" : "chart",
+                      "SeriesType5" : "chart",
+                      "SeriesType6" : "chart",
+                      "SeriesType7" : "chart",
+                      "SeriesType8" : "chart",
+                      "SeriesType9" : "chart",
+                      "ShowLegend" : true,
+                      "ShowXAxis" : true,
+                      "ShowXAxisGrid" : true,
+                      "ShowXAxisLabels" : true,
+                      "ShowXAxisTicks" : true,
+                      "ShowYAxis" : true,
+                      "ShowYAxisGrid" : true,
+                      "ShowYAxisLabels" : true,
+                      "ShowYAxisTicks" : true,
+                      "SingleDataSource" : true,
+                      "Top" : 150,
+                      "Type" : "timeserieschart",
+                      "VerticalAxisWidth" : 40,
+                      "Width" : 480,
+                      "XAxisAutoscale" : true,
+                      "XAxisField" : "timestamp",
+                      "XAxisFormat" : "yyyy-MM-dd\\nHH:mm:ss",
+                      "XAxisIntervals" : 10,
+                      "XAxisLabels" : 2,
+                      "XAxisMinorTicks" : 1,
+                      "XAxisSmoothScaling" : true,
+                      "XAxisStyle" : "DefaultChartAxisStyle",
+                      "XAxisZeroscale" : false,
+                      "YAxisAutoscale" : false,
+                      "YAxisFormat" : "0000.0",
+                      "YAxisIntervals" : 10,
+                      "YAxisLabels" : 2,
+                      "YAxisMaximum" : 70,
+                      "YAxisMinimum" : 20,
+                      "YAxisMinorTicks" : 1,
+                      "YAxisStyle" : "DefaultChartAxisStyle",
+                      "YAxisZeroscale" : false,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Time Series Chart"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "AlternateText" : "",
+                      "Area" : "UI",
+                      "Height" : 110,
+                      "Id" : "Image-61",
+                      "Left" : 10,
+                      "SourceURL" : "",
+                      "Top" : 35,
+                      "Type" : "image",
+                      "Width" : 40,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Image"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "AlternateText" : "",
+                      "Area" : "UI",
+                      "Height" : 110,
+                      "Id" : "Image-63",
+                      "Left" : 135,
+                      "SourceURL" : "",
+                      "Top" : 35,
+                      "Type" : "image",
+                      "Width" : 40,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Image"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "AlternateText" : "",
+                      "Area" : "UI",
+                      "Height" : 110,
+                      "Id" : "Image-65",
+                      "Left" : 260,
+                      "SourceURL" : "",
+                      "Top" : 35,
+                      "Type" : "image",
+                      "Width" : 40,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Image"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "AlternateText" : "",
+                      "Area" : "UI",
+                      "Height" : 110,
+                      "Id" : "Image-67",
+                      "Left" : 385,
+                      "SourceURL" : "",
+                      "Top" : 35,
+                      "Type" : "image",
+                      "Width" : 40,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Image"
+                    },
+                    "Widgets" : [ ]
+                  } ]
+                }, {
+                  "Properties" : {
+                    "Alignment" : "left",
+                    "Area" : "UI",
+                    "AutoSelectFirstRow" : false,
+                    "DisplayField" : "name",
+                    "Height" : 30,
+                    "HeightOfDropdownView" : 200,
+                    "Id" : "List-35",
+                    "Left" : 33,
+                    "ListBackgroundStyle" : "DefaultListBackgroundStyle",
+                    "ListFormat" : {
+                      "FormatString" : "",
+                      "formatInfo" : {
+                        "FieldName" : "StatusCode",
+                        "StateDefinition" : "VendinMachineState",
+                        "StateDefinitionType" : "numeric",
+                        "StateFormats" : [ {
+                          "comparator" : "<",
+                          "state" : "AcmeOrderPaused",
+                          "stateName" : "NotProvisioned",
+                          "value" : "10"
+                        }, {
+                          "comparator" : "<",
+                          "state" : "AcmeOrderRunning",
+                          "stateName" : "NormalService",
+                          "value" : "100"
+                        }, {
+                          "comparator" : "<",
+                          "state" : "AcmeOrderNew",
+                          "stateName" : "OutOfService",
+                          "value" : "1000"
+                        }, {
+                          "state" : "AcmePageTitle",
+                          "stateName" : "CloneMaster"
+                        } ]
+                      },
+                      "renderer" : "DEFAULT"
+                    },
+                    "ListItemAlternateStyle" : "DefaultListItemAlternateStyle",
+                    "ListItemHoverStyle" : "DefaultListItemHoverStyle",
+                    "ListItemSelectedStyle" : "DefaultListItemSelectedStyle",
+                    "ListItemStyle" : "DefaultListItemStyle",
+                    "MultiSelect" : false,
+                    "NumberOfItemsInDropdownView" : 6,
+                    "RowHeight" : 30,
+                    "Top" : 245,
+                    "Type" : "dhxlist",
+                    "View" : "dropdown",
+                    "Width" : 165,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "List"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "AllowNewPosts" : true,
+                    "Area" : "UI",
+                    "Blog" : "AcmeVendingEquiptmentBlog",
+                    "BlogButtonsStyle" : "DefaultBlogButtonsStyle",
+                    "BlogHeaderStyle" : "DefaultBlogHeaderStyle",
+                    "BlogPostStyle" : "DefaultBlogPostStyle",
+                    "BlogStyle" : "DefaultBlogStyle",
+                    "EndDateTime" : "",
+                    "ExpandAll" : false,
+                    "Height" : 215,
+                    "HeightOfFullView" : 600,
+                    "Id" : "Blog-45",
+                    "Left" : 673,
+                    "SearchExpression" : "",
+                    "ShowExpandInSummary" : false,
+                    "ShowSearchInSummary" : false,
+                    "SortOrder" : "Newest",
+                    "Source" : "",
+                    "StartDateTime" : "",
+                    "Title" : "Machine Blog",
+                    "Top" : 340,
+                    "Type" : "blog",
+                    "View" : "Summary",
+                    "Width" : 345,
+                    "WidthOfFullView" : 800,
+                    "WordsInPosts" : 100,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Blog"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Alignment" : "left",
+                    "Area" : "UI",
+                    "Height" : 22,
+                    "Id" : "Label-47",
+                    "Left" : 0,
+                    "Style" : "DefaultLabelStyle",
+                    "Text" : "Select Vending Machine:",
+                    "Top" : 220,
+                    "Type" : "label",
+                    "Width" : 155,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Label"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "AutoSelectFirstRow" : false,
+                    "ColumnFormat" : {
+                      "formatInfo" : [ {
+                        "Align" : "left",
+                        "FieldName" : "workOrder",
+                        "FormatOptions" : {
+                          "FormatString" : "",
+                          "formatInfo" : {
+                            "FieldName" : "",
+                            "StateDefinition" : "",
+                            "StateDefinitionType" : "fixed",
+                            "StateFormats" : [ {
+                              "state" : "",
+                              "stateName" : "fixed"
+                            } ]
+                          },
+                          "renderer" : "STRING"
+                        },
+                        "Title" : "Work Order",
+                        "Width" : "100"
+                      }, {
+                        "Align" : "left",
+                        "FieldName" : "systemStatus",
+                        "FormatOptions" : {
+                          "FormatString" : "",
+                          "formatInfo" : {
+                            "FieldName" : "",
+                            "StateDefinition" : "",
+                            "StateDefinitionType" : "fixed",
+                            "StateFormats" : [ {
+                              "state" : "",
+                              "stateName" : "fixed"
+                            } ]
+                          },
+                          "renderer" : "STRING"
+                        },
+                        "Title" : "Order Type",
+                        "Width" : "auto"
+                      }, {
+                        "Align" : "left",
+                        "FieldName" : "shortText",
+                        "FormatOptions" : {
+                          "FormatString" : "",
+                          "formatInfo" : {
+                            "FieldName" : "",
+                            "StateDefinition" : "",
+                            "StateDefinitionType" : "fixed",
+                            "StateFormats" : [ {
+                              "state" : "",
+                              "stateName" : "fixed"
+                            } ]
+                          },
+                          "renderer" : "STRING"
+                        },
+                        "Title" : "Description",
+                        "Width" : "auto"
+                      }, {
+                        "Align" : "left",
+                        "FieldName" : "basicStartDate",
+                        "FormatOptions" : {
+                          "FormatString" : "yyyy-MM-dd HH:mm:ss",
+                          "formatInfo" : {
+                            "FieldName" : "",
+                            "StateDefinition" : "",
+                            "StateDefinitionType" : "fixed",
+                            "StateFormats" : [ {
+                              "state" : "",
+                              "stateName" : "fixed"
+                            } ]
+                          },
+                          "renderer" : "DATETIME"
+                        },
+                        "Title" : "Sched Start",
+                        "Width" : "auto"
+                      }, {
+                        "Align" : "left",
+                        "FieldName" : "actualStart",
+                        "FormatOptions" : {
+                          "FormatString" : "yyyy-MM-dd HH:mm:ss",
+                          "formatInfo" : {
+                            "FieldName" : "",
+                            "StateDefinition" : "",
+                            "StateDefinitionType" : "fixed",
+                            "StateFormats" : [ {
+                              "state" : "",
+                              "stateName" : "fixed"
+                            } ]
+                          },
+                          "renderer" : "DATETIME"
+                        },
+                        "Title" : "Actual Start",
+                        "Width" : "auto"
+                      }, {
+                        "Align" : "left",
+                        "FieldName" : "basicFinishDate",
+                        "FormatOptions" : {
+                          "FormatString" : "yyyy-MM-dd HH:mm:ss",
+                          "formatInfo" : {
+                            "FieldName" : "",
+                            "StateDefinition" : "",
+                            "StateDefinitionType" : "fixed",
+                            "StateFormats" : [ {
+                              "state" : "",
+                              "stateName" : "fixed"
+                            } ]
+                          },
+                          "renderer" : "DATETIME"
+                        },
+                        "Title" : "Sched Finish",
+                        "Width" : "auto"
+                      }, {
+                        "Align" : "left",
+                        "FieldName" : "actualFinish",
+                        "FormatOptions" : {
+                          "FormatString" : "yyyy-MM-dd HH:mm:ss",
+                          "formatInfo" : {
+                            "FieldName" : "",
+                            "StateDefinition" : "",
+                            "StateDefinitionType" : "fixed",
+                            "StateFormats" : [ {
+                              "state" : "",
+                              "stateName" : "fixed"
+                            } ]
+                          },
+                          "renderer" : "DATETIME"
+                        },
+                        "Title" : "Actual Finish",
+                        "Width" : "auto"
+                      } ]
+                    },
+                    "GridBackgroundStyle" : "DefaultGridBackgroundStyle",
+                    "GridHeaderStyle" : "DefaultGridHeaderStyle",
+                    "Height" : 105,
+                    "Id" : "Grid-46",
+                    "Left" : 213,
+                    "MultiSelect" : false,
+                    "RowAlternateBackgroundStyle" : "DefaultRowAlternateBackgroundStyle",
+                    "RowBackgroundStyle" : "DefaultRowBackgroundStyle",
+                    "RowFormat_StateParameters" : [ ],
+                    "RowHeight" : 30,
+                    "RowHoverStyle" : "DefaultRowHoverStyle",
+                    "RowSelectedStyle" : "DefaultRowSelectedStyle",
+                    "RowStyle" : "DefaultGridStyle",
+                    "ShowAllColumns" : false,
+                    "Top" : 340,
+                    "Type" : "dhxgrid",
+                    "Width" : 455,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Grid"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "AutoSelectFirstRow" : false,
+                    "ColumnFormat" : {
+                      "formatInfo" : [ {
+                        "Align" : "left",
+                        "FieldName" : "timestamp",
+                        "FormatOptions" : {
+                          "FormatString" : "yyyy-MM-dd HH:mm",
+                          "formatInfo" : {
+                            "FieldName" : "",
+                            "StateDefinition" : "",
+                            "StateDefinitionType" : "fixed",
+                            "StateFormats" : [ {
+                              "state" : "",
+                              "stateName" : "fixed"
+                            } ]
+                          },
+                          "renderer" : "DATETIME"
+                        },
+                        "Title" : "Fault Time",
+                        "Width" : "120"
+                      }, {
+                        "Align" : "left",
+                        "FieldName" : "statusCode",
+                        "FormatOptions" : {
+                          "FormatString" : "0",
+                          "formatInfo" : {
+                            "FieldName" : "",
+                            "StateDefinition" : "",
+                            "StateDefinitionType" : "fixed",
+                            "StateFormats" : [ {
+                              "state" : "",
+                              "stateName" : "fixed"
+                            } ]
+                          },
+                          "renderer" : "NUMBER"
+                        },
+                        "Title" : "Fault Code",
+                        "Width" : "80"
+                      }, {
+                        "Align" : "left",
+                        "FieldName" : "statusDescription",
+                        "FormatOptions" : {
+                          "FormatString" : "",
+                          "formatInfo" : {
+                            "FieldName" : "",
+                            "StateDefinition" : "",
+                            "StateDefinitionType" : "fixed",
+                            "StateFormats" : [ {
+                              "state" : "",
+                              "stateName" : "fixed"
+                            } ]
+                          },
+                          "renderer" : "STRING"
+                        },
+                        "Title" : "Fault Description",
+                        "Width" : "243"
+                      } ]
+                    },
+                    "GridBackgroundStyle" : "DefaultGridBackgroundStyle",
+                    "GridHeaderStyle" : "DefaultGridHeaderStyle",
+                    "Height" : 105,
+                    "Id" : "Grid-48",
+                    "Left" : 210,
+                    "MultiSelect" : false,
+                    "RowAlternateBackgroundStyle" : "DefaultRowAlternateBackgroundStyle",
+                    "RowBackgroundStyle" : "DefaultRowBackgroundStyle",
+                    "RowFormat_StateParameters" : [ ],
+                    "RowHeight" : 30,
+                    "RowHoverStyle" : "DefaultRowHoverStyle",
+                    "RowSelectedStyle" : "DefaultRowSelectedStyle",
+                    "RowStyle" : "DefaultGridStyle",
+                    "ShowAllColumns" : false,
+                    "Top" : 450,
+                    "Type" : "dhxgrid",
+                    "Width" : 460,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Grid"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "ActiveStyle" : "DefaultButtonActiveStyle",
+                    "Area" : "UI",
+                    "CancelConfirmationButton" : "button2",
+                    "ConfirmationButton1Label" : "Yes",
+                    "ConfirmationButton2Label" : "No",
+                    "ConfirmationPrompt" : "Do Action?",
+                    "ConfirmationRequired" : false,
+                    "ConfirmationTitle" : "Confirm Action",
+                    "DefaultConfirmationButton" : "button1",
+                    "DisplayName" : "Button-69",
+                    "FocusStyle" : "DefaultButtonFocusStyle",
+                    "Height" : 30,
+                    "HoverStyle" : "DefaultButtonHoverStyle",
+                    "Id" : "Button-69",
+                    "Label" : "Back to Main Screen",
+                    "Left" : 5,
+                    "Style" : "DefaultButtonStyle",
+                    "TabSequence" : 0,
+                    "Top" : 525,
+                    "Type" : "button",
+                    "Width" : 195,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Button"
+                  },
+                  "Widgets" : [ ]
+                } ]
+              },
+              "mashupType" : "page"
+            }
+            ]]>
+            </mashupContent>
+        </Mashup>
+    </Mashups>
+</Entities>

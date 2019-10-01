@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <ThingPackages>
+        <ThingPackage
+         aspect.isExtension="true"
+         className="gb.GitBackupTemplate"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-10-01T07:19:03.086Z"
+         name="GitExtensionPackage"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <HandlerDefinitions>
+                <HandlerDefinition
+                 className="com.thingworx.handlers.ExtensionServiceHandler"
+                 description="Extension handler"
+                 isUserDefinable="false"
+                 name="Extension"></HandlerDefinition>
+                <HandlerDefinition
+                 className="com.thingworx.handlers.ReflectionServiceHandler"
+                 description="Reflection handler"
+                 isUserDefinable="false"
+                 name="Reflection"></HandlerDefinition>
+                <HandlerDefinition
+                 className="com.thingworx.dsl.DSLServiceHandler"
+                 description="Script handler"
+                 isUserDefinable="true"
+                 name="Script"></HandlerDefinition>
+            </HandlerDefinitions>
+            <ImplementedShapes></ImplementedShapes>
+        </ThingPackage>
+    </ThingPackages>
+</Entities>

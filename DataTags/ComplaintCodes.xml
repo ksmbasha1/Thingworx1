@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <DataTags>
+        <DataTagVocabulary
+         description=""
+         documentationContent=""
+         homeMashup=""
+         isDynamic="true"
+         lastModifiedDate="2019-10-01T12:11:07.713Z"
+         name="ComplaintCodes"
+         projectName=""
+         tags="Applications:AcmeVending">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <VocabularyTerm
+             description=""
+             name="Bill Reader Failed"></VocabularyTerm>
+            <VocabularyTerm
+             description=""
+             name="Coin Slot Failed"></VocabularyTerm>
+            <VocabularyTerm
+             description=""
+             name="Lost Money"></VocabularyTerm>
+            <VocabularyTerm
+             description=""
+             name="No Change Dispensed"></VocabularyTerm>
+            <VocabularyTerm
+             description=""
+             name="No Power"></VocabularyTerm>
+            <VocabularyTerm
+             description=""
+             name="No Product Dispensed"></VocabularyTerm>
+            <VocabularyTerm
+             description=""
+             name="Other"></VocabularyTerm>
+            <VocabularyTerm
+             description=""
+             name="Product Sold Out"></VocabularyTerm>
+            <VocabularyTerm
+             description=""
+             name="Product Too Cold"></VocabularyTerm>
+            <VocabularyTerm
+             description=""
+             name="Product Too Warm"></VocabularyTerm>
+            <VocabularyTerm
+             description=""
+             name="Product Warm"></VocabularyTerm>
+            <VocabularyTerm
+             description=""
+             name="Wrong Change"></VocabularyTerm>
+            <VocabularyTerm
+             description=""
+             name="Wrong Product"></VocabularyTerm>
+        </DataTagVocabulary>
+    </DataTags>
+</Entities>

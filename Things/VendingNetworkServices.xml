@@ -1,0 +1,1044 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         lastModifiedDate="2019-10-01T12:11:13.797Z"
+         name="VendingNetworkServices"
+         projectName=""
+         published="false"
+         tags="Applications:AcmeVending"
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions>
+                    <PropertyDefinition
+                     aspect.dataChangeThreshold="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.defaultValue="Maintenance"
+                     aspect.isPersistent="true"
+                     aspect.isReadOnly="false"
+                     baseType="USERNAME"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="onCallUser"
+                     ordinal="0"></PropertyDefinition>
+                </PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetCompaintStream">
+                        <ResultType
+                         aspect.dataShape="CompaintStreamDS"
+                         aspect.isStreamEntry="true"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="blank"
+                             baseType="STRING"
+                             description=""
+                             name="filter"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetDashboardData">
+                        <ResultType
+                         aspect.dataShape="DashBoardData"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="AcmeVendingCorp"
+                             baseType="STRING"
+                             description=""
+                             name="filter"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetEquiptmentFaults">
+                        <ResultType
+                         aspect.dataShape="EquiptmentStatusStreamDS"
+                         aspect.isStreamEntry="true"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="blank"
+                             baseType="STRING"
+                             description=""
+                             name="filter"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetNewMachines">
+                        <ResultType
+                         aspect.dataShape="EntityList"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetReplenishmentOrders">
+                        <ResultType
+                         aspect.dataShape="ReplenishmentOrderDS"
+                         aspect.isDataTableEntry="true"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="blank"
+                             baseType="STRING"
+                             description=""
+                             name="filter"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetVendingNetwork">
+                        <ResultType
+                         aspect.dataShape="VendingNetwork"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="AcmeVendingCorp"
+                             baseType="STRING"
+                             description=""
+                             name="filter"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetWorkOrders">
+                        <ResultType
+                         aspect.dataShape="WorkOrderDS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="blank"
+                             baseType="STRING"
+                             description=""
+                             name="filter"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="MashupNav">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="MashupName"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="ProvisionMachine">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name=""
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="AssetID"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="ESN"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="LOCATION"
+                             description=""
+                             name="Location"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="machine"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="MEID"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Prod1"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Prod2"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Prod3"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Prod4"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="NUMBER"
+                             description=""
+                             name="Qty1"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="NUMBER"
+                             description=""
+                             name="Qty2"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="NUMBER"
+                             description=""
+                             name="Qty3"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="NUMBER"
+                             description=""
+                             name="Qty4"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="GetCompaintStream"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="GetDashboardData"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="GetEquiptmentFaults"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="GetNewMachines"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="GetReplenishmentOrders"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="GetVendingNetwork"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="GetWorkOrders"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="MashupNav"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="ProvisionMachine"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="SendSMS"
+                     queryService=""></ServiceMapping>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="temp"
+                     queryService=""></ServiceMapping>
+                </ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetCompaintStream">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var connections;
+                                        if (filter == "blank") {
+                                        	connections = Networks['AcmeVending'].GetNetworkConnectionsWithTemplate();
+                                        } else {
+                                        	var params = {
+                                        		start : filter
+                                        	};	
+                                        	connections = Networks['AcmeVending'].GetSubNetworkConnectionsWithTemplate(params);
+                                        }
+                                        
+                                        var connection;
+                                        var filter = new Array();
+                                        
+                                        for each(connection in connections.rows) {
+                                        	if (connection.to != "") {
+                                        		filter.push(connection.to);
+                                        	}
+                                        }
+                                        
+                                        // query:VALUES
+                                        var query = new Object();
+                                        query = {
+                                        	filters: {
+                                        		type: "IN",
+                                        		fieldName: "source",
+                                        		values: filter
+                                        	}         
+                                        };
+                                        
+                                        // tags:TAGS
+                                        var tags = new Array();
+                                        
+                                        var startDate = new Date();
+                                        startDate.setYear(2000);
+                                        var endDate = new Date();
+                                        
+                                        var params = {
+                                        	queryExpression : "",
+                                        	tags : tags,
+                                        	oldestFirst : false,
+                                        	maxItems : 9999,
+                                        	endDate : endDate,
+                                        	query : query,
+                                        	sourceTags : tags,
+                                        	startDate : startDate
+                                        };
+                                        
+                                        // QueryStreamEntriesWithData(queryExpression:STRING, tags:TAGS, oldestFirst:BOOLEAN, maxItems:NUMBER(500), source:STRING, endDate:DATETIME, query:VALUES, sourceTags:TAGS, startDate:DATETIME):INFOTABLE(EquiptmentStatusStreamDS)
+                                        var result = Things['ComplaintStream'].QueryStreamEntriesWithData(params);
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetDashboardData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var connections;
+                                        var params = {
+                                        	start : filter
+                                        };	
+                                        connections = Networks['AcmeVending'].GetSubNetworkConnectionsWithTemplate(params);
+                                        
+                                        var params = {
+                                        	dataShapeName : "DashBoardData",
+                                        	infoTableName : "DBData"
+                                        };
+                                        
+                                        // CreateInfoTableFromDataShape(dataShapeName:STRING, infoTableName:STRING("")):INFOTABLE
+                                        var table = Resources['InfoTableFunctions'].CreateInfoTableFromDataShape(params);
+                                        
+                                        var connection;
+                                        var outOfStockPct = 0;
+                                        var inServicePct = 0;
+                                        var complaints = 0;
+                                        var salesVgoal = 0;
+                                        var count = 0;
+                                        
+                                        for each(connection in connections.rows) {
+                                        	var data = new Object();
+                                        	if (connection.thingTemplate == 'VerySmartVendingMach' || connection.thingTemplate == 'BuildDemoVendingMachine' || connection.thingTemplate == 'VendingMachineTemplate') {
+                                        		outOfStockPct = outOfStockPct + Things[connection.to].PercentTimeOutOfStock;
+                                        		inServicePct = inServicePct + Things[connection.to].PercentTimeInService;
+                                        		complaints = complaints + Things[connection.to].TotalComplaints;
+                                        		salesVgoal = salesVgoal + Things[connection.to].SalesVsGoal;		
+                                        		count++;
+                                        	}
+                                        }
+                                        
+                                        data.outOfStockPct = outOfStockPct/count;
+                                        data.inServicePct = inServicePct/count;
+                                        data.salesVgoal = salesVgoal/count;
+                                        data.complaints = complaints;
+                                        
+                                        table.AddRow(data);
+                                        var result = table;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetEquiptmentFaults">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var connections;
+                                        if (filter == "blank") {
+                                        	connections = Networks['AcmeVending'].GetNetworkConnectionsWithTemplate();
+                                        } else {
+                                        	var params = {
+                                        		start : filter
+                                        	};	
+                                        	connections = Networks['AcmeVending'].GetSubNetworkConnectionsWithTemplate(params);
+                                        }
+                                        
+                                        var connection;
+                                        var filter = new Array();
+                                        
+                                        for each(connection in connections.rows) {
+                                        	if (connection.to != "") {
+                                        		filter.push(connection.to);
+                                        	}
+                                        }
+                                        
+                                        // query:VALUES
+                                        var query = new Object();
+                                        query = {
+                                        	filters: {
+                                        		type: "IN",
+                                        		fieldName: "source",
+                                        		values: filter
+                                        	}         
+                                        };
+                                        
+                                        // tags:TAGS
+                                        var tags = new Array();
+                                        
+                                        var startDate = new Date();
+                                        startDate.setYear(2000);
+                                        var endDate = new Date();
+                                        
+                                        var params = {
+                                        	queryExpression : "",
+                                        	tags : tags,
+                                        	oldestFirst : false,
+                                        	maxItems : 9999,
+                                        	endDate : endDate,
+                                        	query : query,
+                                        	sourceTags : tags,
+                                        	startDate : startDate
+                                        };
+                                        
+                                        // QueryStreamEntriesWithData(queryExpression:STRING, tags:TAGS, oldestFirst:BOOLEAN, maxItems:NUMBER(500), source:STRING, endDate:DATETIME, query:VALUES, sourceTags:TAGS, startDate:DATETIME):INFOTABLE(EquiptmentStatusStreamDS)
+                                        var result = Things['EquiptmentStatusStream'].QueryStreamEntriesWithData(params);
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetNewMachines">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // tags:TAGS
+                                        var tags = new Array();
+                                        
+                                        var params = {
+                                        	maxItems : 500,
+                                        	query : {filters:{fieldName:"StatusCode",type:"EQ",value:0}}
+                                        };
+                                        
+                                        // QueryImplementingThingsWithData(maxItems:NUMBER(500), tags:TAGS, nameMask:STRING, query:QUERY):INFOTABLE(RootEntityList)
+                                        var search = ThingTemplates['VerySmartVendingMach'].QueryImplementingThingsWithData(params);
+                                        
+                                        var params = {
+                                        	dataShapeName : "EntityList",
+                                        	infoTableName : "InfoTable"
+                                        };
+                                        
+                                        // CreateInfoTableFromDataShape(dataShapeName:STRING, infoTableName:STRING("InfoTable")):INFOTABLE(Undefined)
+                                        var result = Resources['InfoTableFunctions'].CreateInfoTableFromDataShape(params);
+                                        
+                                        for each (thing in search.rows) {
+                                        	var row = new Object();
+                                        	row.name = thing.name;
+                                        	row.description = thing.description;
+                                        	result.AddRow(row);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetReplenishmentOrders">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var connections;
+                                        if (filter == "blank") {
+                                        	connections = Networks['AcmeVending'].GetNetworkConnectionsWithTemplate();
+                                        } else {
+                                        	var params = {
+                                        		start : filter
+                                        	};	
+                                        	connections = Networks['AcmeVending'].GetSubNetworkConnectionsWithTemplate(params);
+                                        }
+                                        
+                                        var connection;
+                                        var filter = new Array();
+                                        
+                                        for each(connection in connections.rows) {
+                                        	if (connection.to != "") {
+                                        		filter.push(connection.to);
+                                        	}
+                                        }
+                                        
+                                        // query:VALUES
+                                        var query = new Object();
+                                        query = {
+                                        	filters: {
+                                        		type: "IN",
+                                        		fieldName: "inventoryLocation",
+                                        		values: filter
+                                        	}         
+                                        };
+                                        
+                                        // tags:TAGS
+                                        var tags = new Array();
+                                        
+                                        var params = {
+                                        	queryExpression : "",
+                                        	query : query,
+                                        	maxItems : 9999,
+                                        	tags : tags
+                                        };
+                                        
+                                        // QueryDataTableEntries(queryExpression:STRING, query:VALUES, maxItems:NUMBER(500), tags:TAGS):INFOTABLE(WorkOrderDS)
+                                        var result = Things['ReplenishmentOrderDT'].QueryDataTableEntries(params);
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetVendingNetwork">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var connections;
+                                        if (filter == "blank") {
+                                        	connections = Networks['AcmeVending'].GetNetworkConnectionsWithTemplate();
+                                        } else {
+                                        	var params = {
+                                        		start : filter
+                                        	};	
+                                        	connections = Networks['AcmeVending'].GetSubNetworkConnectionsWithTemplate(params);
+                                        }
+                                        
+                                        var params = {
+                                        	dataShapeName : "VendingNetwork",
+                                        	infoTableName : "AssetHierarchy"
+                                        };
+                                        
+                                        // CreateInfoTableFromDataShape(dataShapeName:STRING, infoTableName:STRING("")):INFOTABLE
+                                        var assets = Resources['InfoTableFunctions'].CreateInfoTableFromDataShape(params);
+                                        
+                                        var connection;
+                                        
+                                        for each(connection in connections.rows) {
+                                        	var data = new Object();
+                                        	data.to = connection.to;
+                                        	data.from = connection.from;
+                                        	data.connectionType = connection.connectionType;
+                                        	var thing = Things[connection.to];
+                                        	if (thing.StatusCode != 0) {
+                                        		data.description = thing.description;
+                                        		if (thing.Location == undefined) {
+                                                    data.location = thing.geolocation;
+                                                } else {
+                                        			data.location = thing.Location;
+                                                }
+                                        		
+                                        		if (connection.thingTemplate == 'Site') {
+                                        			data.inService = "";
+                                        			data.zoom = 16;
+                                        		} else if (connection.thingTemplate == 'Corp') {
+                                        			data.inService = "";
+                                        			data.zoom = 6;
+                                        		} else if (connection.thingTemplate == 'Region') {
+                                        			data.inService = "";
+                                        			data.zoom = 9;
+                                        		} else {
+                                        			data.outOfStockPct = thing.PercentTimeOutOfStock;
+                                        			data.inServicePct = thing.PercentTimeInService;
+                                        			data.complaints = thing.TotalComplaints;
+                                        			data.salesVgoal = thing.SalesVsGoal;	
+                                        			data.inService = thing.InService;
+                                        			data.zoom = 18;
+                                        		}
+                                        		
+                                        		data.assetType = connection.thingTemplate + ":" + data.inService;
+                                        		assets.AddRow(data);
+                                        	}
+                                        }
+                                        
+                                        var result = assets;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetWorkOrders">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var connections;
+                                        if (filter == "blank") {
+                                        	connections = Networks['AcmeVending'].GetNetworkConnectionsWithTemplate();
+                                        } else {
+                                        	var params = {
+                                        		start : filter
+                                        	};	
+                                        	connections = Networks['AcmeVending'].GetSubNetworkConnectionsWithTemplate(params);
+                                        }
+                                        
+                                        var connection;
+                                        var filter = new Array();
+                                        
+                                        for each(connection in connections.rows) {
+                                        	if (connection.to != "") {
+                                        		filter.push(connection.to);
+                                        	}
+                                        }
+                                        
+                                        // query:VALUES
+                                        var query = new Object();
+                                        query = {
+                                        	filters: {
+                                        		type: "IN",
+                                        		fieldName: "mainWorkCenter",
+                                        		values: filter
+                                        	}         
+                                        };
+                                        
+                                        // tags:TAGS
+                                        var tags = new Array();
+                                        
+                                        var params = {
+                                        	queryExpression : "",
+                                        	query : query,
+                                        	maxItems : 9999,
+                                        	tags : tags
+                                        };
+                                        
+                                        // QueryDataTableEntries(queryExpression:STRING, query:VALUES, maxItems:NUMBER(500), tags:TAGS):INFOTABLE(WorkOrderDS)
+                                        var result = Things['WorkOrderDT'].QueryDataTableEntries(params);
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="MashupNav">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var result = MashupName;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="ProvisionMachine">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var thing = Things[machine];
+                                        
+                                        thing.ESN = ESN;
+                                        thing.MEID = MEID;
+                                        thing.AssetId = AssetID;
+                                        thing.Location = Location;
+                                        thing.StatusCode = 10;
+                                        thing.InService = true;
+                                        
+                                        // values:INFOTABLE(Datashape: InventoryDS)
+                                        var values = Things['InventoryDT'].CreateValues();
+                                        
+                                        values.positionCapacity = 16;
+                                        values.vendPosition = 1;
+                                        values.productImage = "/Thingworx/MediaEntities/" + Prod1;
+                                        values.currentInvQty = Qty1;
+                                        values.productId = Prod1;
+                                        
+                                        var params = {
+                                        	values : values
+                                        };
+                                        
+                                        // AddDataTableEntry(values:INFOTABLE(InventoryDS), source:STRING, tags:TAGS, location:LOCATION):STRING
+                                        var id = Things['InventoryDT'].AddDataTableEntry(params);
+                                        
+                                        values.positionCapacity = 16;
+                                        values.vendPosition = 2;
+                                        values.productImage = "/Thingworx/MediaEntities/" + Prod2;
+                                        values.currentInvQty = Qty2;
+                                        values.productId = Prod;
+                                        
+                                        params = {
+                                        	values : values
+                                        };
+                                        
+                                        // AddDataTableEntry(values:INFOTABLE(InventoryDS), source:STRING, tags:TAGS, location:LOCATION):STRING
+                                        id = Things['InventoryDT'].AddDataTableEntry(params);
+                                        
+                                        values.positionCapacity = 16;
+                                        values.vendPosition = 3;
+                                        values.productImage = "/Thingworx/MediaEntities/" + Prod3;
+                                        values.currentInvQty = Qty3;
+                                        values.productId = Prod3;
+                                        
+                                        params = {
+                                        	values : values
+                                        };
+                                        
+                                        // AddDataTableEntry(values:INFOTABLE(InventoryDS), source:STRING, tags:TAGS, location:LOCATION):STRING
+                                        id = Things['InventoryDT'].AddDataTableEntry(params);
+                                        
+                                        values.positionCapacity = 16;
+                                        values.vendPosition = 4;
+                                        values.productImage = "/Thingworx/MediaEntities/" + Prod4;
+                                        values.currentInvQty = Qty4;
+                                        values.productId = Prod4;
+                                        
+                                        params = {
+                                        	values : values
+                                        };
+                                        
+                                        // AddDataTableEntry(values:INFOTABLE(InventoryDS), source:STRING, tags:TAGS, location:LOCATION):STRING
+                                        id = Things['InventoryDT'].AddDataTableEntry(params);
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties>
+                <onCallUser>
+                    <Value>
+                    <![CDATA[
+                    Maintenance
+                    ]]>
+                    </Value>
+                    <Timestamp>2019-09-27T10:03:08.303Z</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </onCallUser>
+            </ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

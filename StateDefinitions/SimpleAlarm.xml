@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <StateDefinitions>
+        <StateDefinition
+         aspect.isEditableSystemObject="true"
+         description="Three state alarm"
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-10-01T12:11:07.941Z"
+         name="SimpleAlarm"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <content>
+            <![CDATA[
+            {
+              "stateDefinitions" : [ {
+                "comparator" : "<",
+                "defaultStyleDefinition" : "LoAlarmMarker",
+                "defaultValue" : 10,
+                "description" : "",
+                "displayString" : "Lo",
+                "name" : "Lo"
+              }, {
+                "comparator" : "<",
+                "defaultStyleDefinition" : "NormalAlarmMarker",
+                "defaultValue" : 90,
+                "description" : "",
+                "displayString" : "Normal",
+                "name" : "Normal"
+              }, {
+                "defaultStyleDefinition" : "HiAlarmMarker",
+                "description" : "",
+                "displayString" : "Hi",
+                "name" : "Hi"
+              } ],
+              "stateType" : "numeric"
+            }
+            ]]>
+            </content>
+        </StateDefinition>
+    </StateDefinitions>
+</Entities>

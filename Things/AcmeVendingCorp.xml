@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <Things>
+        <Thing
+         description="Acme Beverage Corp"
+         documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;"
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         lastModifiedDate="2019-10-01T12:11:13.791Z"
+         name="AcmeVendingCorp"
+         projectName=""
+         published="false"
+         tags="Applications:AcmeVending"
+         thingTemplate="Corp"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="StartUpSelection">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="TransferValues">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings>
+                    <ServiceMapping
+                     deleteService=""
+                     description=""
+                     listService=""
+                     name="StartUpSelection"
+                     queryService=""></ServiceMapping>
+                </ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="StartUpSelection">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // GetGlobalSessionValues():INFOTABLE(GlobalSessionProperties)
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="TransferValues">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // result: INFOTABLE dataShape: RootEntityList
+                                        var Machines = ThingTemplates["VerySmartVendingMach"].GetImplementingThings();
+                                        
+                                        for each (var entry in Machines.rows) {
+                                          var OldName = entry.name + "E";
+                                          logger.warn(entry.name + OldName);
+                                          if (Things[OldName].MEID) {
+                                          	Things[entry.name].MEID = Things[OldName].MEID;
+                                          }
+                                          Things[entry.name].CurrentTemp = Things[OldName].CurrentTemp;
+                                          Things[entry.name].ESN = Things[OldName].ESN;
+                                          Things[entry.name].FieldServiceTech = Things[OldName].FieldServiceTech;
+                                          Things[entry.name].InService = Things[OldName].InService;
+                                          Things[entry.name].Location = Things[OldName].Location;
+                                          Things[entry.name].MaintenanceStatus = Things[OldName].MaintenanceStatus;
+                                          Things[entry.name].CurrentHumidity = Things[OldName].CurrentHumidity;
+                                          Things[entry.name].NumberOfPositions = Things[OldName].NumberOfPositions;
+                                          Things[entry.name].PercentTimeInService = Things[OldName].PercentTimeInService;
+                                          Things[entry.name].PercentTimeOutOfStock = Things[OldName].PercentTimeOutOfStock;
+                                          Things[entry.name].rap = Things[OldName].rap;
+                                          Things[entry.name].SalesVsGoal = Things[OldName].SalesVsGoal;
+                                          Things[entry.name].StatusCode = Things[OldName].StatusCode;
+                                          Things[entry.name].TotalComplaints = Things[OldName].TotalComplaints;
+                                          Things[entry.name].VendorName = Things[OldName].VendorName;
+                                          Things[entry.name].AssetId = Things[OldName].AssetId;
+                                          var tempinv = Things[OldName].CurrentInventory;
+                                          Things[entry.name].VendorName = tempinv;
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties></ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

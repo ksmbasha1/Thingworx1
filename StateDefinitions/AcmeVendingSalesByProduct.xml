@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <StateDefinitions>
+        <StateDefinition
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-10-01T12:11:07.934Z"
+         name="AcmeVendingSalesByProduct"
+         projectName=""
+         tags="Applications:AcmeVending">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <content>
+            <![CDATA[
+            {
+              "stateDefinitions" : [ {
+                "defaultStyleDefinition" : "DefaultChartStyle15",
+                "defaultValue" : "A",
+                "description" : "",
+                "displayString" : "A",
+                "name" : "A"
+              }, {
+                "defaultStyleDefinition" : "DefaultChartStyle2",
+                "defaultValue" : "B",
+                "description" : "",
+                "displayString" : "B",
+                "name" : "B"
+              }, {
+                "defaultStyleDefinition" : "DefaultChartStyle4",
+                "defaultValue" : "C",
+                "description" : "",
+                "displayString" : "C",
+                "name" : "C"
+              }, {
+                "defaultStyleDefinition" : "DefaultChartStyle5",
+                "defaultValue" : "D",
+                "description" : "",
+                "displayString" : "D",
+                "name" : "D"
+              }, {
+                "defaultStyleDefinition" : "",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              } ],
+              "stateType" : "string"
+            }
+            ]]>
+            </content>
+        </StateDefinition>
+    </StateDefinitions>
+</Entities>

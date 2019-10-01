@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <StateDefinitions>
+        <StateDefinition
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-10-01T12:11:07.953Z"
+         name="AcmeVendingTabs"
+         projectName=""
+         tags="Applications:AcmeVending">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <content>
+            <![CDATA[
+            {
+              "stateDefinitions" : [ {
+                "defaultStyleDefinition" : "AcmeVendingUnselected",
+                "defaultValue" : "VendingDashboard",
+                "description" : "",
+                "displayString" : "Dashboard",
+                "name" : "Dashboard"
+              }, {
+                "defaultStyleDefinition" : "AcmeVendingUnselected",
+                "defaultValue" : "VendingMaintenance",
+                "description" : "",
+                "displayString" : "Maintenance",
+                "name" : "Maintenance"
+              }, {
+                "defaultStyleDefinition" : "AcmeVendingUnselected",
+                "defaultValue" : "VendingOperations",
+                "description" : "",
+                "displayString" : "Operations",
+                "name" : "Operations"
+              }, {
+                "defaultStyleDefinition" : "AcmeVendingUnselected",
+                "defaultValue" : "VendingSalesMarketing",
+                "description" : "",
+                "displayString" : "Sales & Marketing",
+                "name" : "Sales & Marketing"
+              }, {
+                "defaultStyleDefinition" : "",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              } ],
+              "stateType" : "string"
+            }
+            ]]>
+            </content>
+        </StateDefinition>
+    </StateDefinitions>
+</Entities>

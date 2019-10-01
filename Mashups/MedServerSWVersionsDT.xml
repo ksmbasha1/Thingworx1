@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <Mashups>
+        <Mashup
+         aspect.mashupType="page"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-10-01T12:11:12.782Z"
+         name="MedServerSWVersionsDT"
+         projectName=""
+         rows="0.0"
+         tags="Applications:AcmeVending">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ParameterDefinitions>
+                <FieldDefinition
+                 aspect.dataShape="SWVersionDS"
+                 aspect.ordinal="0"
+                 baseType="INFOTABLE"
+                 description=""
+                 name="SWVersionsDS"
+                 ordinal="0"></FieldDefinition>
+            </ParameterDefinitions>
+            <Things></Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "Data" : {
+                "Things_AcmeMedServerSWVersionsDT" : {
+                  "DataName" : "Things_AcmeMedServerSWVersionsDT",
+                  "EntityName" : "AcmeMedServerSWVersionsDT",
+                  "EntityType" : "Things",
+                  "Id" : "731331736354869",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "891331736354877",
+                    "Name" : "AddOrUpdateDataTableEntry",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "AddOrUpdateDataTableEntry"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "681331736354912",
+                    "Name" : "GetDataTableEntries",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetDataTableEntries"
+                  } ]
+                },
+                "Things_AcmeMedServerSWVersionsDT1" : {
+                  "DataName" : "Things_AcmeMedServerSWVersionsDT1",
+                  "EntityName" : "AcmeMedServerSWVersionsDT",
+                  "EntityType" : "Things",
+                  "Id" : "1001331739876004",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "951331739876012",
+                    "Name" : "DeleteDataTableEntryByKey",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "DeleteDataTableEntryByKey"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "111331736365474",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetDataTableEntries",
+                "SourceSection" : "Things_AcmeMedServerSWVersionsDT",
+                "TargetArea" : "UI",
+                "TargetId" : "Grid-1",
+                "TargetSection" : ""
+              }, {
+                "Id" : "461331736748895",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "SWVersionsDS",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property",
+                  "TargetSubProperty" : "server"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "Textbox-3",
+                "SourceSection" : "",
+                "TargetArea" : "Mashup",
+                "TargetId" : "mashup-root",
+                "TargetSection" : ""
+              }, {
+                "Id" : "861331736769384",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "SWVersionsDS",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property",
+                  "TargetSubProperty" : "sw_package"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "Textbox-4",
+                "SourceSection" : "",
+                "TargetArea" : "Mashup",
+                "TargetId" : "mashup-root",
+                "TargetSection" : ""
+              }, {
+                "Id" : "41331736847657",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "SWVersionsDS",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property",
+                  "TargetSubProperty" : "sw_version"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "Textbox-7",
+                "SourceSection" : "",
+                "TargetArea" : "Mashup",
+                "TargetId" : "mashup-root",
+                "TargetSection" : ""
+              }, {
+                "Id" : "981331737002950",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Value",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "SWVersionsDS",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "property",
+                  "TargetSubProperty" : "superceded"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "NumericEntry-19",
+                "SourceSection" : "",
+                "TargetArea" : "Mashup",
+                "TargetId" : "mashup-root",
+                "TargetSection" : ""
+              }, {
+                "Id" : "141331737039290",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "DateTime",
+                  "SourcePropertyBaseType" : "DATETIME",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "SWVersionsDS",
+                  "TargetPropertyBaseType" : "DATETIME",
+                  "TargetPropertyType" : "property",
+                  "TargetSubProperty" : "install_date"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "DateTimePicker-20",
+                "SourceSection" : "",
+                "TargetArea" : "Mashup",
+                "TargetId" : "mashup-root",
+                "TargetSection" : ""
+              }, {
+                "Id" : "921331737119994",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "SWVersionsDS",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "values",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceDetails" : "AllData",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "AddOrUpdateDataTableEntry",
+                "TargetSection" : "Things_AcmeMedServerSWVersionsDT"
+              }, {
+                "Id" : "731331737236494",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "server",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetDataTableEntries",
+                "SourceSection" : "Things_AcmeMedServerSWVersionsDT",
+                "TargetArea" : "UI",
+                "TargetId" : "Textbox-3",
+                "TargetSection" : ""
+              }, {
+                "Id" : "571331737254678",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "install_date",
+                  "SourcePropertyBaseType" : "DATETIME",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "DateTime",
+                  "TargetPropertyBaseType" : "DATETIME",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetDataTableEntries",
+                "SourceSection" : "Things_AcmeMedServerSWVersionsDT",
+                "TargetArea" : "UI",
+                "TargetId" : "DateTimePicker-20",
+                "TargetSection" : ""
+              }, {
+                "Id" : "171331737263091",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "sw_package",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetDataTableEntries",
+                "SourceSection" : "Things_AcmeMedServerSWVersionsDT",
+                "TargetArea" : "UI",
+                "TargetId" : "Textbox-4",
+                "TargetSection" : ""
+              }, {
+                "Id" : "471331737272514",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "sw_version",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetDataTableEntries",
+                "SourceSection" : "Things_AcmeMedServerSWVersionsDT",
+                "TargetArea" : "UI",
+                "TargetId" : "Textbox-7",
+                "TargetSection" : ""
+              }, {
+                "Id" : "381331737282965",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "superceded",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Value",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetDataTableEntries",
+                "SourceSection" : "Things_AcmeMedServerSWVersionsDT",
+                "TargetArea" : "UI",
+                "TargetId" : "NumericEntry-19",
+                "TargetSection" : ""
+              }, {
+                "Id" : "381331737317769",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "sw_type",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetDataTableEntries",
+                "SourceSection" : "Things_AcmeMedServerSWVersionsDT",
+                "TargetArea" : "UI",
+                "TargetId" : "Textbox-21",
+                "TargetSection" : ""
+              }, {
+                "Id" : "441331737333974",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "SWVersionsDS",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property",
+                  "TargetSubProperty" : "sw_type"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "Textbox-21",
+                "SourceSection" : "",
+                "TargetArea" : "Mashup",
+                "TargetId" : "mashup-root",
+                "TargetSection" : ""
+              }, {
+                "Id" : "191331737950454",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "idsoftware_versions",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Value",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetDataTableEntries",
+                "SourceSection" : "Things_AcmeMedServerSWVersionsDT",
+                "TargetArea" : "UI",
+                "TargetId" : "NumericEntry-24",
+                "TargetSection" : ""
+              }, {
+                "Id" : "291331737965235",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Value",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "SWVersionsDS",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "property",
+                  "TargetSubProperty" : "idsoftware_versions"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "NumericEntry-24",
+                "SourceSection" : "",
+                "TargetArea" : "Mashup",
+                "TargetId" : "mashup-root",
+                "TargetSection" : ""
+              }, {
+                "Id" : "701331739380858",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "source",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "Textbox-25",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "AddOrUpdateDataTableEntry",
+                "TargetSection" : "Things_AcmeMedServerSWVersionsDT"
+              }, {
+                "Id" : "181331739405194",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "source",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetDataTableEntries",
+                "SourceSection" : "Things_AcmeMedServerSWVersionsDT",
+                "TargetArea" : "UI",
+                "TargetId" : "Textbox-25",
+                "TargetSection" : ""
+              }, {
+                "Id" : "961331739890509",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Value",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "key",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "NumericEntry-24",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "DeleteDataTableEntryByKey",
+                "TargetSection" : "Things_AcmeMedServerSWVersionsDT1"
+              } ],
+              "Events" : [ {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_AcmeMedServerSWVersionsDT",
+                "EventHandlerService" : "GetDataTableEntries",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "381331736362418"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_AcmeMedServerSWVersionsDT",
+                "EventHandlerService" : "AddOrUpdateDataTableEntry",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "Clicked",
+                "EventTriggerId" : "Button-16",
+                "EventTriggerSection" : "",
+                "Id" : "641331737209496"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_AcmeMedServerSWVersionsDT",
+                "EventHandlerService" : "GetDataTableEntries",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "ServiceInvokeCompleted",
+                "EventTriggerId" : "AddOrUpdateDataTableEntry",
+                "EventTriggerSection" : "Things_AcmeMedServerSWVersionsDT",
+                "Id" : "811331737575007"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_AcmeMedServerSWVersionsDT",
+                "EventHandlerService" : "GetDataTableEntries",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "ServiceInvokeCompleted",
+                "EventTriggerId" : "DeleteDataTableEntryByKey",
+                "EventTriggerSection" : "Things_AcmeMedServerSWVersionsDT1",
+                "Id" : "681331739902116"
+              } ],
+              "UI" : {
+                "Properties" : {
+                  "Area" : "Mashup",
+                  "Height" : 618,
+                  "Id" : "mashup-root",
+                  "Left" : 0,
+                  "Tags" : [ {
+                    "vocabulary" : "Applications",
+                    "vocabularyTerm" : "AcmeVending"
+                  } ],
+                  "Top" : 0,
+                  "Type" : "mashup",
+                  "Width" : 1024,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Mashup",
+                  "_currentParameterDefs" : [ {
+                    "Aspects" : {
+                      "dataShape" : "SWVersionDS"
+                    },
+                    "BaseType" : "INFOTABLE",
+                    "Description" : "",
+                    "ParameterName" : "SWVersionsDS"
+                  } ],
+                  "id_index" : 26
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "AutoSelectFirstRow" : false,
+                    "ColumnFormat" : {
+                      "formatInfo" : [ {
+                        "Align" : "left",
+                        "FieldName" : "idsoftware_versions",
+                        "FormatOptions" : {
+                          "FormatString" : "0.00",
+                          "formatInfo" : {
+                            "FieldName" : "",
+                            "StateDefinition" : "",
+                            "StateDefinitionType" : "fixed",
+                            "StateFormats" : [ {
+                              "state" : "",
+                              "stateName" : "fixed"
+                            } ]
+                          },
+                          "renderer" : "NUMBER"
+                        },
+                        "Title" : "ID",
+                        "Width" : "auto"
+                      }, {
+                        "Align" : "left",
+                        "FieldName" : "server",
+                        "FormatOptions" : {
+                          "FormatString" : "full",
+                          "formatInfo" : {
+                            "FieldName" : "",
+                            "StateDefinition" : "",
+                            "StateDefinitionType" : "fixed",
+                            "StateFormats" : [ {
+                              "state" : "",
+                              "stateName" : "fixed"
+                            } ]
+                          },
+                          "renderer" : "STRING"
+                        },
+                        "Title" : "server",
+                        "Width" : "auto"
+                      }, {
+                        "Align" : "left",
+                        "FieldName" : "sw_package",
+                        "FormatOptions" : {
+                          "FormatString" : "full",
+                          "formatInfo" : {
+                            "FieldName" : "",
+                            "StateDefinition" : "",
+                            "StateDefinitionType" : "fixed",
+                            "StateFormats" : [ {
+                              "state" : "",
+                              "stateName" : "fixed"
+                            } ]
+                          },
+                          "renderer" : "STRING"
+                        },
+                        "Title" : "sw_package",
+                        "Width" : "auto"
+                      }, {
+                        "Align" : "left",
+                        "FieldName" : "sw_version",
+                        "FormatOptions" : {
+                          "FormatString" : "full",
+                          "formatInfo" : {
+                            "FieldName" : "",
+                            "StateDefinition" : "",
+                            "StateDefinitionType" : "fixed",
+                            "StateFormats" : [ {
+                              "state" : "",
+                              "stateName" : "fixed"
+                            } ]
+                          },
+                          "renderer" : "STRING"
+                        },
+                        "Title" : "sw_version",
+                        "Width" : "auto"
+                      }, {
+                        "Align" : "left",
+                        "FieldName" : "sw_type",
+                        "FormatOptions" : {
+                          "FormatString" : "full",
+                          "formatInfo" : {
+                            "FieldName" : "",
+                            "StateDefinition" : "",
+                            "StateDefinitionType" : "fixed",
+                            "StateFormats" : [ {
+                              "state" : "",
+                              "stateName" : "fixed"
+                            } ]
+                          },
+                          "renderer" : "STRING"
+                        },
+                        "Title" : "sw_type",
+                        "Width" : "auto"
+                      }, {
+                        "Align" : "left",
+                        "FieldName" : "install_date",
+                        "FormatOptions" : {
+                          "FormatString" : "yyyy-MM-dd HH:mm:ss",
+                          "renderer" : "DATETIME"
+                        },
+                        "Title" : "install_date",
+                        "Width" : "auto"
+                      }, {
+                        "Align" : "right",
+                        "FieldName" : "superceded",
+                        "FormatOptions" : {
+                          "FormatString" : "0.00",
+                          "renderer" : "NUMBER"
+                        },
+                        "Title" : "superceded",
+                        "Width" : "auto"
+                      }, {
+                        "Align" : "left",
+                        "FieldName" : "source",
+                        "FormatOptions" : {
+                          "FormatString" : "full",
+                          "formatInfo" : {
+                            "FieldName" : "",
+                            "StateDefinition" : "",
+                            "StateDefinitionType" : "fixed",
+                            "StateFormats" : [ {
+                              "state" : "",
+                              "stateName" : "fixed"
+                            } ]
+                          },
+                          "renderer" : "STRING"
+                        },
+                        "Title" : "source",
+                        "Width" : "auto"
+                      } ]
+                    },
+                    "Height" : 605,
+                    "Id" : "Grid-1",
+                    "Left" : 310,
+                    "MultiSelect" : false,
+                    "RowFormat_StateParameters" : [ ],
+                    "RowHeight" : 30,
+                    "ShowAllColumns" : false,
+                    "Top" : 5,
+                    "Type" : "dhxgrid",
+                    "Width" : 700,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Grid"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Alignment" : "right",
+                    "Area" : "UI",
+                    "Height" : 22,
+                    "Id" : "Label-2",
+                    "Left" : 10,
+                    "Text" : "Server:",
+                    "Top" : 10,
+                    "Type" : "label",
+                    "Width" : 75,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Label"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Height" : 24,
+                    "Id" : "Textbox-3",
+                    "Label" : "",
+                    "Left" : 95,
+                    "Text" : "",
+                    "Top" : 5,
+                    "Type" : "textbox",
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Textbox",
+                    "__supportsLabel" : true
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Height" : 24,
+                    "Id" : "Textbox-4",
+                    "Label" : "",
+                    "Left" : 95,
+                    "Text" : "",
+                    "Top" : 35,
+                    "Type" : "textbox",
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Textbox",
+                    "__supportsLabel" : true
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Alignment" : "right",
+                    "Area" : "UI",
+                    "Height" : 22,
+                    "Id" : "Label-5",
+                    "Left" : 10,
+                    "Text" : "SW Pkg:",
+                    "Top" : 40,
+                    "Type" : "label",
+                    "Width" : 75,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Label"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Alignment" : "right",
+                    "Area" : "UI",
+                    "Height" : 22,
+                    "Id" : "Label-6",
+                    "Left" : 10,
+                    "Text" : "SW Ver:",
+                    "Top" : 70,
+                    "Type" : "label",
+                    "Width" : 75,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Label"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Height" : 24,
+                    "Id" : "Textbox-7",
+                    "Label" : "",
+                    "Left" : 95,
+                    "Text" : "",
+                    "Top" : 65,
+                    "Type" : "textbox",
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Textbox",
+                    "__supportsLabel" : true
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Alignment" : "right",
+                    "Area" : "UI",
+                    "Height" : 22,
+                    "Id" : "Label-10",
+                    "Left" : 10,
+                    "Text" : "Install Date:",
+                    "Top" : 100,
+                    "Type" : "label",
+                    "Width" : 75,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Label"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Alignment" : "right",
+                    "Area" : "UI",
+                    "Height" : 22,
+                    "Id" : "Label-11",
+                    "Left" : 10,
+                    "Text" : "Superceded:",
+                    "Top" : 130,
+                    "Type" : "label",
+                    "Width" : 75,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Label"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "CancelConfirmationButton" : "button2",
+                    "ConfirmationButton1Label" : "Yes",
+                    "ConfirmationButton2Label" : "No",
+                    "ConfirmationPrompt" : "Do Action?",
+                    "ConfirmationRequired" : false,
+                    "ConfirmationTitle" : "Confirm Action",
+                    "DefaultConfirmationButton" : "button1",
+                    "Height" : 30,
+                    "Id" : "Button-16",
+                    "Label" : "Add/Update Entry",
+                    "Left" : 120,
+                    "Top" : 285,
+                    "Type" : "button",
+                    "Width" : 150,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Button"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "CancelConfirmationButton" : "button2",
+                    "ConfirmationButton1Label" : "Yes",
+                    "ConfirmationButton2Label" : "No",
+                    "ConfirmationPrompt" : "Do Action?",
+                    "ConfirmationRequired" : true,
+                    "ConfirmationTitle" : "Confirm Action",
+                    "DefaultConfirmationButton" : "button1",
+                    "Height" : 30,
+                    "Id" : "Button-17",
+                    "Label" : "Delete Entry",
+                    "Left" : 120,
+                    "Top" : 330,
+                    "Type" : "button",
+                    "Width" : 150,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Button"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "AllowDecimals" : false,
+                    "AllowNegatives" : false,
+                    "Area" : "UI",
+                    "ConstrainValue" : false,
+                    "DisplayName" : "NumericEntry-19",
+                    "FixedDigits" : 0,
+                    "Height" : 24,
+                    "Id" : "NumericEntry-19",
+                    "Label" : "",
+                    "Left" : 95,
+                    "Maximum" : 1,
+                    "Minimum" : 0,
+                    "Top" : 130,
+                    "Type" : "numericentry",
+                    "Value" : 0,
+                    "ValueAlign" : "right",
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Numeric Entry",
+                    "__supportsLabel" : true
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DateOnly" : false,
+                    "DisplayName" : "DateTimePicker-20",
+                    "Height" : 28,
+                    "Id" : "DateTimePicker-20",
+                    "Interval" : 0,
+                    "IntervalType" : "h",
+                    "Label" : "",
+                    "Left" : 95,
+                    "Top" : 95,
+                    "Type" : "datetimepicker",
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Date Time Picker",
+                    "__supportsLabel" : true
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "Textbox-21",
+                    "Height" : 24,
+                    "Id" : "Textbox-21",
+                    "Label" : "",
+                    "Left" : 95,
+                    "Text" : "",
+                    "Top" : 165,
+                    "Type" : "textbox",
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Textbox",
+                    "__supportsLabel" : true
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Alignment" : "right",
+                    "Area" : "UI",
+                    "DisplayName" : "Label-22",
+                    "Height" : 22,
+                    "Id" : "Label-22",
+                    "Left" : 10,
+                    "Text" : "SW Type:",
+                    "Top" : 165,
+                    "Type" : "label",
+                    "Width" : 75,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Label"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Alignment" : "right",
+                    "Area" : "UI",
+                    "DisplayName" : "Label-23",
+                    "Height" : 22,
+                    "Id" : "Label-23",
+                    "Left" : 10,
+                    "Text" : "ID:",
+                    "Top" : 200,
+                    "Type" : "label",
+                    "Width" : 75,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Label"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "AllowDecimals" : false,
+                    "AllowNegatives" : false,
+                    "Area" : "UI",
+                    "ConstrainValue" : false,
+                    "DisplayName" : "NumericEntry-24",
+                    "FixedDigits" : 0,
+                    "Height" : 24,
+                    "Id" : "NumericEntry-24",
+                    "Label" : "",
+                    "Left" : 95,
+                    "Maximum" : 1,
+                    "Minimum" : 0,
+                    "Top" : 200,
+                    "Type" : "numericentry",
+                    "Value" : 0,
+                    "ValueAlign" : "right",
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Numeric Entry",
+                    "__supportsLabel" : true
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "Textbox-25",
+                    "Height" : 24,
+                    "Id" : "Textbox-25",
+                    "Label" : "",
+                    "Left" : 95,
+                    "Text" : "",
+                    "Top" : 235,
+                    "Type" : "textbox",
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Textbox",
+                    "__supportsLabel" : true
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Alignment" : "right",
+                    "Area" : "UI",
+                    "DisplayName" : "Label-26",
+                    "Height" : 22,
+                    "Id" : "Label-26",
+                    "Left" : 10,
+                    "Text" : "Source:",
+                    "Top" : 235,
+                    "Type" : "label",
+                    "Width" : 75,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Label"
+                  },
+                  "Widgets" : [ ]
+                } ]
+              },
+              "mashupType" : "page"
+            }
+            ]]>
+            </mashupContent>
+        </Mashup>
+    </Mashups>
+</Entities>

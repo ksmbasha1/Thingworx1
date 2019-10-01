@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="DataTableThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         lastModifiedDate="2019-10-01T12:11:13.567Z"
+         name="WorkOrderDT"
+         projectName=""
+         published="false"
+         tags="Applications:AcmeVending"
+         thingTemplate="DataTable"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 description="Data Thing Configuration"
+                 isMultiRow="false"
+                 name="DataThingSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="Persistence Provider Name"
+                             name="persistenceProvider"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <persistenceProvider>
+                            <![CDATA[
+                            ThingworxPersistenceProvider
+                            ]]>
+                            </persistenceProvider>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 description="Data Shape Configuration"
+                 isMultiRow="false"
+                 name="Settings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Data Shape"
+                             baseType="DATASHAPENAME"
+                             description="Data shape"
+                             name="dataShape"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <accumulatedDataShape>
+                                <json>
+                                <![CDATA[
+                                {"fieldDefinitions":{"workOrder":{"name":"workOrder","aspects":{"isPrimaryKey":true},"description":"","baseType":"STRING","ordinal":12},"plannerGroup":{"name":"plannerGroup","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":7},"userStatus":{"name":"userStatus","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":11},"basicStartDate":{"name":"basicStartDate","aspects":{"isPrimaryKey":false},"description":"","baseType":"DATETIME","ordinal":3},"priority":{"name":"priority","aspects":{"isPrimaryKey":false},"description":"","baseType":"NUMBER","ordinal":8},"basicFinishDate":{"name":"basicFinishDate","aspects":{"isPrimaryKey":false},"description":"","baseType":"DATETIME","ordinal":2},"mainWorkCenter":{"name":"mainWorkCenter","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":5},"actualFinish":{"name":"actualFinish","aspects":{"isPrimaryKey":false},"description":"","baseType":"DATETIME","ordinal":0},"notification":{"name":"notification","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":6},"functionalLocation":{"name":"functionalLocation","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":4},"shortText":{"name":"shortText","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":9},"systemStatus":{"name":"systemStatus","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":10},"actualStart":{"name":"actualStart","aspects":{"isPrimaryKey":false},"description":"","baseType":"DATETIME","ordinal":1}}}
+                                ]]>
+                                </json>
+                            </accumulatedDataShape>
+                            <dataShape>
+                            <![CDATA[
+                            WorkOrderDS
+                            ]]>
+                            </dataShape>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 description="Index Settings"
+                 isMultiRow="true"
+                 name="Indexes"
+                 ordinal="1">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Index Field Names"
+                             baseType="STRING"
+                             description="Index fields"
+                             name="fieldNames"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Index Name"
+                             baseType="STRING"
+                             description="Index name"
+                             name="name"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows></Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions></ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations></ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties></ThingProperties>
+        </Thing>
+    </Things>
+</Entities>
