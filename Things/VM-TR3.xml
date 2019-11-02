@@ -15,9 +15,9 @@
          enabled="true"
          homeMashup=""
          identifier=""
-         lastModifiedDate="2019-10-01T12:11:13.738Z"
+         lastModifiedDate="2019-10-28T09:30:14.461Z"
          name="VM-TR3"
-         projectName=""
+         projectName="vendingmahcine"
          published="false"
          tags=""
          thingTemplate="VendingMachineTemplate"
@@ -30,7 +30,41 @@
                 <Delete></Delete>
                 <Metadata></Metadata>
             </DesignTimePermissions>
-            <RunTimePermissions></RunTimePermissions>
+            <RunTimePermissions>
+                <Permissions
+                 resourceName="*">
+                    <PropertyRead>
+                        <Principal
+                         isPermitted="true"
+                         name="Testinggroup"
+                         type="Group"></Principal>
+                    </PropertyRead>
+                    <PropertyWrite>
+                        <Principal
+                         isPermitted="true"
+                         name="Testinggroup"
+                         type="Group"></Principal>
+                    </PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="Testinggroup"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="Testinggroup"
+                         type="Group"></Principal>
+                    </EventInvoke>
+                    <EventSubscribe>
+                        <Principal
+                         isPermitted="true"
+                         name="Testinggroup"
+                         type="Group"></Principal>
+                    </EventSubscribe>
+                </Permissions>
+            </RunTimePermissions>
             <VisibilityPermissions>
                 <Visibility></Visibility>
             </VisibilityPermissions>
@@ -77,9 +111,9 @@
                     <Quality>UNKNOWN</Quality>
                 </VMTemperatureSetpoint>
                 <Location>
-                    <Value>0.0,0.0,0.0</Value>
-                    <Timestamp>1970-01-01T00:00:00.000Z</Timestamp>
-                    <Quality>UNKNOWN</Quality>
+                    <Value>25.0,45.0,0.0</Value>
+                    <Timestamp>2019-11-01T06:42:26.090Z</Timestamp>
+                    <Quality>GOOD</Quality>
                 </Location>
                 <rap>
                     <Value></Value>

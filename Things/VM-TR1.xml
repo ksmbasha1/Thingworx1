@@ -13,9 +13,9 @@
          documentationContent=""
          effectiveThingPackage="ConfiguredThing"
          enabled="true"
-         homeMashup=""
+         homeMashup="VendingMachineMash"
          identifier=""
-         lastModifiedDate="2019-10-01T12:11:13.744Z"
+         lastModifiedDate="2019-10-18T04:41:24.506Z"
          name="VM-TR1"
          projectName=""
          published="false"
@@ -75,7 +75,7 @@
                 </FieldServiceTech>
                 <VMHumiditySetpoint>
                     <Value>70.23</Value>
-                    <Timestamp>2019-09-30T11:07:02.118Z</Timestamp>
+                    <Timestamp>2019-10-16T01:46:30.281Z</Timestamp>
                     <Quality>GOOD</Quality>
                 </VMHumiditySetpoint>
                 <VMTempMin>
@@ -90,7 +90,7 @@
                 </VMTempMax>
                 <VMTemperatureSetpoint>
                     <Value>70.93</Value>
-                    <Timestamp>2019-09-30T11:07:02.108Z</Timestamp>
+                    <Timestamp>2019-10-16T01:46:30.261Z</Timestamp>
                     <Quality>GOOD</Quality>
                 </VMTemperatureSetpoint>
                 <Location>

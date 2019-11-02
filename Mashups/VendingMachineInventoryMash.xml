@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <Mashups>
+        <Mashup
+         aspect.isResponsive="true"
+         aspect.mashupType="mashup"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-10-16T13:39:17.306Z"
+         name="VendingMachineInventoryMash"
+         projectName=""
+         rows="0.0"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ParameterDefinitions></ParameterDefinitions>
+            <Things>
+                <Thing>VendingMachineInventoryTable</Thing>
+            </Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "ConfigurationTables" : { },
+              "CustomMashupCss" : "",
+              "Data" : {
+                "Session" : {
+                  "DataName" : "Session",
+                  "EntityName" : "",
+                  "EntityType" : "Session",
+                  "Id" : "session",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "SessionInterface",
+                    "Name" : "GetGlobalSessionValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGlobalSessionValues"
+                  } ]
+                },
+                "Things_VendingMachineInventoryTable" : {
+                  "DataName" : "Things_VendingMachineInventoryTable",
+                  "EntityName" : "VendingMachineInventoryTable",
+                  "EntityType" : "Things",
+                  "Id" : "12e747a4-422d-43b9-8ff7-a83fa28e0233",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "d2d54dec-296f-42c2-a9aa-d1de185499f6",
+                    "Name" : "EnterMyInfo",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "EnterMyInfo"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "ad233061-d0c6-4a0c-b9ac-09c9853bef4c",
+                    "Name" : "GetDataTableEntries",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetDataTableEntries"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "e713e2a6-1a03-444b-844f-e2396a7e7ee6",
+                    "Name" : "DeleteDataTableEntryByKey",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "DeleteDataTableEntryByKey"
+                  } ]
+                },
+                "UserExtensions" : {
+                  "DataName" : "UserExtensions",
+                  "EntityName" : "",
+                  "EntityType" : "UserExtensions",
+                  "Id" : "UserExtensions",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "UserExtensionInterface",
+                    "Name" : "GetCurrentUserExtensionProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetCurrentUserExtensionProperties"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "8ad86aef-7311-4ea1-a29b-80186f528936",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetDataTableEntries",
+                "SourceSection" : "Things_VendingMachineInventoryTable",
+                "TargetArea" : "UI",
+                "TargetId" : "dhxgrid-4",
+                "TargetSection" : ""
+              }, {
+                "Id" : "40389c59-e40e-447a-94bd-d0fb414caceb",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Value",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "TargetProperty" : "Position",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "numericentry-6",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "EnterMyInfo",
+                "TargetSection" : "Things_VendingMachineInventoryTable"
+              }, {
+                "Id" : "402f4c66-ceea-4a2b-81a7-7dd0dc1319f4",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "ProductID",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "textbox-10",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "EnterMyInfo",
+                "TargetSection" : "Things_VendingMachineInventoryTable"
+              }, {
+                "Id" : "cfb389d7-c369-43b8-b867-e16b0107b992",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Value",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "TargetProperty" : "Current",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "numericentry-8",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "EnterMyInfo",
+                "TargetSection" : "Things_VendingMachineInventoryTable"
+              }, {
+                "Id" : "1e5ce400-7e86-422e-9a44-9b587ca187a6",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Value",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "TargetProperty" : "Capacity",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "numericentry-9",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "EnterMyInfo",
+                "TargetSection" : "Things_VendingMachineInventoryTable"
+              }, {
+                "Id" : "ba1eed87-e001-4776-8dbc-712d814ccf01",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Value",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "TargetProperty" : "Price",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "numericentry-7",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "EnterMyInfo",
+                "TargetSection" : "Things_VendingMachineInventoryTable"
+              }, {
+                "Id" : "20047605-3e23-4234-b523-c2e67b8b04f2",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "vendPosition",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Value",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetDataTableEntries",
+                "SourceSection" : "Things_VendingMachineInventoryTable",
+                "TargetArea" : "UI",
+                "TargetId" : "numericentry-6",
+                "TargetSection" : ""
+              }, {
+                "Id" : "e5f10ef6-7543-4b2d-bb46-503ff3dbf408",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "key",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "key",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetDataTableEntries",
+                "SourceSection" : "Things_VendingMachineInventoryTable",
+                "TargetArea" : "Data",
+                "TargetId" : "DeleteDataTableEntryByKey",
+                "TargetSection" : "Things_VendingMachineInventoryTable"
+              } ],
+              "DesignTimePermissions" : { },
+              "Events" : [ {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_VendingMachineInventoryTable",
+                "EventHandlerService" : "GetDataTableEntries",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "992761a7-fddb-4654-bc84-eb47085f2251"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_VendingMachineInventoryTable",
+                "EventHandlerService" : "EnterMyInfo",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "Clicked",
+                "EventTriggerId" : "button-11",
+                "EventTriggerSection" : "",
+                "Id" : "c3b21669-ea66-4fed-b9e1-5bd9dd945aac"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_VendingMachineInventoryTable",
+                "EventHandlerService" : "GetDataTableEntries",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "ServiceInvokeCompleted",
+                "EventTriggerId" : "EnterMyInfo",
+                "EventTriggerSection" : "Things_VendingMachineInventoryTable",
+                "Id" : "df34696b-9316-433b-a6a3-6353519b3f46"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_VendingMachineInventoryTable",
+                "EventHandlerService" : "DeleteDataTableEntryByKey",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "Clicked",
+                "EventTriggerId" : "button-12",
+                "EventTriggerSection" : "",
+                "Id" : "e8d35808-75f4-4327-ba65-203c8bae266c"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_VendingMachineInventoryTable",
+                "EventHandlerService" : "GetDataTableEntries",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "ServiceInvokeCompleted",
+                "EventTriggerId" : "DeleteDataTableEntryByKey",
+                "EventTriggerSection" : "Things_VendingMachineInventoryTable",
+                "Id" : "c0049b19-50dd-4aa5-8f09-ba990ae52352"
+              } ],
+              "RunTimePermissions" : { },
+              "UI" : {
+                "Properties" : {
+                  "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+                  "Area" : "Mashup",
+                  "BGImageRepeat" : "no-repeat",
+                  "BGImageSize" : "auto",
+                  "Columns" : 0,
+                  "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+                  "DisplayName" : "Mashup",
+                  "EnableParameterEditing" : false,
+                  "Height" : 618,
+                  "Id" : "mashup-root",
+                  "IgnoreWarningsInViewMashup" : false,
+                  "IsPrintLayout" : false,
+                  "Left" : 0,
+                  "MashupToEditGadget" : "DefaultMashupToEditGadget",
+                  "MinHeight" : 0,
+                  "MinWidth" : 0,
+                  "ResponsiveLayout" : true,
+                  "Rows" : 0,
+                  "ShowDataLoading" : true,
+                  "Style" : "DefaultMashupStyle",
+                  "Title" : "",
+                  "TitleBar" : false,
+                  "TitleBarStyle" : "DefaultTitleBarStyle",
+                  "TitleBarText" : "Gadget Title Here",
+                  "Top" : 0,
+                  "Type" : "mashup",
+                  "Visible" : true,
+                  "Width" : 1024,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Mashup",
+                  "id_index" : 12,
+                  "supportsAutoResize" : true
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Columns" : 0,
+                    "DisplayName" : "layout-1",
+                    "Footer" : false,
+                    "FooterHeight" : 0,
+                    "Header" : true,
+                    "HeaderHeight" : 100,
+                    "Id" : "layout-1",
+                    "IncludeSpacingInFixedAreas" : false,
+                    "IsPrintLayout" : false,
+                    "Left" : 110,
+                    "LeftSidebar" : false,
+                    "LeftSidebarWidth" : 0,
+                    "Orientation" : "vertical",
+                    "PctColumn1" : 50,
+                    "PctColumn2" : 50,
+                    "PctColumn3" : 1,
+                    "PctColumn4" : 1,
+                    "PctColumn5" : 1,
+                    "PctColumn6" : 1,
+                    "PctColumn7" : 1,
+                    "PctColumn8" : 1,
+                    "PctRow1" : 100,
+                    "PctRow2" : 0,
+                    "PctRow3" : 0,
+                    "PctRow4" : 0,
+                    "PctRow5" : 0,
+                    "PctRow6" : 0,
+                    "PctRow7" : 0,
+                    "PctRow8" : 0,
+                    "PrintMarginLeftRight" : 0.5,
+                    "PrintMarginTopBottom" : 0.5,
+                    "PrintWidth" : 650,
+                    "ResponsiveLayout" : true,
+                    "RightSidebar" : false,
+                    "RightSidebarWidth" : 0,
+                    "Rows" : 1,
+                    "ShowDataLoading" : true,
+                    "Spacing" : 2,
+                    "Top" : 70,
+                    "Type" : "layout",
+                    "Visible" : true,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Layout"
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "AnimateExpandCollapse" : true,
+                      "Area" : "UI",
+                      "BGImageRepeat" : "no-repeat",
+                      "BGImageSize" : "auto",
+                      "DisplayName" : "Header",
+                      "ExpandCollapseTabLocation" : "outside",
+                      "Expanded" : true,
+                      "Id" : "container-2",
+                      "MinHeight" : 0,
+                      "MinWidth" : 0,
+                      "Overlay" : false,
+                      "OverlayIsTransparent" : false,
+                      "ResponsiveLayout" : true,
+                      "ShowDataLoading" : true,
+                      "ShowExpandCollapseTab" : false,
+                      "Style" : "DefaultContainerStyle",
+                      "TabCollapseStyle" : "DefaultTabCollapseStyle",
+                      "TabExpandStyle" : "DefaultTabExpandStyle",
+                      "TabHeight" : 36,
+                      "TabLocation" : "center",
+                      "TabOffset" : 0,
+                      "TabWidth" : 36,
+                      "Type" : "container",
+                      "Visible" : true,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Container"
+                    },
+                    "Widgets" : [ {
+                      "Properties" : {
+                        "Area" : "UI",
+                        "DisplayName" : "panel-5",
+                        "Height" : 200,
+                        "HideScrollbars" : false,
+                        "HorizontalAnchor" : "left",
+                        "Id" : "panel-5",
+                        "Left" : 35,
+                        "ResponsiveLayout" : true,
+                        "ShowDataLoading" : true,
+                        "Style" : "DefaultPanelStyle",
+                        "Top" : 35,
+                        "Type" : "panel",
+                        "VerticalAnchor" : "top",
+                        "Visible" : true,
+                        "Width" : 300,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Panel"
+                      },
+                      "Widgets" : [ {
+                        "Properties" : {
+                          "AllowDecimals" : true,
+                          "AllowNegatives" : true,
+                          "Area" : "UI",
+                          "ConstrainValue" : false,
+                          "DisplayName" : "numericentry-6",
+                          "FixedDigits" : 0,
+                          "Height" : 24,
+                          "Id" : "numericentry-6",
+                          "InnerShadow" : true,
+                          "Label" : "Position",
+                          "LabelAlignment" : "left",
+                          "Left" : 42.95142652148439,
+                          "Maximum" : 100,
+                          "Minimum" : 0,
+                          "NumericEntryFocusStyle" : "DefaultFocusStyle",
+                          "NumericEntryLabelStyle" : "DefaultWidgetLabelStyle",
+                          "ResponsiveLayout" : false,
+                          "ShowDataLoading" : true,
+                          "Style" : "DefaultTextBoxStyle",
+                          "TabSequence" : 0,
+                          "ToolTipField" : "",
+                          "ToolTipStyle" : "DefaultTooltipStyle",
+                          "Top" : 46.961802498046865,
+                          "Type" : "numericentry",
+                          "Value" : 0,
+                          "ValueAlign" : "right",
+                          "Visible" : true,
+                          "Width" : 110,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Numeric Entry",
+                          "__supportsLabel" : true,
+                          "__supportsTooltip" : true
+                        },
+                        "Widgets" : [ ]
+                      }, {
+                        "Properties" : {
+                          "AllowDecimals" : true,
+                          "AllowNegatives" : true,
+                          "Area" : "UI",
+                          "ConstrainValue" : false,
+                          "DisplayName" : "numericentry-7",
+                          "FixedDigits" : 0,
+                          "Height" : 24,
+                          "Id" : "numericentry-7",
+                          "InnerShadow" : true,
+                          "Label" : "Price",
+                          "LabelAlignment" : "left",
+                          "Left" : 719.9479064941406,
+                          "Maximum" : 100,
+                          "Minimum" : 0,
+                          "NumericEntryFocusStyle" : "DefaultFocusStyle",
+                          "NumericEntryLabelStyle" : "DefaultWidgetLabelStyle",
+                          "ResponsiveLayout" : false,
+                          "ShowDataLoading" : true,
+                          "Style" : "DefaultTextBoxStyle",
+                          "TabSequence" : 0,
+                          "ToolTipField" : "",
+                          "ToolTipStyle" : "DefaultTooltipStyle",
+                          "Top" : 38.923614501953125,
+                          "Type" : "numericentry",
+                          "Value" : 0,
+                          "ValueAlign" : "right",
+                          "Visible" : true,
+                          "Width" : 100,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Numeric Entry",
+                          "__supportsLabel" : true,
+                          "__supportsTooltip" : true
+                        },
+                        "Widgets" : [ ]
+                      }, {
+                        "Properties" : {
+                          "AllowDecimals" : true,
+                          "AllowNegatives" : true,
+                          "Area" : "UI",
+                          "ConstrainValue" : false,
+                          "DisplayName" : "numericentry-8",
+                          "FixedDigits" : 0,
+                          "Height" : 24,
+                          "Id" : "numericentry-8",
+                          "InnerShadow" : true,
+                          "Label" : "Current Qty",
+                          "LabelAlignment" : "left",
+                          "Left" : 355.95490552539064,
+                          "Maximum" : 100,
+                          "Minimum" : 0,
+                          "NumericEntryFocusStyle" : "DefaultFocusStyle",
+                          "NumericEntryLabelStyle" : "DefaultWidgetLabelStyle",
+                          "ResponsiveLayout" : false,
+                          "ShowDataLoading" : true,
+                          "Style" : "DefaultTextBoxStyle",
+                          "TabSequence" : 0,
+                          "ToolTipField" : "",
+                          "ToolTipStyle" : "DefaultTooltipStyle",
+                          "Top" : 44.930552498046865,
+                          "Type" : "numericentry",
+                          "Value" : 0,
+                          "ValueAlign" : "right",
+                          "Visible" : true,
+                          "Width" : 115,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Numeric Entry",
+                          "__supportsLabel" : true,
+                          "__supportsTooltip" : true
+                        },
+                        "Widgets" : [ ]
+                      }, {
+                        "Properties" : {
+                          "AllowDecimals" : true,
+                          "AllowNegatives" : true,
+                          "Area" : "UI",
+                          "ConstrainValue" : false,
+                          "DisplayName" : "numericentry-9",
+                          "FixedDigits" : 0,
+                          "Height" : 24,
+                          "Id" : "numericentry-9",
+                          "InnerShadow" : true,
+                          "Label" : "Max Capacity",
+                          "LabelAlignment" : "left",
+                          "Left" : 524.9480085527343,
+                          "Maximum" : 100,
+                          "Minimum" : 0,
+                          "NumericEntryFocusStyle" : "DefaultFocusStyle",
+                          "NumericEntryLabelStyle" : "DefaultWidgetLabelStyle",
+                          "ResponsiveLayout" : false,
+                          "ShowDataLoading" : true,
+                          "Style" : "DefaultTextBoxStyle",
+                          "TabSequence" : 0,
+                          "ToolTipField" : "",
+                          "ToolTipStyle" : "DefaultTooltipStyle",
+                          "Top" : 43.92360974902343,
+                          "Type" : "numericentry",
+                          "Value" : 0,
+                          "ValueAlign" : "right",
+                          "Visible" : true,
+                          "Width" : 120,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Numeric Entry",
+                          "__supportsLabel" : true,
+                          "__supportsTooltip" : true
+                        },
+                        "Widgets" : [ ]
+                      }, {
+                        "Properties" : {
+                          "Area" : "UI",
+                          "CursorPosition" : 0,
+                          "DefaultTextboxFocusStyle" : "DefaultFocusStyle",
+                          "DisplayName" : "textbox-10",
+                          "Height" : 24,
+                          "Id" : "textbox-10",
+                          "InnerShadow" : true,
+                          "Label" : "Product ID",
+                          "LabelAlignment" : "left",
+                          "Left" : 183.9583845292969,
+                          "MaskInputCharacters" : false,
+                          "PlaceholderText" : "",
+                          "ReadOnly" : false,
+                          "ResponsiveLayout" : false,
+                          "ShowDataLoading" : true,
+                          "Style" : "DefaultTextBoxStyle",
+                          "TabSequence" : 0,
+                          "Text" : "",
+                          "TextAlign" : "left",
+                          "TextboxLabelStyle" : "DefaultWidgetLabelStyle",
+                          "ToolTipField" : "",
+                          "ToolTipStyle" : "DefaultTooltipStyle",
+                          "Top" : 47.95138074511718,
+                          "Type" : "textbox",
+                          "Visible" : true,
+                          "Width" : 130,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "TextBox",
+                          "__supportsLabel" : true,
+                          "__supportsTooltip" : true
+                        },
+                        "Widgets" : [ ]
+                      }, {
+                        "Properties" : {
+                          "ActiveStyle" : "DefaultButtonActiveStyle",
+                          "Area" : "UI",
+                          "CancelConfirmationButton" : "button2",
+                          "ConfirmationButton1Label" : "Yes",
+                          "ConfirmationButton2Label" : "No",
+                          "ConfirmationPrompt" : "Do Action?",
+                          "ConfirmationRequired" : false,
+                          "ConfirmationTitle" : "Confirm Action",
+                          "ContextId" : "",
+                          "DefaultConfirmationButton" : "button1",
+                          "Disabled" : false,
+                          "DisabledStyle" : "DefaultButtonDisabledStyle",
+                          "DisplayName" : "button-11",
+                          "FocusStyle" : "DefaultButtonFocusStyle",
+                          "Height" : 30,
+                          "HoverStyle" : "DefaultButtonHoverStyle",
+                          "IconAlignment" : "left",
+                          "Id" : "button-11",
+                          "Label" : "New/Edit",
+                          "Left" : 255,
+                          "ResponsiveLayout" : false,
+                          "RoundedCorners" : true,
+                          "ShowDataLoading" : true,
+                          "Style" : "DefaultButtonStyle",
+                          "TabSequence" : 0,
+                          "ToolTipField" : "",
+                          "ToolTipStyle" : "DefaultTooltipStyle",
+                          "Top" : 20,
+                          "Type" : "button",
+                          "Visible" : true,
+                          "Width" : 75,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Button",
+                          "__supportsTooltip" : true
+                        },
+                        "Widgets" : [ ]
+                      }, {
+                        "Properties" : {
+                          "ActiveStyle" : "DefaultButtonActiveStyle",
+                          "Area" : "UI",
+                          "CancelConfirmationButton" : "button2",
+                          "ConfirmationButton1Label" : "Yes",
+                          "ConfirmationButton2Label" : "No",
+                          "ConfirmationPrompt" : "Do Action?",
+                          "ConfirmationRequired" : false,
+                          "ConfirmationTitle" : "Confirm Action",
+                          "ContextId" : "",
+                          "DefaultConfirmationButton" : "button1",
+                          "Disabled" : false,
+                          "DisabledStyle" : "DefaultButtonDisabledStyle",
+                          "DisplayName" : "button-12",
+                          "FocusStyle" : "DefaultButtonFocusStyle",
+                          "Height" : 30,
+                          "HoverStyle" : "DefaultButtonHoverStyle",
+                          "IconAlignment" : "left",
+                          "Id" : "button-12",
+                          "Label" : "Delete",
+                          "Left" : 405,
+                          "ResponsiveLayout" : false,
+                          "RoundedCorners" : true,
+                          "ShowDataLoading" : true,
+                          "Style" : "DefaultButtonStyle",
+                          "TabSequence" : 0,
+                          "ToolTipField" : "",
+                          "ToolTipStyle" : "DefaultTooltipStyle",
+                          "Top" : 5,
+                          "Type" : "button",
+                          "Visible" : true,
+                          "Width" : 75,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Button",
+                          "__supportsTooltip" : true
+                        },
+                        "Widgets" : [ ]
+                      } ]
+                    } ]
+                  }, {
+                    "Properties" : {
+                      "AnimateExpandCollapse" : true,
+                      "Area" : "UI",
+                      "BGImageRepeat" : "no-repeat",
+                      "BGImageSize" : "auto",
+                      "DisplayName" : "Row 1",
+                      "ExpandCollapseTabLocation" : "outside",
+                      "Expanded" : true,
+                      "Id" : "container-3",
+                      "MinHeight" : 0,
+                      "MinWidth" : 0,
+                      "Overlay" : false,
+                      "OverlayIsTransparent" : false,
+                      "ResponsiveLayout" : true,
+                      "ShowDataLoading" : true,
+                      "ShowExpandCollapseTab" : false,
+                      "Style" : "DefaultContainerStyle",
+                      "TabCollapseStyle" : "DefaultTabCollapseStyle",
+                      "TabExpandStyle" : "DefaultTabExpandStyle",
+                      "TabHeight" : 36,
+                      "TabLocation" : "center",
+                      "TabOffset" : 0,
+                      "TabWidth" : 36,
+                      "Type" : "container",
+                      "Visible" : true,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Container"
+                    },
+                    "Widgets" : [ {
+                      "Properties" : {
+                        "AlignHeader" : false,
+                        "Area" : "UI",
+                        "AutoSelectFirstRow" : false,
+                        "CellTextWrapping" : false,
+                        "ColumnFormat" : {
+                          "formatInfo" : [ {
+                            "Align" : "right",
+                            "AllowEdit" : false,
+                            "FieldName" : "vendPosition",
+                            "FormatOptions" : {
+                              "FormatString" : "0.00",
+                              "renderer" : "NUMBER"
+                            },
+                            "Title" : "vendPosition",
+                            "ValidationExpression" : "",
+                            "ValidationMessage" : "",
+                            "Width" : "auto"
+                          }, {
+                            "Align" : "left",
+                            "AllowEdit" : false,
+                            "FieldName" : "productID",
+                            "FormatOptions" : {
+                              "FormatString" : "full",
+                              "renderer" : "STRING"
+                            },
+                            "Title" : "productID",
+                            "ValidationExpression" : "",
+                            "ValidationMessage" : "",
+                            "Width" : "auto"
+                          }, {
+                            "Align" : "right",
+                            "AllowEdit" : false,
+                            "FieldName" : "currentInvQty",
+                            "FormatOptions" : {
+                              "FormatString" : "0.00",
+                              "renderer" : "NUMBER"
+                            },
+                            "Title" : "currentInvQty",
+                            "ValidationExpression" : "",
+                            "ValidationMessage" : "",
+                            "Width" : "auto"
+                          }, {
+                            "Align" : "right",
+                            "AllowEdit" : false,
+                            "FieldName" : "positionCapacity",
+                            "FormatOptions" : {
+                              "FormatString" : "0.00",
+                              "renderer" : "NUMBER"
+                            },
+                            "Title" : "positionCapacity",
+                            "ValidationExpression" : "",
+                            "ValidationMessage" : "",
+                            "Width" : "auto"
+                          }, {
+                            "Align" : "right",
+                            "AllowEdit" : false,
+                            "FieldName" : "productPrice",
+                            "FormatOptions" : {
+                              "FormatString" : "0.00",
+                              "renderer" : "NUMBER"
+                            },
+                            "Title" : "productPrice",
+                            "ValidationExpression" : "",
+                            "ValidationMessage" : "",
+                            "Width" : "auto"
+                          } ]
+                        },
+                        "CurrentScrollTop" : 0,
+                        "DisplayName" : "dhxgrid-4",
+                        "FocusStyle" : "DefaultFocusStyle",
+                        "GridBackgroundStyle" : "DefaultGridBackgroundStyle",
+                        "GridEditableFieldStyle" : "DefaultGridEditableFieldStyle",
+                        "GridHeaderStyle" : "DefaultGridHeaderStyle",
+                        "GridHeaderTextCase" : "capitalize",
+                        "GridInvalidFieldStyle" : "DefaultGridInvalidFieldStyle",
+                        "Height" : 200,
+                        "Id" : "dhxgrid-4",
+                        "IsEditable" : false,
+                        "IsPrintLayout" : false,
+                        "Left" : 235,
+                        "MultiSelect" : false,
+                        "ResponsiveLayout" : true,
+                        "RowAlternateBackgroundStyle" : "DefaultRowAlternateBackgroundStyle",
+                        "RowBackgroundStyle" : "DefaultRowBackgroundStyle",
+                        "RowHeight" : 30,
+                        "RowHoverStyle" : "DefaultRowHoverStyle",
+                        "RowSelectedStyle" : "DefaultRowSelectedStyle",
+                        "ScrollTop" : 0,
+                        "ShowAllColumns" : false,
+                        "ShowDataLoading" : true,
+                        "TabSequence" : 0,
+                        "Top" : 100,
+                        "Type" : "dhxgrid",
+                        "Visible" : true,
+                        "Width" : 400,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Grid"
+                      },
+                      "Widgets" : [ ]
+                    } ]
+                  } ]
+                } ]
+              },
+              "mashupType" : "mashup"
+            }
+            ]]>
+            </mashupContent>
+        </Mashup>
+    </Mashups>
+</Entities>

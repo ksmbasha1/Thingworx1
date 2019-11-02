@@ -156,7 +156,7 @@
                                      baseType="NUMBER"
                                      description=""
                                      name="positionCapacity"
-                                     ordinal="7"></FieldDefinition>
+                                     ordinal="6"></FieldDefinition>
                                     <FieldDefinition
                                      aspect.isPrimaryKey="false"
                                      baseType="STRING"
@@ -196,7 +196,7 @@
                                      baseType="NUMBER"
                                      description=""
                                      name="vendPosition"
-                                     ordinal="6"></FieldDefinition>
+                                     ordinal="7"></FieldDefinition>
                                 </FieldDefinitions>
                             </DataShape>
                             <Rows></Rows>

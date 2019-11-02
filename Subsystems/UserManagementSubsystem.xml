@@ -19,7 +19,7 @@
          enabled="true"
          friendlyName="User Management"
          homeMashup="MonitoringUserManagementSubsystem"
-         lastModifiedDate="2019-09-26T10:00:09.735Z"
+         lastModifiedDate="2019-11-02T16:23:20.860Z"
          name="UserManagementSubsystem"
          projectName=""
          tags="">
@@ -70,7 +70,7 @@
                     <Rows>
                         <Row>
                             <restrictConcurrentUserSessions>false</restrictConcurrentUserSessions>
-                            <timeout>30.0</timeout>
+                            <timeout>120.0</timeout>
                             <userServiceSelfBypass>true</userServiceSelfBypass>
                         </Row>
                     </Rows>
@@ -231,7 +231,7 @@
                         <Row>
                             <loginAttemptsMax>5</loginAttemptsMax>
                             <loginAttemptsResetMinutes>5</loginAttemptsResetMinutes>
-                            <loginLockedMinutes>15</loginLockedMinutes>
+                            <loginLockedMinutes>30</loginLockedMinutes>
                         </Row>
                     </Rows>
                 </ConfigurationTable>

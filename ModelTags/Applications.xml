@@ -56,6 +56,9 @@
             <VocabularyTerm
              description=""
              name="ThingWorxTraining"></VocabularyTerm>
+            <VocabularyTerm
+             description=""
+             name="basha"></VocabularyTerm>
         </ModelTagVocabulary>
     </ModelTags>
 </Entities>

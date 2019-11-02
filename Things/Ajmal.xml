@@ -10,14 +10,14 @@
     <Things>
         <Thing
          aspect.isSystemObject="false"
-         description="Git Repository created by UI at Tue Oct 01 2019 12:22:09 GMT-0000 (UTC)"
+         description="Git Repository created by UI at Sat Nov 02 2019 18:31:49 GMT-0000 (UTC)"
          documentationContent=""
          effectiveThingPackage="GitExtensionPackage"
          enabled="true"
          homeMashup=""
          identifier=""
-         lastModifiedDate="2019-10-01T12:22:09.849Z"
-         name="testt"
+         lastModifiedDate="2019-11-02T18:31:49.361Z"
+         name="Ajmal"
          projectName="GitBackup"
          published="false"
          tags=""
@@ -113,7 +113,7 @@
                             </CommitEmail>
                             <CommitName>
                             <![CDATA[
-                            basha
+                            ksm
                             ]]>
                             </CommitName>
                             <FileRepository>
@@ -123,17 +123,17 @@
                             </FileRepository>
                             <GitRepoURL>
                             <![CDATA[
-                            https://github.com/ksmbasha1/Thingworx1.git
+                            https://github.com/ksmbasha1/
                             ]]>
                             </GitRepoURL>
                             <Password>
                             <![CDATA[
-                            0/vGqgDESTr/dkjN0XHVCg==:Uj958BmEnMPcNDbpflVUSQ==
+                            a3E8dzqUz497tVGRXEj9cw==:mkVa8QEPKqnEM8gmOJt7mA==
                             ]]>
                             </Password>
                             <RepoPathName>
                             <![CDATA[
-                            /Thingworx1
+                            /ajmalrepo
                             ]]>
                             </RepoPathName>
                             <User>

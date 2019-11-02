@@ -15,9 +15,9 @@
          enabled="true"
          homeMashup=""
          identifier=""
-         lastModifiedDate="2019-10-01T12:11:13.694Z"
+         lastModifiedDate="2019-11-01T09:57:53.315Z"
          name="PiThing"
-         projectName=""
+         projectName="PiProject"
          published="false"
          tags=""
          thingTemplate="RemoteThing"
@@ -127,8 +127,8 @@
             <ImplementedShapes></ImplementedShapes>
             <ThingProperties>
                 <lastConnection>
-                    <Value>2019-09-30T12:00:36.336Z</Value>
-                    <Timestamp>2019-09-30T12:00:36.336Z</Timestamp>
+                    <Value>2019-11-01T09:57:53.332Z</Value>
+                    <Timestamp>2019-11-01T09:57:53.332Z</Timestamp>
                     <Quality>GOOD</Quality>
                 </lastConnection>
             </ThingProperties>

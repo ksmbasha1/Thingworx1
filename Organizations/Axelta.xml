@@ -9,19 +9,18 @@
  universal="">
     <Organizations>
         <Organization
-         aspect.isEditableSystemObject="true"
-         description="Default organization"
+         description=""
          documentationContent=""
          homeMashup=""
-         lastModifiedDate="2019-10-29T08:31:48.240Z"
+         lastModifiedDate="2019-10-31T11:05:51.314Z"
          loginButtonStyle=""
          loginPrompt=""
          loginResetPassword="false"
          loginStyle=""
          mobileMashup=""
-         name="Everyone"
+         name="Axelta"
          projectName=""
-         resetMailContent="&lt;p&gt;[[resetemail.requestmade]]&lt;/p&gt;&#xA;&#xA;&lt;p&gt;[[resetemail.instructions]]&lt;/p&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;p&gt;[[resetemail.helpneeded]]&lt;/p&gt;"
+         resetMailContent="&lt;p&gt;[[resetemail.requestmade]]&lt;/p&gt;&#xA;&#xA;&lt;p&gt;[[resetemail.instructions]]&lt;/p&gt;&#xA;&#xA;&lt;p&gt;[[resetemail.helpneeded]]&lt;/p&gt;"
          resetMailServer=""
          resetMailSubject="[[resetemail.subject]]"
          tags="">
@@ -43,17 +42,17 @@
             <Connections>
                 <Connection
                  from=""
-                 to="Everyone"></Connection>
+                 to="Axelta"></Connection>
             </Connections>
             <OrganizationalUnits>
                 <OrganizationalUnit
-                 description="All users"
-                 name="Everyone">
+                 description=""
+                 name="Axelta">
                     <Members>
                         <Members>
                             <Member
-                             name="ksm1"
-                             type="User"></Member>
+                             name="Development"
+                             type="Group"></Member>
                         </Members>
                     </Members>
                 </OrganizationalUnit>

@@ -15,9 +15,9 @@
          enabled="true"
          homeMashup=""
          identifier=""
-         lastModifiedDate="2019-10-01T12:11:13.740Z"
+         lastModifiedDate="2019-10-28T09:29:57.689Z"
          name="VM-TR2"
-         projectName=""
+         projectName="vendingmahcine"
          published="false"
          tags=""
          thingTemplate="VendingMachineTemplate"
@@ -75,7 +75,7 @@
                 </FieldServiceTech>
                 <VMHumiditySetpoint>
                     <Value>70.93</Value>
-                    <Timestamp>2019-09-30T11:07:02.108Z</Timestamp>
+                    <Timestamp>2019-10-16T01:46:30.261Z</Timestamp>
                     <Quality>GOOD</Quality>
                 </VMHumiditySetpoint>
                 <VMTempMin>
@@ -90,7 +90,7 @@
                 </VMTempMax>
                 <VMTemperatureSetpoint>
                     <Value>35.78</Value>
-                    <Timestamp>2019-09-30T11:07:02.112Z</Timestamp>
+                    <Timestamp>2019-10-16T01:46:30.265Z</Timestamp>
                     <Quality>GOOD</Quality>
                 </VMTemperatureSetpoint>
                 <Location>

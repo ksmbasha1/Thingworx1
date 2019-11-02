@@ -15,7 +15,7 @@
          description=""
          documentationContent=""
          homeMashup=""
-         lastModifiedDate="2019-10-01T12:11:12.734Z"
+         lastModifiedDate="2019-10-29T07:21:46.039Z"
          name="VendingMachineMash"
          projectName=""
          rows="0.0"
@@ -23,14 +23,58 @@
             <avatar></avatar>
             <DesignTimePermissions>
                 <Create></Create>
-                <Read></Read>
-                <Update></Update>
-                <Delete></Delete>
+                <Read>
+                    <Principal
+                     isPermitted="true"
+                     name="Development"
+                     type="Group"></Principal>
+                </Read>
+                <Update>
+                    <Principal
+                     isPermitted="true"
+                     name="Development"
+                     type="Group"></Principal>
+                </Update>
+                <Delete>
+                    <Principal
+                     isPermitted="true"
+                     name="Development"
+                     type="Group"></Principal>
+                </Delete>
                 <Metadata></Metadata>
             </DesignTimePermissions>
-            <RunTimePermissions></RunTimePermissions>
+            <RunTimePermissions>
+                <Permissions
+                 resourceName="*">
+                    <PropertyRead>
+                        <Principal
+                         isPermitted="true"
+                         name="Development"
+                         type="Group"></Principal>
+                    </PropertyRead>
+                    <PropertyWrite>
+                        <Principal
+                         isPermitted="true"
+                         name="Development"
+                         type="Group"></Principal>
+                    </PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="Development"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke></EventInvoke>
+                    <EventSubscribe></EventSubscribe>
+                </Permissions>
+            </RunTimePermissions>
             <VisibilityPermissions>
-                <Visibility></Visibility>
+                <Visibility>
+                    <Principal
+                     isPermitted="true"
+                     name="Axelta"
+                     type="Organization"></Principal>
+                </Visibility>
             </VisibilityPermissions>
             <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
             <ConfigurationTables></ConfigurationTables>
@@ -296,11 +340,27 @@
                 "TargetSection" : ""
               } ],
               "DesignTimePermissions" : {
-                "Create" : [ ],
-                "Delete" : [ ],
+                "Create" : [ {
+                  "isPermitted" : true,
+                  "name" : "ksm",
+                  "type" : "User"
+                } ],
+                "Delete" : [ {
+                  "isPermitted" : true,
+                  "name" : "ksm",
+                  "type" : "User"
+                } ],
                 "Metadata" : [ ],
-                "Read" : [ ],
-                "Update" : [ ]
+                "Read" : [ {
+                  "isPermitted" : true,
+                  "name" : "ksm",
+                  "type" : "User"
+                } ],
+                "Update" : [ {
+                  "isPermitted" : true,
+                  "name" : "ksm",
+                  "type" : "User"
+                } ]
               },
               "Events" : [ {
                 "EventHandlerArea" : "Data",
@@ -349,7 +409,34 @@
                 "Id" : "b7bf9b93-d043-4609-a659-3628b45d37a8"
               } ],
               "RunTimePermissions" : {
-                "permissions" : [ ]
+                "permissions" : [ {
+                  "EventInvoke" : [ {
+                    "isPermitted" : true,
+                    "name" : "Testinggroup",
+                    "type" : "Group"
+                  } ],
+                  "EventSubscribe" : [ {
+                    "isPermitted" : true,
+                    "name" : "Testinggroup",
+                    "type" : "Group"
+                  } ],
+                  "PropertyRead" : [ {
+                    "isPermitted" : true,
+                    "name" : "Testinggroup",
+                    "type" : "Group"
+                  } ],
+                  "PropertyWrite" : [ {
+                    "isPermitted" : true,
+                    "name" : "Testinggroup",
+                    "type" : "Group"
+                  } ],
+                  "ServiceInvoke" : [ {
+                    "isPermitted" : true,
+                    "name" : "Testinggroup",
+                    "type" : "Group"
+                  } ],
+                  "resourceName" : "*"
+                } ]
               },
               "UI" : {
                 "Properties" : {
@@ -383,7 +470,7 @@
                   "Width" : 1024,
                   "Z-index" : 10,
                   "__TypeDisplayName" : "Mashup",
-                  "id_index" : 26,
+                  "id_index" : 30,
                   "supportsAutoResize" : true
                 },
                 "Widgets" : [ {
@@ -673,6 +760,39 @@
                               "__TypeDisplayName" : "Auto Refresh"
                             },
                             "Widgets" : [ ]
+                          }, {
+                            "Properties" : {
+                              "ActiveStyle" : "DefaultButtonActiveStyle",
+                              "Area" : "UI",
+                              "AutoRefresh" : true,
+                              "AutoRefreshTabSequence" : 0,
+                              "DisplayName" : "autorefresh-30",
+                              "FocusStyle" : "DefaultButtonFocusStyle",
+                              "Height" : 28,
+                              "HoverStyle" : "DefaultButtonHoverStyle",
+                              "IconAlignment" : "left",
+                              "Id" : "autorefresh-30",
+                              "Label" : "Refresh Now",
+                              "Left" : 30,
+                              "RefreshInterval" : 30,
+                              "RefreshNowTabSequence" : 0,
+                              "RefreshToggleLabel" : "On",
+                              "RefreshToggleLabelOff" : "Off",
+                              "RefreshToggleSliderStyle" : "DefaultAutoRefreshToggleSliderStyle",
+                              "RefreshToggleStyle" : "DefaultAutoRefreshToggleStyle",
+                              "RefreshToggleStyleOff" : "DefaultAutoRefreshToggleOffStyle",
+                              "ResponsiveLayout" : false,
+                              "ShowControls" : true,
+                              "ShowDataLoading" : true,
+                              "Style" : "DefaultButtonStyle",
+                              "Top" : 40,
+                              "Type" : "autorefresh",
+                              "Visible" : true,
+                              "Width" : 180,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Auto Refresh"
+                            },
+                            "Widgets" : [ ]
                           } ]
                         } ]
                       } ]
@@ -889,21 +1009,21 @@
                               "Area" : "UI",
                               "Decimals" : 2,
                               "Digits" : 5,
-                              "DisplayName" : "leddisplay-18",
+                              "DisplayName" : "Humidity",
                               "Height" : 56,
                               "Id" : "leddisplay-18",
                               "LEDFormatter_StateParameters" : [ ],
                               "LEDLabelStyle" : "DefaultWidgetLabelStyle",
                               "LEDSize" : "normal",
                               "LEDStyle" : "DefaultLEDStyle",
-                              "Label" : "",
+                              "Label" : "Humidity",
                               "LabelAlignment" : "left",
-                              "Left" : 30,
+                              "Left" : 21.97918701171875,
                               "ResponsiveLayout" : false,
                               "ShowDataLoading" : true,
                               "ToolTipField" : "",
                               "ToolTipStyle" : "DefaultTooltipStyle",
-                              "Top" : 50,
+                              "Top" : 31.97918701171875,
                               "Type" : "leddisplay",
                               "Visible" : true,
                               "Width" : 154,
@@ -1248,7 +1368,66 @@
                           "Z-index" : 10,
                           "__TypeDisplayName" : "Container"
                         },
-                        "Widgets" : [ ]
+                        "Widgets" : [ {
+                          "Properties" : {
+                            "Area" : "UI",
+                            "DisplayName" : "panel-28",
+                            "Height" : 200,
+                            "HideScrollbars" : false,
+                            "HorizontalAnchor" : "left",
+                            "Id" : "panel-28",
+                            "Left" : 35,
+                            "ResponsiveLayout" : true,
+                            "ShowDataLoading" : true,
+                            "Style" : "DefaultPanelStyle",
+                            "Top" : 15,
+                            "Type" : "panel",
+                            "VerticalAnchor" : "top",
+                            "Visible" : true,
+                            "Width" : 300,
+                            "Z-index" : 10,
+                            "__TypeDisplayName" : "Panel"
+                          },
+                          "Widgets" : [ {
+                            "Properties" : {
+                              "ActiveStyle" : "DefaultButtonActiveStyle",
+                              "Area" : "UI",
+                              "CancelConfirmationButton" : "button2",
+                              "ConfirmationButton1Label" : "Yes",
+                              "ConfirmationButton2Label" : "No",
+                              "ConfirmationPrompt" : "Do Action?",
+                              "ConfirmationRequired" : false,
+                              "ConfirmationTitle" : "Confirm Action",
+                              "ContextId" : "",
+                              "DefaultConfirmationButton" : "button1",
+                              "Disabled" : false,
+                              "DisabledStyle" : "DefaultButtonDisabledStyle",
+                              "DisplayName" : "button-29",
+                              "FocusStyle" : "DefaultButtonFocusStyle",
+                              "Height" : 30,
+                              "HoverStyle" : "DefaultButtonHoverStyle",
+                              "IconAlignment" : "left",
+                              "Id" : "button-29",
+                              "Label" : "Button",
+                              "Left" : 35,
+                              "ResponsiveLayout" : false,
+                              "RoundedCorners" : true,
+                              "ShowDataLoading" : true,
+                              "Style" : "DefaultButtonStyle",
+                              "TabSequence" : 0,
+                              "ToolTipField" : "",
+                              "ToolTipStyle" : "DefaultTooltipStyle",
+                              "Top" : 15,
+                              "Type" : "button",
+                              "Visible" : true,
+                              "Width" : 75,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Button",
+                              "__supportsTooltip" : true
+                            },
+                            "Widgets" : [ ]
+                          } ]
+                        } ]
                       } ]
                     } ]
                   } ]
